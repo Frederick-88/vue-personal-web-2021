@@ -1,0 +1,44 @@
+// --- Variables
+
+// light
+$white: #ffffff;
+$lightGrey1: #d1d1d1;
+$lightGrey2: #e2e2e2;
+$lightGrey3: #f6f6f6;
+$lightGrey4: #c9ced6;
+$lightGrey5: #a6aebc;
+$lightGrey6: #bdbdbd;
+$lightGrey7: #f2f2f2;
+$lightGrey8: #fcfcfd;
+$grey: #8a94a6;
+$disabledGrey: #e1e4e8;
+
+// dark
+$black: #000000;
+$darkGrey1: #0a1f44;
+$darkGrey2: #141e30;
+$darkGrey3: #243b55;
+$darkGrey4: #182c4f;
+
+// blue
+$blue: #0072ff;
+
+// --- Dark Mode Settings
+:root {
+  /* Variables for default theme (light-mode) */
+  --background-color: #{$lightGrey2};
+  --text-color: #{$darkGrey1};
+}
+
+[data-theme="darkMode"] {
+  /* Variables for dark mode */
+  --background-color: #{$darkGrey1};
+  --text-color: #{$lightGrey2};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #{$darkGrey1};
+    --text-color: #{$lightGrey2};
+  }
+}
