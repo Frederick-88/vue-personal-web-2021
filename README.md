@@ -1,18 +1,10 @@
 ## vue-personal-web-2021
 
-### Feature :
+### Features :
 
-1. Dark Mode, reference :
+1. Dark Mode
 
-- https://medium.com/swlh/dark-mode-using-css-variables-cf065a7fa133
-- https://dev.to/lindaojo/dark-mode-using-css-variables-vue-js-37il
-- https://www.instagram.com/p/CLHZVdeAYyR/
-
-2. Gradient, reference :
-
-- https://codepen.io/taylorvowell/pen/BkxbC
-
-3. Note :
+2. Note :
    have landing page with typing effect
 
 reference can be from images we have.
@@ -25,3 +17,21 @@ content :
 2. portofolios / projects
 3. skills
 4. contact
+
+### References :
+
+1. Dark Mode, reference :
+
+- https://medium.com/swlh/dark-mode-using-css-variables-cf065a7fa133
+- https://dev.to/lindaojo/dark-mode-using-css-variables-vue-js-37il
+- https://www.instagram.com/p/CLHZVdeAYyR/
+
+2. Gradient, reference :
+
+- https://codepen.io/taylorvowell/pen/BkxbC
+
+3. Setups :
+
+- Pug = https://dev.to/reiallenramos/vue-pug-and-scss-27pl
+- SCSS = https://www.npmjs.com/package/global-ui
+- Icomoon = https://www.npmjs.com/package/global-ui
