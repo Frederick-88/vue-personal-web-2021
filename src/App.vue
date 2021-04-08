@@ -9,6 +9,8 @@
 </template>
 
 <style lang="scss">
+@import "@/assets/icomoon/style.scss"; // import at parent of all components for global usage
+
 body {
   margin: 0;
   padding: 0;

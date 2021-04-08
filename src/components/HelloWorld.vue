@@ -1,11 +1,8 @@
 <template lang="pug">
-  //- <div>
-  //-   <div class="wallpaper" :style="backgroundImage" />
-  //-   <h3>test</h3>
-  //- </div>
   section
     div.wallpaper(:style="backgroundImage")
     h3 test
+    i.icon-home
 </template>
 
 <script>
@@ -33,5 +30,9 @@ export default {
   background-size: cover;
   width: 100%;
   height: 100vh;
+}
+
+.icon-home {
+  color: $blue;
 }
 </style>
