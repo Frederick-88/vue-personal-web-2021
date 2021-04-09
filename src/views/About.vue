@@ -1,32 +1,41 @@
 <template>
   <div class="example">
     <h1>This is an about page</h1>
-    <p>{{ theme }}</p>
+    <p>{{ webTheme }}</p>
 
     <button @click="toggleTheme" aria-label="Toggle themes">
-      <span v-if="this.theme == 'darkMode'"> Light</span>
+      <span v-if="this.webTheme == 'darkMode'"> Light</span>
       <span v-else> Dark</span>
     </button>
   </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex";
+
 export default {
-  data() {
-    return {
-      theme: "",
-    };
+  computed: {
+    ...mapState(["webTheme"]),
   },
   methods: {
+    ...mapMutations(["setWebTheme"]),
     toggleTheme() {
-      this.theme = this.theme === "darkMode" ? "" : "darkMode";
-      document.documentElement.setAttribute("data-theme", this.theme);
-      localStorage.setItem("theme", this.theme);
+      if (this.webTheme === "darkMode") {
+        this.setWebTheme("");
+      } else {
+        this.setWebTheme("darkMode");
+      }
+      document.documentElement.setAttribute("data-theme", this.webTheme);
+      localStorage.setItem("theme", this.webTheme);
     },
   },
   mounted() {
     let localTheme = localStorage.getItem("theme");
-    this.theme = !localTheme ? "" : "darkMode";
+    if (!localTheme) {
+      this.setWebTheme("");
+    } else {
+      this.setWebTheme("darkMode");
+    }
     // documentElement select the root tag of our html which is <html/>
     document.documentElement.setAttribute("data-theme", localTheme);
   },
