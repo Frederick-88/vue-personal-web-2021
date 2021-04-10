@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    webTheme: "darkMode",
+    webTheme: "",
   },
   mutations: {
     setWebTheme(state, value) {

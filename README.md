@@ -26,12 +26,17 @@ content :
 - https://dev.to/lindaojo/dark-mode-using-css-variables-vue-js-37il
 - https://www.instagram.com/p/CLHZVdeAYyR/
 
-2. Gradient, reference :
+2. Gradient & Color Palette, reference :
 
 - https://codepen.io/taylorvowell/pen/BkxbC
+- https://colorhunt.co/palettes/dark
 
 3. Setups :
 
 - Pug = https://dev.to/reiallenramos/vue-pug-and-scss-27pl
 - SCSS = https://www.npmjs.com/package/global-ui
 - Icomoon = https://www.npmjs.com/package/global-ui
+
+4. Design :
+
+- https://dribbble.com/shots/10077547/attachments/2093788?mode=media
