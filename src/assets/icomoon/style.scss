@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9wu0tg');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9wu0tg#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9wu0tg') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9wu0tg') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9wu0tg##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vgq8yp');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vgq8yp#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vgq8yp') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vgq8yp') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vgq8yp##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,56 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-sun-solid {
+  &:before {
+    content: $icon-sun-solid; 
+  }
+}
+.icon-sun-line {
+  &:before {
+    content: $icon-sun-line; 
+  }
+}
+.icon-moon-solid {
+  &:before {
+    content: $icon-moon-solid; 
+  }
+}
+.icon-moon-line {
+  &:before {
+    content: $icon-moon-line; 
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email; 
+  }
+}
+.icon-designer-background {
+  &:before {
+    content: $icon-designer-background; 
+  }
+}
+.icon-eye-slash {
+  &:before {
+    content: $icon-eye-slash; 
+  }
+}
+.icon-eye {
+  &:before {
+    content: $icon-eye; 
+  }
+}
+.icon-lightbulb {
+  &:before {
+    content: $icon-lightbulb; 
+  }
+}
+.icon-duplicate {
+  &:before {
+    content: $icon-duplicate; 
+  }
+}
 .icon-home {
   &:before {
     content: $icon-home; 
@@ -37,24 +87,19 @@
     content: $icon-notification-bell; 
   }
 }
-.icon-bx-search {
+.icon-search {
   &:before {
-    content: $icon-bx-search; 
+    content: $icon-search; 
   }
 }
-.icon-messenger {
+.icon-calendar {
   &:before {
-    content: $icon-messenger; 
+    content: $icon-calendar; 
   }
 }
-.icon-schedule {
+.icon-whatsapp {
   &:before {
-    content: $icon-schedule; 
-  }
-}
-.icon-whatsapp1 {
-  &:before {
-    content: $icon-whatsapp1; 
+    content: $icon-whatsapp; 
   }
 }
 .icon-checkmark {
@@ -87,9 +132,9 @@
     content: $icon-arrow-up; 
   }
 }
-.icon-duration {
+.icon-time {
   &:before {
-    content: $icon-duration; 
+    content: $icon-time; 
   }
 }
 .icon-favorite-line {
@@ -122,14 +167,9 @@
     content: $icon-instagram; 
   }
 }
-.icon-folder-line-2 {
+.icon-folder-line {
   &:before {
-    content: $icon-folder-line-2; 
-  }
-}
-.icon-pinterest {
-  &:before {
-    content: $icon-pinterest; 
+    content: $icon-folder-line; 
   }
 }
 .icon-replay {
@@ -152,11 +192,6 @@
     content: $icon-star; 
   }
 }
-.icon-star-full {
-  &:before {
-    content: $icon-star-full; 
-  }
-}
 .icon-thumbs-up {
   &:before {
     content: $icon-thumbs-up; 
@@ -167,59 +202,24 @@
     content: $icon-tick-circle; 
   }
 }
-.icon-check_circle {
-  &:before {
-    content: $icon-check_circle; 
-  }
-}
 .icon-twitter {
   &:before {
     content: $icon-twitter; 
   }
 }
-.icon-whatsapp {
+.icon-github {
   &:before {
-    content: $icon-whatsapp; 
+    content: $icon-github; 
   }
 }
-.icon-youtube {
+.icon-linkedin-solid {
   &:before {
-    content: $icon-youtube; 
+    content: $icon-linkedin-solid; 
   }
 }
-.icon-email-input {
+.icon-linkedin-line {
   &:before {
-    content: $icon-email-input; 
-  }
-}
-.icon-designer-background {
-  &:before {
-    content: $icon-designer-background; 
-  }
-}
-.icon-eye-slash {
-  &:before {
-    content: $icon-eye-slash; 
-  }
-}
-.icon-eye {
-  &:before {
-    content: $icon-eye; 
-  }
-}
-.icon-lightbulb {
-  &:before {
-    content: $icon-lightbulb; 
-  }
-}
-.icon-facebook {
-  &:before {
-    content: $icon-facebook; 
-  }
-}
-.icon-designer-duplicate {
-  &:before {
-    content: $icon-designer-duplicate; 
+    content: $icon-linkedin-line; 
   }
 }
 
