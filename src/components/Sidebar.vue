@@ -1,13 +1,12 @@
 <template lang="pug">
   aside
-      button.darkmode__toggle(@click="toggleTheme" aria-label="Toggle themes")
-        span(v-if="this.webTheme == 'darkMode'") Light
-        span(v-else) Dark
+      button.social-media__button.darkmode__toggle(@click="toggleTheme" aria-label="Toggle themes")
+        span.icon-sun-solid(v-if="this.webTheme == 'darkMode'") Light
+        span.icon-moon-solid(v-else) Dark
+      button.social-media__button.icon-email(type="button")
+      button.social-media__button.icon-linkedin-solid(type="button")
       button.social-media__button.icon-whatsapp(type="button")
-      button.social-media__button.icon-whatsapp(type="button")
-      button.social-media__button.icon-whatsapp(type="button")
-      button.social-media__button.icon-whatsapp(type="button")
-      button.social-media__button.icon-whatsapp(type="button")
+      button.social-media__button.icon-github(type="button")
       div.sidebar__line
 </template>
 
@@ -54,6 +53,6 @@ export default {
 .sidebar__line {
   height: 100px;
   margin-top: 20px;
-  border-right: 2px solid var(--text-color-secondary-notfocus);
+  border-right: 2px solid var(--sidebar-line);
 }
 </style>
