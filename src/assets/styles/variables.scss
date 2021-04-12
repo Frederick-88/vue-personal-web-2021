@@ -55,7 +55,7 @@ $lightGrey4: #cccccc;
 [data-theme="darkMode"] {
   /* Variables for dark mode */
   --background-color: #{$darkGrey1};
-  --text-color-primary: #{$white};
+  --text-color-primary: #{$lightGrey1};
   --text-color-secondary: #{$primary};
   --text-color-secondary-notfocus: #{$primaryNotFocus};
   --sidebar-line: #{$primaryNotFocus};
@@ -64,7 +64,7 @@ $lightGrey4: #cccccc;
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #{$darkGrey1};
-    --text-color-primary: #{$white};
+    --text-color-primary: #{$lightGrey1};
     --text-color-secondary: #{$primary};
     --text-color-secondary-notfocus: #{$primaryNotFocus};
     --sidebar-line: #{$primaryNotFocus};

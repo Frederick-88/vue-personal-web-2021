@@ -23,6 +23,7 @@ export default {
     text-decoration: none;
     margin-right: 30px;
     font-size: 0.875rem;
+    text-transform: uppercase;
 
     &.main-nav {
       color: var(--text-color-secondary);

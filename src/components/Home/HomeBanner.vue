@@ -4,8 +4,15 @@
       Navbar.navigation__bar
 
       div.home-banner__content
-        h3 test {{webTheme}}
-        i.icon-home
+        div.left-column
+          div.left-column__content
+            h3.title Chen
+            h3.title Frederick
+            p.subtitle Passionate Fullstack Developer who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
+            p.subtitle.cta-text Have a look in my CV below.
+
+        div.right-column
+          img.image(:src="require('@/assets/images/me.jpeg')" alt="me")
 
     Sidebar.sidebar
 </template>
@@ -92,7 +99,47 @@ export default {
   }
 }
 
-.icon-home {
-  color: $blue;
+.home-banner__content {
+  display: flex;
+  color: var(--text-color-primary);
+  margin-top: 50px;
+
+  .left-column {
+    flex: 60%;
+    padding: 30px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .right-column {
+    flex: 40%;
+    padding: 30px;
+    justify-content: center;
+    display: flex;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .left-column__content {
+    width: 550px;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    line-height: 1.7;
+
+    &.cta-text {
+      margin-top: 40px;
+    }
+  }
 }
 </style>
