@@ -12,13 +12,15 @@
             p.subtitle.cta-text Have a look in my CV below.
 
         div.right-column
-          img.image(:src="require('@/assets/images/me.jpeg')" alt="me")
+          GlobalAnimationLoader(:file="workingLaptopJson" :width="600")
 
     Sidebar.sidebar
 </template>
 
 <script>
 import { mapState, mapMutations } from "vuex";
+import JsonFile from "@/assets/json/man-work-with-laptop.json";
+import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
 
@@ -27,6 +29,12 @@ export default {
   components: {
     Navbar,
     Sidebar,
+    GlobalAnimationLoader,
+  },
+  data() {
+    return {
+      workingLaptopJson: JsonFile,
+    };
   },
   computed: {
     ...mapState(["webTheme"]),
