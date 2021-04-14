@@ -6,13 +6,21 @@
       div.home-banner__content
         div.left-column
           div.left-column__content
-            h3.title Chen
-            h3.title Frederick
-            p.subtitle Passionate Fullstack Developer who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
+            h3.title Hello!
+            h3.title I'm Chen Frederick
+            
+            p.subtitle 
+              | A Passionate 
+              span.typing__word-wrapper
+                p.typing__height-secure -
+                p#typing-word.word
+                p.typing__blink |
+                p.word.typing__height-secure Developer
+              | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
             p.subtitle.cta-text Have a look in my CV below.
 
         div.right-column
-          GlobalAnimationLoader(:file="workingLaptopJson" :width="600")
+          GlobalAnimationLoader(:file="workingLaptopJson")
 
     Sidebar.sidebar
 </template>
@@ -42,7 +50,7 @@ export default {
       // creating black/white overlay effect
       const darkBackground = {
         backgroundImage:
-          "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(" +
+          "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0.35) 100%), url(" +
           require("@/assets/images/wallpaper-dark.jpg") +
           ")",
       };
@@ -67,6 +75,45 @@ export default {
     }
     // documentElement select the root tag of our html which is <html/>
     document.documentElement.setAttribute("data-theme", localTheme);
+
+    // typing logic
+    const words = ["Fullstack", "Web", "Frontend"];
+    let wordQueueNumber = 0;
+
+    function typingEffect() {
+      let word = words[wordQueueNumber].split("");
+      var loopTyping = function() {
+        if (word.length > 0) {
+          document.getElementById("typing-word").innerHTML += word.shift();
+        } else {
+          setTimeout(deletingEffect, 3000);
+          return false;
+        }
+        setTimeout(loopTyping, 250);
+      };
+      loopTyping();
+    }
+    function deletingEffect() {
+      let word = words[wordQueueNumber].split("");
+      var loopDeleting = function() {
+        if (word.length > 0) {
+          word.pop();
+          document.getElementById("typing-word").innerHTML = word.join("");
+        } else {
+          if (words.length > wordQueueNumber + 1) {
+            wordQueueNumber++;
+          } else {
+            wordQueueNumber = 0;
+          }
+          typingEffect();
+          return false;
+        }
+        setTimeout(loopDeleting, 200);
+      };
+      loopDeleting();
+    }
+
+    typingEffect();
   },
 };
 </script>
@@ -102,38 +149,54 @@ export default {
   width: calc(100% - 100px);
 
   .navigation__bar {
-    padding: 40px 60px 0;
+    padding: 40px 130px 0;
     display: flex;
   }
 }
 
 .home-banner__content {
   display: flex;
+  flex-wrap: wrap;
   color: var(--text-color-primary);
-  margin-top: 50px;
+  margin: 50px 100px 0;
 
   .left-column {
-    flex: 60%;
+    flex: 55%;
+    width: 55%;
     padding: 30px;
-    justify-content: center;
-    display: flex;
-  }
-
-  .right-column {
-    flex: 40%;
-    padding: 30px;
-    justify-content: center;
     display: flex;
 
-    .image {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
+    .typing__blink {
+      animation: blink 0.5s infinite;
+    }
+    @keyframes blink {
+      to {
+        opacity: 0;
+      }
+    }
+
+    .typing__word-wrapper {
+      display: inline-flex;
+
+      .word {
+        font-weight: 700;
+      }
+    }
+
+    .typing__height-secure {
+      margin-right: 5px;
     }
   }
 
-  .left-column__content {
-    width: 550px;
+  .right-column {
+    flex: 45%;
+    width: 45%;
+    justify-content: center;
+    display: flex;
+
+    .animation-loader__image {
+      width: 100% !important;
+    }
   }
 
   .title {
@@ -144,6 +207,8 @@ export default {
   .subtitle {
     font-size: 1.125rem;
     line-height: 1.7;
+    max-width: 550px;
+    margin: 30px 0;
 
     &.cta-text {
       margin-top: 40px;

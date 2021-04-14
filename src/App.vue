@@ -4,6 +4,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    title: "Chen Frederick's -- Website",
+  },
+};
+</script>
+
 <style lang="scss">
 @import "@/assets/icomoon/style.scss"; // import at parent of all components for global usage
 
@@ -17,11 +25,16 @@ body {
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  p {
     margin: 0;
   }
 }
 #app {
   font-family: "Montserrat", sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 </style>
