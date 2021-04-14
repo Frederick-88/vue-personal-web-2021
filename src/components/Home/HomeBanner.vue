@@ -196,6 +196,8 @@ export default {
 
     .animation-loader__image {
       width: 100% !important;
+      max-width: 600px;
+      min-width: 500px;
     }
   }
 
