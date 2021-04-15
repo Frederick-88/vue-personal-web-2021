@@ -1,24 +1,32 @@
 ## vue-personal-web-2021
 
-### Features :
-
-1. Dark Mode
-
-2. Note :
-   have landing page with typing effect
-
-reference can be from images we have.
-
-prioritize broad view to get better impressions
-
-content :
-
-1. experience
-2. portofolios / projects
-3. skills
-4. contact
-
 ### References :
+
+- Sections :
+
+1. Profile
+2. My Portofolio - Recent Works
+
+- http://kos45.netlify.app/
+
+3. Experience - Awesome Journey, reference :
+
+- https://dribbble.com/shots/15097897-Personal-Portfolio-website/attachments/6829917?mode=media
+
+4. Skills - Specialization
+
+- https://dribbble.com/shots/14624614-Dreams-l-Landing-page-Design/attachments/6318025?mode=media
+
+5. My Intro - About Me
+
+- https://dribbble.com/shots/10735824-Hardy-Personal-Portfolio-UI/attachments/2403413?mode=media
+
+6. Let's get connected & ending
+
+- https://dribbble.com/shots/7662998/attachments/412970?mode=media
+- https://dribbble.com/shots/11172881-Website-Redesign-for-a-Freelance-Marketer-UX-UI-Designer
+
+---
 
 1. Dark Mode, reference :
 
@@ -41,3 +49,8 @@ content :
 
 - https://dribbble.com/search/personal%20web
 - https://dribbble.com/shots/10077547/attachments/2093788?mode=media
+
+5. Carousel :
+
+- https://www.npmjs.com/package/vue-agile
+- https://www.npmjs.com/package/vue-slick-carousel
