@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.home-banner(:style="backgroundImage")    
+  section.home-banner(:style="backgroundImage")   
     div.home-banner__container
       Navbar.navigation__bar
 
@@ -17,7 +17,17 @@
                 p.typing__blink |
                 p.word.typing__height-secure Developer
               | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
-            p.subtitle.cta-text Have a look in my CV below.
+            
+            button.home-banner__button(
+              type="button" 
+              title="Download CV"
+              :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
+            ) Download My CV
+            button.home-banner__button(
+              type="button" 
+              title="See My Works"
+              :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
+            ) My Works
 
         div.right-column
           GlobalAnimationLoader(:file="workingLaptopJson")
@@ -211,9 +221,33 @@ export default {
     line-height: 1.7;
     max-width: 550px;
     margin: 30px 0;
+  }
+}
 
-    &.cta-text {
-      margin-top: 40px;
+.home-banner__button {
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 14px 30px;
+  background: transparent;
+  border: 1px solid var(--button-background);
+  color: var(--button-background);
+  text-transform: uppercase;
+  border-radius: 4px;
+  outline: 0;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: background 0.3s, color 0.3s;
+
+  &.--light {
+    &:hover {
+      background: var(--button-hover-bg);
+      color: var(--button-text);
+    }
+  }
+
+  &.--dark {
+    &:hover {
+      color: var(--button-hover-bg);
     }
   }
 }
