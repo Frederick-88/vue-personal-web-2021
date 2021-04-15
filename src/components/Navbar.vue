@@ -3,10 +3,10 @@
       div
         router-link.nav__item.main-nav(to="/") CHENFREDERICK.COM
         hr.nav__line
+      router-link.nav__item(to="/about") My Intro
       router-link.nav__item(to="/about") Works
       router-link.nav__item(to="/about") Experience
       router-link.nav__item(to="/about") Skills
-      router-link.nav__item(to="/about") Contact
 </template>
 
 <script>
