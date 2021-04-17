@@ -52,5 +52,4 @@
 
 5. Carousel :
 
-- https://www.npmjs.com/package/vue-agile
 - https://www.npmjs.com/package/vue-slick-carousel
