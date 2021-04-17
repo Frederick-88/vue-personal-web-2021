@@ -1,52 +1,42 @@
 <template lang="pug">
-  section.home-banner(:style="backgroundImage")   
-    div.home-banner__container
-      Navbar.navigation__bar
+  section.home-banner__content
+    div.left-column
+      div.left-column__content
+        h3.title Hello!
+        h3.title I'm Chen Frederick
+        
+        p.subtitle 
+          | A Passionate 
+          span.typing__word-wrapper
+            p.typing__height-secure -
+            p#typing-word.word
+            p.typing__blink |
+            p.word.typing__height-secure Developer
+          | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
+        
+        button.home-banner__button(
+          type="button" 
+          title="Download CV"
+          :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
+        ) Download My CV
+        button.home-banner__button(
+          type="button" 
+          title="See My Works"
+          :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
+        ) My Works
 
-      div.home-banner__content
-        div.left-column
-          div.left-column__content
-            h3.title Hello!
-            h3.title I'm Chen Frederick
-            
-            p.subtitle 
-              | A Passionate 
-              span.typing__word-wrapper
-                p.typing__height-secure -
-                p#typing-word.word
-                p.typing__blink |
-                p.word.typing__height-secure Developer
-              | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
-            
-            button.home-banner__button(
-              type="button" 
-              title="Download CV"
-              :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
-            ) Download My CV
-            button.home-banner__button(
-              type="button" 
-              title="See My Works"
-              :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
-            ) My Works
-
-        div.right-column
-          GlobalAnimationLoader(:file="workingLaptopJson")
-
-    Sidebar.sidebar
+    div.right-column
+      GlobalAnimationLoader(:file="workingLaptopJson")
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState } from "vuex";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
-import Navbar from "../Navbar";
-import Sidebar from "../Sidebar";
 
 export default {
-  name: "HelloWorld",
+  name: "HomeBanner",
   components: {
-    Navbar,
-    Sidebar,
     GlobalAnimationLoader,
   },
   data() {
@@ -56,36 +46,8 @@ export default {
   },
   computed: {
     ...mapState(["webTheme"]),
-    backgroundImage() {
-      // creating black/white overlay effect
-      const darkBackground = {
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0.35) 100%), url(" +
-          require("@/assets/images/wallpaper-dark.jpg") +
-          ")",
-      };
-      const lightBackground = {
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0.65) 100%), url(" +
-          require("@/assets/images/wallpaper-white.jpg") +
-          ")",
-      };
-      return this.webTheme === "darkMode" ? darkBackground : lightBackground;
-    },
-  },
-  methods: {
-    ...mapMutations(["setWebTheme"]),
   },
   mounted() {
-    let localTheme = localStorage.getItem("theme");
-    if (!localTheme) {
-      this.setWebTheme("");
-    } else {
-      this.setWebTheme("darkMode");
-    }
-    // documentElement select the root tag of our html which is <html/>
-    document.documentElement.setAttribute("data-theme", localTheme);
-
     // typing logic
     const words = ["Fullstack", "Web", "Frontend"];
     let wordQueueNumber = 0;
@@ -129,41 +91,6 @@ export default {
 </script>
 
 <style lang="scss">
-.home-banner {
-  background-attachment: static;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    position: fixed;
-    height: 100%;
-    z-index: 10;
-    padding: 40px 15px 0;
-    width: 100px;
-    right: 0;
-  }
-}
-
-.home-banner__container {
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  width: calc(100% - 100px);
-
-  .navigation__bar {
-    padding: 40px 130px 0;
-    display: flex;
-  }
-}
-
 .home-banner__content {
   display: flex;
   flex-wrap: wrap;
@@ -219,7 +146,7 @@ export default {
   .subtitle {
     font-size: 1.125rem;
     line-height: 1.7;
-    max-width: 550px;
+    max-width: 555px;
     margin: 30px 0;
   }
 }
