@@ -12,6 +12,10 @@ import { mapState, mapMutations } from "vuex";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
+// vue-slick-carousel imports
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
 export default {
   metaInfo: {
     title: "Chen Frederick's -- Website",
@@ -62,6 +66,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--background-color);
 
   h1,
   h2,
