@@ -1,8 +1,8 @@
 <template lang="pug">
   aside
-      button.social-media__button.darkmode__toggle(@click="toggleTheme" aria-label="Toggle themes")
-        span.icon-sun-solid(v-if="this.webTheme == 'darkMode'") Light
-        span.icon-moon-solid(v-else) Dark
+      button.darkmode__toggle(@click="toggleTheme" aria-label="Toggle themes")
+        span.icon-sun-solid(v-if="this.webTheme == 'darkMode'")
+        span.icon-moon-solid(v-else)
       button.social-media__button.icon-email(type="button")
       button.social-media__button.icon-linkedin-solid(type="button")
       button.social-media__button.icon-whatsapp(type="button")
@@ -47,6 +47,42 @@ export default {
 
   &:hover {
     color: var(--text-color-secondary);
+  }
+}
+
+.darkmode__toggle {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 80px;
+  height: 32px;
+  border: 2px solid var(--text-color-secondary-notfocus);
+  color: var(--text-color-secondary-notfocus);
+  padding: 0;
+  outline: 0;
+  background: none;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.2s, border 0.2s;
+
+  &:hover {
+    border-color: var(--text-color-secondary);
+    color: var(--text-color-secondary);
+  }
+
+  span {
+    transition: transform 0.75s;
+  }
+
+  .icon-sun-solid {
+    font-size: 1.25rem;
+    transform: translateX(-15px);
+  }
+
+  .icon-moon-solid {
+    font-size: 1.125rem;
+    transform: translateX(15px);
   }
 }
 
