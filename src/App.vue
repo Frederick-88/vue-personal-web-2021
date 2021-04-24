@@ -77,6 +77,22 @@ body {
   p {
     margin: 0;
   }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar {
+    border-radius: 4px;
+    width: 6px;
+    background-color: var(--background-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--text-color-secondary);
+  }
 }
 #app {
   font-family: "Montserrat", sans-serif;
