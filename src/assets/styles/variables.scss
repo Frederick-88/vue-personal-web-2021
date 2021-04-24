@@ -45,7 +45,8 @@ $lightGrey4: #cccccc;
 // --- Dark Mode Settings
 :root {
   /* Variables for default theme (light-mode) */
-  --darkWhite: #{$black};
+  --dark-white: #{$black};
+  --white-dark: #{$white};
   --background-color: #{$lightGrey2};
   --text-color-primary: #{$darkGrey1};
   --text-color-secondary: #{$darkGrey1};
@@ -58,7 +59,8 @@ $lightGrey4: #cccccc;
 
 [data-theme="darkMode"] {
   /* Variables for dark mode */
-  --darkWhite: #{$white};
+  --dark-white: #{$white};
+  --white-dark: #{$black};
   --background-color: #{$black};
   --text-color-primary: #{$lightGrey1};
   --text-color-secondary: #{$primary};
@@ -71,7 +73,8 @@ $lightGrey4: #cccccc;
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --darkWhite: #{$white};
+    --dark-white: #{$white};
+    --white-dark: #{$black};
     --background-color: #{$black};
     --text-color-primary: #{$lightGrey1};
     --text-color-secondary: #{$primary};

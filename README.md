@@ -11,7 +11,8 @@
 
 3. Experience - Awesome Journey, reference :
 
-- https://dribbble.com/shots/15097897-Personal-Portfolio-website/attachments/6829917?mode=media
+- https://dribbble.com/shots/11235233-Personal-Website
+- Carousel Presentation Structure = https://dribbble.com/shots/14943796-Personal-portfolio-website
 
 4. Skills - Specialization
 

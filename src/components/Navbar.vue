@@ -1,7 +1,7 @@
 <template lang="pug">
   section.navigation__bar
       div
-        router-link.nav__item.main-nav(to="/") CHENFREDERICK.COM
+        router-link.nav__item.main-nav(to="/") CHENFREDERICK.ASIA
         hr.nav__line
       router-link.nav__item(to="/about") My Intro
       router-link.nav__item(to="/about") Works
