@@ -14,18 +14,18 @@
 - https://dribbble.com/shots/11235233-Personal-Website
 - Carousel Presentation Structure = https://dribbble.com/shots/14943796-Personal-portfolio-website
 
-4. Skills - Specialization
-
-- https://dribbble.com/shots/14624614-Dreams-l-Landing-page-Design/attachments/6318025?mode=media
-
-5. My Intro - About Me
+4. My Intro - About Me
 
 - https://dribbble.com/shots/10735824-Hardy-Personal-Portfolio-UI/attachments/2403413?mode=media
+
+5. Skills - Specialization
+
+- https://dribbble.com/shots/14624614-Dreams-l-Landing-page-Design/attachments/6318025?mode=media
 
 6. Let's get connected & ending
 
 - https://dribbble.com/shots/7662998/attachments/412970?mode=media
-- https://dribbble.com/shots/11172881-Website-Redesign-for-a-Freelance-Marketer-UX-UI-Designer
+- https://dribbble.com/shots/11172881-Website-Redesign-for-a-Freelance-Marketer-UX-UI-Designer/attachments/2776907?mode=media
 
 ---
 
