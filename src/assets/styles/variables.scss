@@ -1,25 +1,5 @@
 $icomoon-font-path: "~@/assets/icomoon/fonts";
 
-// light
-$white: #ffffff;
-$lightGrey1: #d1d1d1;
-$lightGrey2: #e2e2e2;
-$lightGrey3: #f6f6f6;
-$lightGrey4: #c9ced6;
-$lightGrey5: #a6aebc;
-$lightGrey6: #bdbdbd;
-$lightGrey7: #f2f2f2;
-$lightGrey8: #fcfcfd;
-$grey: #8a94a6;
-$disabledGrey: #e1e4e8;
-
-// // dark
-// $black: #000000;
-// $darkGrey1: #0a1f44;
-// $darkGrey2: #141e30;
-// $darkGrey3: #243b55;
-// $darkGrey4: #182c4f;
-
 // blue
 $blue: #0072ff;
 
@@ -28,6 +8,7 @@ $disabledGrey: #e1e4e8;
 $primaryFocus: #11f3aa;
 $primary: #4ecca3;
 $primaryNotFocus: #2ba57d;
+$primarySolid: #23866b;
 
 // Dark Variables
 $black: #000000;
@@ -37,10 +18,12 @@ $darkGrey3: #4c4d50;
 
 // Light Variables
 $white: #ffffff;
+$grey: #8a94a6;
 $lightGrey1: #eeeeee;
 $lightGrey2: #f6f6f6;
 $lightGrey3: #fcfcfd;
 $lightGrey4: #cccccc;
+$disabledGrey: #e1e4e8;
 
 // --- Dark Mode Settings
 :root {
@@ -52,9 +35,12 @@ $lightGrey4: #cccccc;
   --text-color-secondary: #{$darkGrey1};
   --text-color-secondary-notfocus: #{$darkGrey3};
   --sidebar-line: #{$lightGrey4};
-  --button-background: #{$darkGrey1};
-  --button-hover-bg: #{$darkGrey1};
+  --button-outline-background: #{$darkGrey1};
+  --button-solid-background: #{$darkGrey1};
+  --button-outline-hover-bg: #{$darkGrey1};
   --button-text: #{$white};
+  --scroll-color: #{$darkGrey1};
+  --input-outline-color: #{$blue};
 }
 
 [data-theme="darkMode"] {
@@ -66,9 +52,12 @@ $lightGrey4: #cccccc;
   --text-color-secondary: #{$primary};
   --text-color-secondary-notfocus: #{$primaryNotFocus};
   --sidebar-line: #{$primaryNotFocus};
-  --button-background: #{$primary};
-  --button-hover-bg: #{$primaryNotFocus};
-  --button-text: #{$lightGrey1};
+  --button-outline-background: #{$primary};
+  --button-solid-background: #{$primarySolid};
+  --button-outline-hover-bg: #{$primaryNotFocus};
+  --button-text: #{$white};
+  --scroll-color: #{$primarySolid};
+  --input-outline-color: #{$primary};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,8 +69,11 @@ $lightGrey4: #cccccc;
     --text-color-secondary: #{$primary};
     --text-color-secondary-notfocus: #{$primaryNotFocus};
     --sidebar-line: #{$primaryNotFocus};
-    --button-background: #{$primary};
-    --button-hover-bg: #{$primaryNotFocus};
-    --button-text: #{$lightGrey1};
+    --button-outline-background: #{$primary};
+    --button-solid-background: #{$primarySolid};
+    --button-outline-hover-bg: #{$primaryNotFocus};
+    --button-text: #{$white};
+    --scroll-color: #{$primarySolid};
+    --input-outline-color: #{$primary};
   }
 }
