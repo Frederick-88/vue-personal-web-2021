@@ -156,25 +156,26 @@ export default {
   font-weight: 600;
   padding: 14px 30px;
   background: transparent;
-  border: 1px solid var(--button-background);
-  color: var(--button-background);
+  border: 1px solid var(--button-outline-background);
+  color: var(--button-outline-background);
   text-transform: uppercase;
   border-radius: 4px;
   outline: 0;
   cursor: pointer;
   margin-right: 15px;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
 
   &.--light {
     &:hover {
-      background: var(--button-hover-bg);
+      background: var(--button-outline-hover-bg);
       color: var(--button-text);
     }
   }
 
   &.--dark {
     &:hover {
-      color: var(--button-hover-bg);
+      color: var(--button-outline-hover-bg);
+      border-color: var(--button-outline-hover-bg);
     }
   }
 }
