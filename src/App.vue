@@ -91,7 +91,7 @@ body {
 
   &::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: var(--text-color-secondary);
+    background-color: var(--scroll-color);
   }
 }
 #app {
@@ -99,6 +99,7 @@ body {
 
   * {
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
   }
 
   .main-section {
