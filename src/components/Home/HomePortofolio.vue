@@ -15,53 +15,64 @@
               h2.title {{portofolio.title}}
               p.subtitle {{portofolio.description}}
               button.button(type="button") See More
+
+    GlobalBaseDialog(
+      :is-show="true"
+      :is-primary="true"
+    )
+      p content here
 </template>
 
 <script>
+import GlobalBaseDialog from "@/utilities/GlobalBaseDialog/GlobalBaseDialog.vue";
+
 export default {
   name: "HomePortofolio",
+  components: {
+    GlobalBaseDialog,
+  },
   data() {
     return {
       portofolioList: [
         {
           title: "Weatherpedia (PWA)",
           subtitle: "Weatherpedia Description",
-          location: "@/assets/images/works/weatherpedia-pwa.png",
+          location: require("@/assets/images/works/weatherpedia-pwa.png"),
         },
         {
           title: "React E-Commerce",
           subtitle: "React E-Commerce Description",
-          location: "@/assets/images/works/react-e-commerce.png",
+          location: require("@/assets/images/works/react-e-commerce.png"),
         },
         {
           title: "Global CSS Framework",
           subtitle: "Description Here",
-          location: "@/assets/images/works/css-framework.png",
+          location: require("@/assets/images/works/css-framework.jpeg"),
         },
         {
           title: "Circle Messenger",
           subtitle: "Description Here",
-          location: "@/assets/images/works/circle-messenger.png",
+          location: require("@/assets/images/works/circle-messenger.png"),
         },
         {
           title: "ChenFrederick.com",
           subtitle: "Description Here",
-          location: "@/assets/images/works/personal-web.png",
+          location: require("@/assets/images/works/personal-web.png"),
         },
         {
           title: "AzurDrones by Vue",
           subtitle: "Description Here",
-          location: "@/assets/images/works/azurdrones.png",
+          location: require("@/assets/images/works/azurdrones.png"),
         },
         {
           title: "SmartLocal Gists Page",
           subtitle: "Description Here",
-          location: "@/assets/images/works/smartlocal.png",
+          location: require("@/assets/images/works/smartlocal.png"),
         },
         {
           title: "Weather Web App",
           subtitle: "Description Here",
-          location: "@/assets/images/works/weather-web.png",
+          location: require("@/assets/images/works/weather-web.png"),
         },
       ],
       settings: {
@@ -105,7 +116,7 @@ export default {
   methods: {
     backgroundImage(imageLocation) {
       const backgroundImageStyle = {
-        backgroundImage: "url(" + require(imageLocation) + ")",
+        backgroundImage: "url(" + imageLocation + ")",
       };
 
       return backgroundImageStyle;
@@ -165,6 +176,11 @@ export default {
     width: 90%;
   }
 
+  .portofolio__card-lists {
+    border: 0;
+    outline: 0;
+  }
+
   .card-list {
     position: relative;
     padding: 30px;
@@ -222,8 +238,8 @@ export default {
 
     .button {
       padding: 10px;
-      color: var(--button-text);
-      background: var(--button-solid-background);
+      color: var(--button-text-2);
+      background: var(--button-solid-background-2);
       transition: background 0.2s, color 0.2s;
       border-radius: 4px;
       cursor: pointer;
@@ -231,8 +247,8 @@ export default {
       border: 0;
 
       &:hover {
-        background: var(--button-text);
-        color: var(--button-solid-background);
+        background: var(--button-text-2);
+        color: var(--button-solid-background-2);
       }
     }
   }

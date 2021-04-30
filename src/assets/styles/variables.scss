@@ -15,6 +15,7 @@ $black: #000000;
 $darkGrey1: #222831;
 $darkGrey2: #393e46;
 $darkGrey3: #4c4d50;
+$darkGrey4: #182c4f;
 
 // Light Variables
 $white: #ffffff;
@@ -37,8 +38,10 @@ $disabledGrey: #e1e4e8;
   --sidebar-line: #{$lightGrey4};
   --button-outline-background: #{$darkGrey1};
   --button-solid-background: #{$darkGrey1};
+  --button-solid-background-2: #{$white};
   --button-outline-hover-bg: #{$darkGrey1};
   --button-text: #{$white};
+  --button-text-2: #{$darkGrey1};
   --scroll-color: #{$darkGrey1};
   --input-outline-color: #{$blue};
 }
@@ -54,8 +57,10 @@ $disabledGrey: #e1e4e8;
   --sidebar-line: #{$primaryNotFocus};
   --button-outline-background: #{$primary};
   --button-solid-background: #{$primarySolid};
+  --button-solid-background-2: #{$primarySolid};
   --button-outline-hover-bg: #{$primaryNotFocus};
   --button-text: #{$white};
+  --button-text-2: #{$white};
   --scroll-color: #{$primarySolid};
   --input-outline-color: #{$primary};
 }
@@ -71,8 +76,10 @@ $disabledGrey: #e1e4e8;
     --sidebar-line: #{$primaryNotFocus};
     --button-outline-background: #{$primary};
     --button-solid-background: #{$primarySolid};
+    --button-solid-background-2: #{$primarySolid};
     --button-outline-hover-bg: #{$primaryNotFocus};
     --button-text: #{$white};
+    --button-text-2: #{$white};
     --scroll-color: #{$primarySolid};
     --input-outline-color: #{$primary};
   }

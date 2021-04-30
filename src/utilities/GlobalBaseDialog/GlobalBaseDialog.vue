@@ -11,11 +11,7 @@
       <i
         class="icon global-dialog-modal__icon"
         :class="{
-          'icon-info-line': isPrimary,
-          'icon-checkmark-outline': isSuccess,
-          'icon-warning': isDanger || isWarning,
-          'is-danger': isDanger,
-          'is-warning': isWarning,
+          'icon-information-solid': isPrimary,
         }"
       ></i>
 
@@ -27,25 +23,24 @@
       <slot></slot>
 
       <div v-if="!noButton" class="global-dialog-modal__buttons">
-        <GlobalButton
-          :is-danger="isDanger"
-          :is-warning="isWarning"
-          :is-success="isSuccess"
+        <button
+          class="global-button"
           :is-tall="true"
-          :is-primary="!isDanger && !isWarning && !isSuccess"
+          :is-primary="true"
           @click="$emit('confirm')"
         >
           {{ button1Text }}
-        </GlobalButton>
+        </button>
 
-        <GlobalButton
+        <button
+          class="global-button"
           v-if="!showOneButton"
           :is-outline="true"
           :is-tall="true"
           @click="$emit('close')"
         >
           {{ button2Text }}
-        </GlobalButton>
+        </button>
       </div>
     </div>
   </div>
@@ -72,27 +67,6 @@ export default {
      * and there will be information icon on top
      */
     isPrimary: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * The first button will be an warning button when set to true
-     */
-    isWarning: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * The first button will be a danger button when set to true
-     */
-    isDanger: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * The first button will be a success button when set to true
-     */
-    isSuccess: {
       type: Boolean,
       default: false,
     },
@@ -151,9 +125,6 @@ export default {
       const classList = [];
 
       if (this.isPrimary) classList.push("global-dialog-modal--primary");
-      if (this.isSuccess) classList.push("global-dialog-modal--success");
-      if (this.isDanger) classList.push("global-dialog-modal--danger");
-      if (this.isWarning) classList.push("global-dialog-modal--warning");
 
       return classList;
     },
@@ -210,22 +181,8 @@ export default {
     margin-top: -20px;
   }
 
-  &.icon-checkmark-outline {
-    border: solid 25px $success1;
-  }
-
-  &.icon-info-line {
-    border: solid 25px $primary1;
-  }
-
-  &.icon-warning {
-    &.is-danger {
-      border: solid 25px $danger1;
-    }
-
-    &.is-warning {
-      border: solid 25px $warning3;
-    }
+  &.icon-information-solid {
+    border: solid 25px var(--button-solid-background);
   }
 }
 
@@ -250,27 +207,12 @@ export default {
     0px 0px 1px rgba(10, 31, 68, 0.1);
   line-height: 1.4;
 
-  .global-dialog-modal--primary &,
-  .global-dialog-modal--success &,
-  .global-dialog-modal--danger &,
-  .global-dialog-modal--warning & {
+  .global-dialog-modal--primary & {
     border-top: 6px solid transparent;
   }
 
   .global-dialog-modal--primary & {
-    border-top-color: $primary1;
-  }
-
-  .global-dialog-modal--success & {
-    border-top-color: $success1;
-  }
-
-  .global-dialog-modal--danger & {
-    border-top-color: $danger1;
-  }
-
-  .global-dialog-modal--warning & {
-    border-top-color: $warning3;
+    border-top-color: var(--button-solid-background);
   }
 }
 
@@ -291,8 +233,29 @@ export default {
   margin: 20px auto 0;
 
   .global-button {
+    display: block;
+    margin: 10px;
+    font-size: 0.825rem;
+    padding: 15px 30px;
     margin: 0 10px;
     width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: box-shadow 0.2s cubic-bezier(0, 0, 0, 1),
+      color 0.2s cubic-bezier(0, 0, 0, 1),
+      background 0.2s cubic-bezier(0, 0, 0, 1);
+    background: var(--button-solid-background);
+    color: var(--button-text);
+    cursor: pointer;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+    outline: 0;
+    border: 0;
+
+    &:hover {
+      box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.15);
+      background: var(--button-text);
+      color: var(--button-solid-background);
+    }
   }
 }
 </style>
