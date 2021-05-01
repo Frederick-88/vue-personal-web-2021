@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vgq8yp');
-  src:  url('fonts/icomoon.eot?vgq8yp#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vgq8yp') format('truetype'),
-    url('fonts/icomoon.woff?vgq8yp') format('woff'),
-    url('fonts/icomoon.svg?vgq8yp#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?uxxgve');
+  src:  url('fonts/icomoon.eot?uxxgve#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?uxxgve') format('truetype'),
+    url('fonts/icomoon.woff?uxxgve') format('woff'),
+    url('fonts/icomoon.svg?uxxgve#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,63 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-language:before {
+  content: "\e904";
+}
+.icon-earth:before {
+  content: "\e909";
+}
+.icon-database:before {
+  content: "\e90a";
+}
+.icon-css:before {
+  content: "\e90b";
+}
+.icon-design:before {
+  content: "\e90c";
+}
+.icon-earth2:before {
+  content: "\e90e";
+}
+.icon-photoshop:before {
+  content: "\e90f";
+}
+.icon-mysql:before {
+  content: "\e910";
+}
+.icon-php:before {
+  content: "\e911";
+}
+.icon-node-js:before {
+  content: "\e913";
+}
+.icon-javascript:before {
+  content: "\e914";
+}
+.icon-mongodb:before {
+  content: "\e915";
+}
+.icon-cloudflare:before {
+  content: "\e916";
+}
+.icon-amazonaws:before {
+  content: "\e917";
+}
+.icon-bitbucket:before {
+  content: "\e919";
+}
+.icon-redux:before {
+  content: "\e91a";
+}
+.icon-react:before {
+  content: "\e91b";
+}
+.icon-nuxt:before {
+  content: "\e91d";
+}
+.icon-vue:before {
+  content: "\e91e";
+}
 .icon-sun-solid:before {
   content: "\e900";
 }
@@ -54,6 +111,30 @@
 }
 .icon-duplicate:before {
   content: "\e9b4";
+}
+.icon-responsive:before {
+  content: "\e958";
+}
+.icon-team:before {
+  content: "\e972";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-code:before {
+  content: "\ea80";
+}
+.icon-linux:before {
+  content: "\eabd";
 }
 .icon-home:before {
   content: "\e95b";

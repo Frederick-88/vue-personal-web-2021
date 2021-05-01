@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vgq8yp');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vgq8yp#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vgq8yp') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vgq8yp') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vgq8yp##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?uxxgve');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?uxxgve#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?uxxgve') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?uxxgve') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?uxxgve##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,101 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-language {
+  &:before {
+    content: $icon-language; 
+  }
+}
+.icon-earth {
+  &:before {
+    content: $icon-earth; 
+  }
+}
+.icon-database {
+  &:before {
+    content: $icon-database; 
+  }
+}
+.icon-css {
+  &:before {
+    content: $icon-css; 
+  }
+}
+.icon-design {
+  &:before {
+    content: $icon-design; 
+  }
+}
+.icon-earth2 {
+  &:before {
+    content: $icon-earth2; 
+  }
+}
+.icon-photoshop {
+  &:before {
+    content: $icon-photoshop; 
+  }
+}
+.icon-mysql {
+  &:before {
+    content: $icon-mysql; 
+  }
+}
+.icon-php {
+  &:before {
+    content: $icon-php; 
+  }
+}
+.icon-node-js {
+  &:before {
+    content: $icon-node-js; 
+  }
+}
+.icon-javascript {
+  &:before {
+    content: $icon-javascript; 
+  }
+}
+.icon-mongodb {
+  &:before {
+    content: $icon-mongodb; 
+  }
+}
+.icon-cloudflare {
+  &:before {
+    content: $icon-cloudflare; 
+  }
+}
+.icon-amazonaws {
+  &:before {
+    content: $icon-amazonaws; 
+  }
+}
+.icon-bitbucket {
+  &:before {
+    content: $icon-bitbucket; 
+  }
+}
+.icon-redux {
+  &:before {
+    content: $icon-redux; 
+  }
+}
+.icon-react {
+  &:before {
+    content: $icon-react; 
+  }
+}
+.icon-nuxt {
+  &:before {
+    content: $icon-nuxt; 
+  }
+}
+.icon-vue {
+  &:before {
+    content: $icon-vue; 
+  }
+}
 .icon-sun-solid {
   &:before {
     content: $icon-sun-solid; 
@@ -75,6 +170,46 @@
 .icon-duplicate {
   &:before {
     content: $icon-duplicate; 
+  }
+}
+.icon-responsive {
+  &:before {
+    content: $icon-responsive; 
+  }
+}
+.icon-team {
+  &:before {
+    content: $icon-team; 
+  }
+}
+.icon-circle-up {
+  &:before {
+    content: $icon-circle-up; 
+  }
+}
+.icon-circle-right {
+  &:before {
+    content: $icon-circle-right; 
+  }
+}
+.icon-circle-down {
+  &:before {
+    content: $icon-circle-down; 
+  }
+}
+.icon-circle-left {
+  &:before {
+    content: $icon-circle-left; 
+  }
+}
+.icon-code {
+  &:before {
+    content: $icon-code; 
+  }
+}
+.icon-linux {
+  &:before {
+    content: $icon-linux; 
   }
 }
 .icon-home {

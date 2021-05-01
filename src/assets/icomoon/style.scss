@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?uxxgve');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?uxxgve#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?uxxgve') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?uxxgve') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?uxxgve##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?pibumj');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?pibumj#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?pibumj') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?pibumj') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?pibumj##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-right {
+  &:before {
+    content: $icon-chevron-right; 
+  }
+}
+.icon-chevron-up {
+  &:before {
+    content: $icon-chevron-up; 
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content: $icon-chevron-left; 
+  }
+}
+.icon-chevron-down {
+  &:before {
+    content: $icon-chevron-down; 
+  }
+}
 .icon-language {
   &:before {
     content: $icon-language; 
@@ -182,26 +202,6 @@
     content: $icon-team; 
   }
 }
-.icon-circle-up {
-  &:before {
-    content: $icon-circle-up; 
-  }
-}
-.icon-circle-right {
-  &:before {
-    content: $icon-circle-right; 
-  }
-}
-.icon-circle-down {
-  &:before {
-    content: $icon-circle-down; 
-  }
-}
-.icon-circle-left {
-  &:before {
-    content: $icon-circle-left; 
-  }
-}
 .icon-code {
   &:before {
     content: $icon-code; 
@@ -210,6 +210,11 @@
 .icon-linux {
   &:before {
     content: $icon-linux; 
+  }
+}
+.icon-information-solid {
+  &:before {
+    content: $icon-information-solid; 
   }
 }
 .icon-home {
@@ -290,11 +295,6 @@
 .icon-help {
   &:before {
     content: $icon-help; 
-  }
-}
-.icon-information-solid {
-  &:before {
-    content: $icon-information-solid; 
   }
 }
 .icon-instagram {
