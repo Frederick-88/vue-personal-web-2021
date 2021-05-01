@@ -3,8 +3,8 @@
     h4.header-title My Skills - Services
     div.skills-carousel__container
       div.carousel-arrow__buttons
-        i.carousel-arrow.icon-arrow-left(@click="showPrev")
-        i.carousel-arrow.icon-arrow-right(@click="showNext")
+        i.carousel-arrow.icon-chevron-left(@click="showPrev")
+        i.carousel-arrow.icon-chevron-right(@click="showNext")
       VueSlickCarousel.skills-carousel(v-bind="settings" ref="carousel")
         div.skills__card-lists(v-for="skill in SkillLists")
           div.card-list
