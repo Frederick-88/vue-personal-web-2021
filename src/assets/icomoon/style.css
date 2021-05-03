@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?pibumj');
-  src:  url('fonts/icomoon.eot?pibumj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?pibumj') format('truetype'),
-    url('fonts/icomoon.woff?pibumj') format('woff'),
-    url('fonts/icomoon.svg?pibumj#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?entm41');
+  src:  url('fonts/icomoon.eot?entm41#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?entm41') format('truetype'),
+    url('fonts/icomoon.woff?entm41') format('woff'),
+    url('fonts/icomoon.svg?entm41#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-sport:before {
+  content: "\e929";
+}
 .icon-chevron-right:before {
   content: "\e90d";
 }
@@ -139,6 +142,9 @@
 .icon-information-solid:before {
   content: "\ea0c";
 }
+.icon-user:before {
+  content: "\e971";
+}
 .icon-home:before {
   content: "\e95b";
 }
@@ -222,4 +228,16 @@
 }
 .icon-linkedin-line:before {
   content: "\eaca";
+}
+.icon-music:before {
+  content: "\e924";
+}
+.icon-film:before {
+  content: "\e927";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-travel:before {
+  content: "\e9af";
 }
