@@ -69,7 +69,7 @@ export default {
   position: absolute;
   top: -12px;
   left: 90px;
-  border-bottom: solid 15px transparent !important;
+  border-bottom: solid 10px transparent !important;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 

@@ -4,7 +4,7 @@
     HomePortofolio
     HomeExperience
     HomeSkills
-    //- HomeAbout
+    HomeAbout
     HomeConnection
 </template>
 
