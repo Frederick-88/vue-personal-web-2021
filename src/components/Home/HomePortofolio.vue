@@ -30,17 +30,29 @@
             v-bind="verticalSettings" 
             ref="verticalCarousel"
           )
-            div.image-wrapper(v-for="num in 4" :key="num")
-              img.image(:src="activePortofolio.thumbnail")
+            div.image-wrapper(v-for="(preview, index) in activePortofolio.previews" :key="index")
+              img.image(:src="preview")
 
         div.column--middle
 
         div.column.column--right
           h2.title {{activePortofolio.title}}
           p.subtitle {{activePortofolio.description}}
+          div.tools-section
+            p.tools-title Leveraged Skills: 
+            div.tools-lists
+              span.tool-text(v-for="(skill, index) in activePortofolio.skills" :key="index") {{skill}}
           div(v-if="activePortofolio.website")
             a.button.button--dark(:href="activePortofolio.website" target="blank") 
               | Visit Website
+              i.icon-earth2
+              
+          div(v-if="activePortofolio.npmWebsite")
+            a.button.button--dark(
+              :href="activePortofolio.npmWebsite" 
+              target="blank"
+            ) 
+              | Visit NPM Package
               i.icon-earth2
 </template>
 
@@ -58,34 +70,100 @@ export default {
       activePortofolio: {},
       portofolioList: [
         {
-          title: "Weatherpedia (PWA)",
+          title: "SmartLocal Gists Page",
           description:
-            "Weatherpedia provides weather informations in Singapore ( by default ) with PWA development-model ( Progresive Web App ). With this, user can download the web into a mobile app for a very small size of 332 kb. then user also can search other city to seek their weather information at here.",
-          thumbnail: require("@/assets/images/works/weatherpedia-pwa.png"),
-          website: "https://weatherpedia.netlify.app/",
+            "This is 1 of the test from a company based on Singapore. With a github opensource api given (https://api.github.com/gists/public),then creatively display it to users. Here, user can see any topic of github gists, search based on github usernames, favourite gists, look through gists author, etc.",
+          thumbnail: require("@/assets/images/works/smartlocal1.png"),
+          website: "https://github-gists.netlify.app/",
+          previews: [
+            require("@/assets/images/works/smartlocal1.png"),
+            require("@/assets/images/works/smartlocal2.png"),
+            require("@/assets/images/works/smartlocal3.png"),
+            require("@/assets/images/works/smartlocal4.png"),
+          ],
+          skills: [
+            "ReactJS",
+            "Local Storage",
+            "REST API",
+            "Font Awesome",
+            "React Toastify",
+          ],
         },
         {
-          title: "React E-Commerce",
+          title: "Weatherpedia (PWA)",
           description:
-            "Full Version of ReactJS & Redux E-Commerce made by Fullstack Development (Frontend, Backend until Deployment), Inspiration based on Best Seller E-Commerce app in theme forest (PickBazar). When user register & stored data to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
-          thumbnail: require("@/assets/images/works/react-e-commerce.png"),
-          website: "https://s2-boutique.netlify.app/",
+            "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the web into a mobile app for a very small size of 332 kb. then user also can search other city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
+          thumbnail: require("@/assets/images/works/weatherpedia-pwa1.png"),
+          website: "https://weatherpedia.netlify.app/",
+          previews: [
+            require("@/assets/images/works/weatherpedia-pwa1.png"),
+            require("@/assets/images/works/weatherpedia-pwa2.png"),
+          ],
+          skills: [
+            "ReactJS",
+            "Progressive Web App (PWA)",
+            "REST API",
+            "Responsive Web App",
+          ],
         },
+        // {
+        //   title: "React E-Commerce",
+        //   description:
+        //     "Full Version of ReactJS & Redux E-Commerce made by Fullstack Development (Frontend, Backend until Deployment), Inspiration based on Best Seller E-Commerce app in theme forest (PickBazar). When user register & stored data to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
+        //   thumbnail: require("@/assets/images/works/react-ecommerce1.png"),
+        //   website: "https://s2-boutique.netlify.app/",
+        //   previews: [
+        //     require("@/assets/images/works/react-ecommerce1.png"),
+        //     require("@/assets/images/works/react-ecommerce2.png"),
+        //   ],
+        //   skills: [
+
+        //    ]
+        // },
         {
           title: "Global CSS Framework",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo donec enim diam vulputate ut pharetra sit amet. Sit amet volutpat consequat mauris nunc congue nisi vitae. Malesuada pellentesque elit eget gravida. Viverra ipsum nunc aliquet bibendum enim facilisis gravida.",
-          thumbnail: require("@/assets/images/works/css-framework.jpeg"),
+            "A CSS Framework & Components Library that is created with Vue.js. Support the usage for Vue.js or Nuxt.js developers. 1 of my best works so far, a system example for agencies that want to have consistent components / UI. Efficient for future changes & a great tool for teamwork culture.",
+          thumbnail: require("@/assets/images/works/css-framework1.png"),
           website: "https://global-ui-docs.netlify.app/",
+          npmWebsite: "https://www.npmjs.com/package/global-ui",
+          previews: [
+            require("@/assets/images/works/css-framework1.png"),
+            require("@/assets/images/works/css-framework2.png"),
+            require("@/assets/images/works/css-framework3.png"),
+            require("@/assets/images/works/css-framework4.png"),
+          ],
+          skills: [
+            "VueJS",
+            "Storybook",
+            "NPM Package Deployment",
+            "Component Documentation System",
+            "Component Library System",
+            "Animation Loader System",
+            "Icomoon",
+            "SCSS",
+          ],
         },
         {
           title: "Circle Messenger",
           description:
             "A Real-Time messenger app which is a team final project in glints academy bootcamp. Here, users could send image, documents and even show expressions with emoji here!",
-          leverage:
-            "ReactJS ,ReactRedux, Socket.io, Google Cloud, REST API, ExpressJS, MongoDB",
-          thumbnail: require("@/assets/images/works/circle-messenger.png"),
+          thumbnail: require("@/assets/images/works/circle-messenger1.png"),
           website: null,
+          previews: [
+            require("@/assets/images/works/circle-messenger1.png"),
+            require("@/assets/images/works/circle-messenger2.png"),
+          ],
+          skills: [
+            "ReactJS",
+            "React Redux",
+            "Socket.io",
+            "Google Cloud",
+            "REST API",
+            "ExpressJS",
+            "MongoDB",
+            "Font Awesome",
+          ],
         },
         {
           title: "ChenFrederick.com",
@@ -93,27 +171,36 @@ export default {
             "This is my own personal website, at here i try to share with you who i am and what are the things that i'm capable of. Here, you can also access my personal web in phone & any other device too since it's also a responsive web app! Let's get to know each other.",
           thumbnail: require("@/assets/images/works/personal-web.png"),
           website: null,
+          previews: [
+            require("@/assets/images/works/personal-web.png"),
+            require("@/assets/images/works/personal-web.png"),
+          ],
+          skills: [
+            "VueJS",
+            "Vuex",
+            "Vue Slick Carousel",
+            "Dark Mode",
+            "SCSS",
+            "Icomoon",
+            "Animation Loader System",
+          ],
         },
         {
           title: "AzurDrones by Vue",
           description:
             "A drone company website which made with VueJS. Interactive Gradient & Animated UI with Fantastic Toast Notifications!",
-          thumbnail: require("@/assets/images/works/azurdrones.png"),
+          thumbnail: require("@/assets/images/works/azurdrones1.png"),
           website: "https://azurdrones.netlify.app/",
-        },
-        {
-          title: "SmartLocal Gists Page",
-          description:
-            "This is 1 of the test from a company based on Singapore. With the api of github gists given, i responsible to creatively display it to users.",
-          thumbnail: require("@/assets/images/works/smartlocal.png"),
-          website: "https://github-gists.netlify.app/",
-        },
-        {
-          title: "Weather Web App",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo donec enim diam vulputate ut pharetra sit amet. Sit amet volutpat consequat mauris nunc congue nisi vitae. Malesuada pellentesque elit eget gravida. Viverra ipsum nunc aliquet bibendum enim facilisis gravida.",
-          thumbnail: require("@/assets/images/works/weather-web.png"),
-          website: "http://fz-weatherpedia.netlify.app/",
+          previews: [
+            require("@/assets/images/works/azurdrones1.png"),
+            require("@/assets/images/works/azurdrones2.png"),
+          ],
+          skills: [
+            "VueJS",
+            "Vue Toastification",
+            "Vue Owl Carousel",
+            "Font Awesome",
+          ],
         },
       ],
       verticalSettings: {
@@ -252,6 +339,7 @@ export default {
       font-weight: 600;
       font-size: 0.875rem;
       padding: 12px;
+      margin: 5px 0;
       width: 50%;
       text-decoration: none;
 
@@ -385,8 +473,40 @@ export default {
     }
 
     .subtitle {
-      margin: 15px 0 35px;
+      margin: 15px 0 25px;
       text-align: justify;
+    }
+
+    .tools-section {
+      margin-bottom: 35px;
+      text-align: left;
+
+      .tools-title {
+        margin-bottom: 8px;
+
+        &::before {
+          font-family: "icomoon";
+          content: $icon-design;
+          font-size: 1rem;
+          margin-right: 8px;
+        }
+      }
+
+      .tools-lists {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .tool-text {
+        padding: 5px 8px;
+        border-radius: 4px;
+        margin: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background-color: var(--button-solid-background-3);
+        color: var(--button-text-3);
+      }
     }
   }
 
