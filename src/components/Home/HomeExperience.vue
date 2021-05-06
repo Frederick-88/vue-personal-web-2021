@@ -35,36 +35,49 @@ export default {
       experienceLists: [
         {
           title: "Infinity Batam ( eXotica Batam )",
-          logo: require("@/assets/images/works/weatherpedia-pwa1.png"),
+          logo: require("@/assets/images/experience/infinity.jpeg"),
           description:
             "As Senior Graphic Designer, creating 3D Interior & Graphic Designs creations, managing Junior team, held meetings with big companies in batam like PT JOTUN, SIIX, PHILIPS, etc.",
           keyContributions: ["Graphic Design", "Interior Design"],
         },
         {
           title: "OFFEO SG",
-          logo: require("@/assets/images/works/weatherpedia-pwa1.png"),
+          logo: require("@/assets/images/experience/offeo.jpg"),
           description: "Junior Frontend & Frontend Developer",
           keyContributions: ["Graphic Design", "Interior Design"],
         },
         {
-          title: "Impact Byte Fullstack Bootcamp",
-          logo: require("@/assets/images/works/weatherpedia-pwa1.png"),
-          description:
-            "Intensive Bootcamp in Fullstack Major, Learnt Frontend & Backend Lessons. Learnt ReactJS, ReactRedux, ExpressJS, Javascript, Bootstrap, Etc.",
-          keyContributions: ["Graphic Design", "Interior Design"],
-        },
-        {
           title: "Fingerfast Laboratory",
-          logo: require("@/assets/images/works/weatherpedia-pwa1.png"),
+          logo: require("@/assets/images/experience/ff.jpg"),
           description:
             "As Intern Graphic Designer, creating Designs, create videos, collaborate in online-queue-ticket-booking application for hospital, create advertisements to support our team better.",
           keyContributions: ["Graphic Design", "Interior Design"],
         },
         {
+          title: "Impact Byte Fullstack Bootcamp",
+          logo: require("@/assets/images/experience/impactbyte.png"),
+          description:
+            "Intensive Bootcamp in Fullstack Major, Learnt Frontend & Backend Lessons. Learnt ReactJS, ReactRedux, ExpressJS, Javascript, Bootstrap, Etc.",
+          keyContributions: ["Graphic Design", "Interior Design"],
+        },
+        {
+          title: "Glints Industrial Trainer",
+          logo: require("@/assets/images/experience/glints.png"),
+          description: "Provide guidance through newcomers in web development.",
+          keyContributions: ["Graphic Design", "Interior Design"],
+        },
+        {
           title: "Leader of Maitreyawira's English Debate Club",
-          logo: require("@/assets/images/works/weatherpedia-pwa1.png"),
+          logo: require("@/assets/images/experience/leader.png"),
           description:
             "Managing Juniors, improve talents, participated in several competitions with teammates, develop this team to their best versions.",
+          keyContributions: ["Graphic Design", "Interior Design"],
+        },
+        {
+          title: "Collaboration with Exive Interior",
+          logo: require("@/assets/images/experience/exive.jpeg"),
+          description:
+            "Creating 3D Interior & Exterior of 'MICHS BATIK' store, an Interior with Batik & elegant theme.",
           keyContributions: ["Graphic Design", "Interior Design"],
         },
       ],
