@@ -37,7 +37,7 @@ export default {
       const lightBackground = {
         backgroundImage:
           "linear-gradient(to bottom, rgba(255,255,255,0.65) 0%,rgba(255,255,255,0.65) 100%), url(" +
-          require("@/assets/images/wallpaper-white.jpg") +
+          require("@/assets/images/wallpaper-white.jpeg") +
           ")",
       };
       return this.webTheme === "darkMode" ? darkBackground : lightBackground;

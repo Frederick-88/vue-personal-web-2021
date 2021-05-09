@@ -14,7 +14,7 @@
 - https://dribbble.com/shots/11235233-Personal-Website
 - Carousel Presentation Structure = https://dribbble.com/shots/14943796-Personal-portfolio-website
 
-4. My Intro - About Me
+4. My Intro - About Me ( add parallax )
 
 - https://dribbble.com/shots/10735824-Hardy-Personal-Portfolio-UI/attachments/2403413?mode=media
 
