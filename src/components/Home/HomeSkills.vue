@@ -1,6 +1,7 @@
 <template lang="pug">
   section.home-skills__content
-    h4.header-title My Skills - Services
+    p.subtitle Services
+    h2.title My Skills
     div.skills-carousel__container
       div.carousel-arrow__buttons
         i.carousel-arrow.icon-chevron-left(@click="showPrev")
@@ -9,7 +10,7 @@
         div.skills__card-lists(v-for="skill in SkillLists")
           div.card-list
             i.card-icon(:class="skill.icon")
-            h2.title {{skill.title}}
+            h2.card-title {{skill.title}}
 </template>
 
 <script>
@@ -83,13 +84,23 @@ export default {
 .home-skills__content {
   margin: 50px 100px 0;
 
-  .header-title {
-    text-align: end;
-    font-weight: 500;
-    color: var(--text-color-primary);
-    margin-right: 30px;
+  .subtitle {
+    font-weight: 600;
+    color: var(--text-orange-green);
     font-size: 0.875rem;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-left: 70px;
+  }
+
+  .title {
+    color: var(--text-color-primary);
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 4px 0 15px;
+    text-align: center;
+    margin-left: 70px;
   }
 }
 
@@ -146,13 +157,13 @@ export default {
       }
     }
 
-    .title {
+    .card-title {
       font-size: 0.875rem;
       font-weight: 600;
     }
   }
 
-  // // rewrite vue slick carousel stylings
+  // rewrite vue slick carousel stylings
   .slick-dots {
     bottom: -40px;
 
