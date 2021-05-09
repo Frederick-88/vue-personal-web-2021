@@ -65,7 +65,7 @@ export default {
     .subtitle {
       margin-top: 10px;
       font-size: 0.875rem;
-      color: var(--text-color-primary);
+      color: var(--text-grey);
       font-weight: 500;
     }
 
