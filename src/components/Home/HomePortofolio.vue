@@ -475,6 +475,7 @@ export default {
     .subtitle {
       margin: 15px 0 25px;
       text-align: justify;
+      color: var(--text-grey);
     }
 
     .tools-section {
