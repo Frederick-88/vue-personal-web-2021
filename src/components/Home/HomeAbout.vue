@@ -76,10 +76,11 @@ export default {};
       padding: 20px 20px 20px 50px;
 
       .about-subtitle {
-        font-weight: 500;
-        color: $orange;
+        font-weight: 600;
+        color: var(--text-orange-green);
         font-size: 0.875rem;
         text-transform: uppercase;
+        margin-bottom: 5px;
       }
 
       .about-title {
@@ -94,6 +95,7 @@ export default {};
         font-size: 0.875rem;
         margin-bottom: 8px;
         font-weight: 500;
+        line-height: 1.4;
         text-align: justify;
       }
     }
@@ -117,7 +119,7 @@ export default {};
         display: flex;
 
         i {
-          color: $orange;
+          color: var(--text-orange-green);
           width: 25px;
         }
 
@@ -135,23 +137,24 @@ export default {};
     }
   }
 
+  .interest-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--text-color-primary);
+  }
+
   .interest-section {
     display: flex;
-    margin-top: 10px;
+    margin-top: 15px;
 
     .section-title {
       display: flex;
       margin-right: 15px;
     }
 
-    .interest-title {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
     i {
-      color: $orange;
+      color: var(--text-orange-green);
       margin-right: 5px;
     }
 
