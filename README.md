@@ -9,7 +9,7 @@
 
 - http://kos45.netlify.app/
 
-3. Experience - Awesome Journey, reference :
+3. Experience - Awesome Journey (add notification kinda like cookie to visit linkedin), reference :
 
 - https://dribbble.com/shots/11235233-Personal-Website
 - Carousel Presentation Structure = https://dribbble.com/shots/14943796-Personal-portfolio-website
