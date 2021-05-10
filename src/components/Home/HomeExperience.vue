@@ -44,7 +44,7 @@ export default {
           title: "OFFEO SG",
           logo: require("@/assets/images/experience/offeo.jpg"),
           description:
-            "Junior Frontend Developer, collaborate together with art director to develop UI that gives remarkable experience for users. Lead users' interactions to be saved in DB by integrating REST API method. Contributed to increased SEO & web performance of OFFEO. Building clean & readable code methodology.",
+            "Junior Frontend Developer, collaborate together with art director to develop UI & features that give remarkable experience for users. Lead users interactions to be saved in Database by integrating REST API method. Contributed to increased SEO & web performance of OFFEO. Building clean & readable code methodology.",
           skills: [
             "Frontend Development",
             "REST API",
@@ -52,6 +52,9 @@ export default {
             "Vuex",
             "Nuxt.js",
             "SEO & Web Performance",
+            "UNIX System (Linux)",
+            "Agile Scrum Development",
+            "Git (Bitbucket & Github)",
           ],
         },
         {
@@ -70,38 +73,73 @@ export default {
           ],
         },
         {
-          title: "Impact Byte Fullstack Bootcamp",
+          title: "Impact Byte Fullstack Javascript Bootcamp",
           logo: require("@/assets/images/experience/impactbyte.png"),
           description:
-            "Intensive Bootcamp in Fullstack Major, Learnt Frontend & Backend Lessons. Learnt ReactJS, ReactRedux, ExpressJS, Javascript, Bootstrap, Etc.",
-          skills: ["Graphic Design", "Interior Design"],
+            "Intensive Bootcamp in Fullstack Major. Learnt frontend, backend & web deployment lessons to become a certified Fullstack Javascript Developer. Doing practices, trainings & finish final project with presentation of our team's software to fellow recruiters from Indonesia & Singapore.",
+          skills: [
+            "React.js",
+            "React Redux",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "AWS",
+            "Heroku",
+            "SCSS & CSS",
+            "Javascript",
+            "Trello",
+            "Github",
+            "Responsive Web Design",
+          ],
         },
         {
           title: "Glints Industrial Trainer",
           logo: require("@/assets/images/experience/glints.png"),
-          description: "Provide guidance through newcomers in web development.",
-          skills: ["Graphic Design", "Interior Design"],
+          description:
+            "Provide guidance through newcomers in web development. Become a mentor of javascript & web development. Share best practices, experience, give live code tests & live code trainings.",
+          skills: ["Mentoring", "Javascript", "Live Code Interviewer"],
         },
         {
           title: "Fingerfast Laboratory",
           logo: require("@/assets/images/experience/ff.jpg"),
           description:
-            "As Intern Graphic Designer, creating Designs, create videos, collaborate in online-queue-ticket-booking application for hospital, create advertisements to support our team better.",
-          skills: ["Graphic Design", "Interior Design"],
+            "As Intern Graphic Designer, creating Designs, create videos, collaborate in online-queue-ticket-booking application for hospital, create advertisements to support the sales growth of our company & provide support to the founder.",
+          skills: [
+            "Adobe After Effects",
+            "Adobe Premier Pro",
+            "Photography & Videography",
+            "Digital Marketing",
+            "Photoshop",
+            "Coreldraw",
+            "Sketchup",
+          ],
         },
         {
           title: "Leader of Maitreyawira's English Debate Club",
           logo: require("@/assets/images/experience/leader.png"),
           description:
-            "Managing Juniors, improve talents, participated in several competitions with teammates, develop this team to their best versions.",
-          skills: ["Graphic Design", "Interior Design"],
+            "Managing Juniors, improve talents, participated in several competitions with teammates & win some, support this community and each family inside to their best versions.",
+          skills: [
+            "Leadership",
+            "Teamwork",
+            "Management",
+            "English Skill",
+            "Public Speaking",
+            "Presentation Skills",
+          ],
         },
         {
           title: "Collaboration with Exive Interior",
           logo: require("@/assets/images/experience/exive.jpeg"),
           description:
-            "Creating 3D Interior & Exterior of 'MICHS BATIK' store, an Interior with Batik & elegant theme.",
-          skills: ["Graphic Design", "Interior Design"],
+            "Creating 3D Interior & Exterior of 'MICHS BATIK' store, an Interior with Batik & elegant theme located in Jakarta, Indonesia.",
+          skills: [
+            "Interior & Exterior Design",
+            "Lumion",
+            "Sketchup",
+            "Vray",
+            "Photoshop",
+          ],
         },
       ],
     };
