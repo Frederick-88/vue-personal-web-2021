@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.home-about__content
+  section#my-intro.home-about__content
     div.content-container
       div.left-column
         img.column-image(:src="require('@/assets/images/me.jpeg')")

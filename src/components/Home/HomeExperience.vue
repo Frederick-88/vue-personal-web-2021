@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.home-experience__content
+  section#experience.home-experience__content
     p.subtitle Wonderful Journey
     h2.title My Experience
     VueSlickCarousel.main-carousel(

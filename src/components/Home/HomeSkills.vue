@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.home-skills__content
+  section#skills.home-skills__content
     p.subtitle Services
     h2.title My Skills
     div.skills-carousel__container

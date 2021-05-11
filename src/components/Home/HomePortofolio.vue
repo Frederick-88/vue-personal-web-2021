@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.home-portofolio__content
+  section#works.home-portofolio__content
     h4.header-title My Portofolio - Recent Works
     div.portofolio-carousel__container
       div.carousel-arrow__buttons
@@ -475,7 +475,7 @@ export default {
     .subtitle {
       margin: 15px 0 25px;
       text-align: justify;
-      color: var(--text-grey);
+      color: $grey2;
     }
 
     .tools-section {
