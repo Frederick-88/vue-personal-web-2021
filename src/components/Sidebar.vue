@@ -3,10 +3,10 @@
       button.darkmode__toggle(@click="toggleTheme" aria-label="Toggle themes")
         span.icon-sun-solid(v-if="this.webTheme == 'darkMode'")
         span.icon-moon-solid(v-else)
-      button.social-media__button.icon-email(type="button")
-      button.social-media__button.icon-linkedin-solid(type="button")
-      button.social-media__button.icon-whatsapp(type="button")
-      button.social-media__button.icon-github(type="button")
+      a.social-media__button.icon-email(href="mailto:chen.frederick88@gmail.com?subject=Hi Fred!&body=I'm (name) from (where) (please drop your message kindly here)")
+      a.social-media__button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="blank")
+      a.social-media__button.icon-whatsapp(href="https://wa.link/fqa4e7" target="blank")
+      a.social-media__button.icon-github(href="https://github.com/Frederick-88" target="blank")
       div.sidebar__line
 </template>
 
@@ -36,6 +36,8 @@ export default {
 <style lang="scss">
 .social-media__button {
   padding: 15px 5px;
+  display: bl;
+
   border-radius: 4px;
   background: none;
   color: var(--text-color-secondary-notfocus);
@@ -43,6 +45,7 @@ export default {
   cursor: pointer;
   border: 0;
   outline: 0;
+  text-decoration: none;
   transition: color 0.2s;
 
   &:hover {
