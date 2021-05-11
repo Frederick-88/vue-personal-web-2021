@@ -4,6 +4,14 @@ import router from "./router";
 import store from "./store";
 import VueMeta from "vue-meta";
 import VueSlickCarousel from "vue-slick-carousel";
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
+
+const options = {
+  timeout: 5000,
+  position: "top-center",
+};
+Vue.use(Toast, options);
 
 Vue.config.productionTip = false;
 
