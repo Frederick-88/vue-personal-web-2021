@@ -3,10 +3,10 @@
       div
         router-link.nav__item.main-nav(to="/") CHENFREDERICK.ASIA
         hr.nav__line
-      router-link.nav__item(to="/about") My Intro
-      router-link.nav__item(to="/about") Works
-      router-link.nav__item(to="/about") Experience
-      router-link.nav__item(to="/about") Skills
+      a.nav__item(href="#my-intro") My Intro
+      a.nav__item(href="#works") Works
+      a.nav__item(href="#experience") Experience
+      a.nav__item(href="#skills") Skills
 </template>
 
 <script>
@@ -18,6 +18,7 @@ export default {
 <style lang="scss">
 .navigation__bar {
   .nav__item {
+    display: block;
     font-weight: 500;
     color: var(--text-color-primary);
     text-decoration: none;
