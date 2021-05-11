@@ -7,11 +7,10 @@
         h2.title Let's be Friends.
         p.subtitle “Strangers are just friends waiting to happen.” – Rod Mckuen
         div.sub-content
-          input.content-input(placeholder="Your Name")
-          input.content-input(placeholder="Your Email")
-          input.content-input(placeholder="Your Website")
-          input.content-input(placeholder="How can i help?")
-        button.connection-button(type="button") Get in Touch
+          input.content-input(placeholder="Your Name" v-model="nameInput")
+          input.content-input(placeholder="From Where" v-model="locationInput")
+          input.content-input(placeholder="How can i help?" v-model="descriptionInput")
+        button.connection-button(type="button" @click="sendEmail") Get in Touch
 </template>
 
 <script>
@@ -26,14 +25,42 @@ export default {
   data() {
     return {
       makeFriendsJson: JsonFile,
+      nameInput: "",
+      locationInput: "",
+      descriptionInput: "",
     };
+  },
+  methods: {
+    sendEmail() {
+      if (
+        this.nameInput === "" ||
+        this.locationInput === "" ||
+        this.descriptionInput === ""
+      ) {
+        this.$toast.error("Please Fill the Email Inputs");
+      } else {
+        const link =
+          "mailto:chen.frederick88@gmail.com" +
+          "&subject=" +
+          encodeURIComponent(
+            `Hi Fred, I'm ${this.nameInput} from ${this.locationInput}`
+          ) +
+          "&body=" +
+          encodeURIComponent(this.descriptionInput);
+        window.location.href = link;
+
+        this.nameInput = "";
+        this.locationInput = "";
+        this.descriptionInput = "";
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss">
 .home-connection__content {
-  margin: 80px 150px 0;
+  margin: 80px 150px 150px;
 
   .content-container {
     display: flex;
