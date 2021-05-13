@@ -14,16 +14,15 @@
             p.word.typing__height-secure Developer
           | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
         
-        button.home-banner__button(
-          type="button" 
-          title="Download CV"
+        a.home-banner__button(
+          :href="CvFile"
+          download="Chen Frederick - CV"
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) Download My CV
-        button.home-banner__button(
-          type="button" 
-          title="See My Works"
+        a.home-banner__button(
+          href="#skills"
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
-        ) My Works
+        ) My Skills
 
     div.right-column
       GlobalAnimationLoader(:file="workingLaptopJson")
@@ -31,6 +30,7 @@
 
 <script>
 import { mapState } from "vuex";
+import Cv from "@/assets/images/my-cv.jpeg";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
@@ -41,6 +41,7 @@ export default {
   },
   data() {
     return {
+      CvFile: Cv,
       workingLaptopJson: JsonFile,
     };
   },
@@ -161,6 +162,7 @@ export default {
   text-transform: uppercase;
   border-radius: 4px;
   outline: 0;
+  text-decoration: none;
   cursor: pointer;
   margin-right: 15px;
   transition: background 0.3s, color 0.3s, border-color 0.3s;
