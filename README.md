@@ -4,7 +4,7 @@
 
 - Sections :
 
-1. Profile
+1. Profile(add waveslide)
 2. My Portofolio - Recent Works
 
 - http://kos45.netlify.app/
@@ -14,7 +14,7 @@
 - https://dribbble.com/shots/11235233-Personal-Website
 - Carousel Presentation Structure = https://dribbble.com/shots/14943796-Personal-portfolio-website
 
-4. My Intro - About Me ( add parallax )
+4. My Intro - About Me
 
 - https://dribbble.com/shots/10735824-Hardy-Personal-Portfolio-UI/attachments/2403413?mode=media
 

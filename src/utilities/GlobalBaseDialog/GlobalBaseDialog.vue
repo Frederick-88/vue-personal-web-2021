@@ -94,7 +94,7 @@ export default {
   position: relative;
   z-index: 2;
   width: 100%;
-  background: #fff;
+  background: $white;
   max-width: 1200px;
   max-height: 90vh;
   border-radius: 4px;

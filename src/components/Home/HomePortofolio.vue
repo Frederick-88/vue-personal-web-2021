@@ -283,6 +283,8 @@ export default {
 <style lang="scss">
 .home-portofolio__content {
   margin: 50px 100px 0;
+  position: relative;
+  z-index: 6;
 
   .header-title {
     text-align: end;

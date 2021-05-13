@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss">
 .home-connection__content {
-  margin: 80px 150px 150px;
+  margin: 80px 150px 100px;
 
   .content-container {
     display: flex;

@@ -138,7 +138,7 @@ export default {
   .card-list {
     padding: 20px;
     min-height: 125px;
-    background: var(--text-color-primary);
+    background: var(--dark-white);
     color: var(--white-dark);
     border-radius: 4px;
     display: flex;
