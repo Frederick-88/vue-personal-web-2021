@@ -36,7 +36,7 @@ export default {
 <style lang="scss">
 .social-media__button {
   padding: 15px 5px;
-  display: bl;
+  display: block;
 
   border-radius: 4px;
   background: none;

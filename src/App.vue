@@ -9,14 +9,15 @@
         svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320")
           path(fill="#f6f6f6" fill-opacity="1" d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,208C840,245,960,267,1080,250.7C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z")
 
-    main.main-mobile__section(v-else)
-      center
-        h2 Currently Still not Support for Mobile & Mini Desktops
+    main.main-mobile__section(v-else :style="backgroundImage")
+      MobileNavbar
+      router-view
 </template>
 
 <script>
 import { mapState, mapMutations } from "vuex";
 import Navbar from "./components/Navbar";
+import MobileNavbar from "./components/MobileNavbar";
 import Sidebar from "./components/Sidebar";
 
 // vue-slick-carousel imports
@@ -30,6 +31,7 @@ export default {
   components: {
     Navbar,
     Sidebar,
+    MobileNavbar,
   },
   data() {
     return {
@@ -164,6 +166,17 @@ body {
       padding: 40px 130px 0;
       display: flex;
     }
+  }
+
+  // <-- Mobile Section -->
+  .main-mobile__section {
+    background-attachment: static;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
   }
 }
 </style>

@@ -32,10 +32,6 @@ export default {
       margin-right: 45px;
       text-transform: uppercase;
     }
-
-    // &.router-link-exact-active {
-    //   color: $blue;
-    // }
   }
 
   .nav__line {

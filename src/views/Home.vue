@@ -1,11 +1,15 @@
 <template lang="pug">
-  div.home
-    HomeBanner
-    HomePortofolio
-    HomeExperience
-    HomeSkills
-    HomeAbout
-    HomeConnection
+  section
+    div.home(v-if="!isMobile")
+      HomeBanner
+      HomePortofolio
+      HomeExperience
+      HomeSkills
+      HomeAbout
+      HomeConnection
+    div.home-mobile(v-else)
+      center
+        h2 Currently Still not Support for Mobile & Mini Desktops
 </template>
 
 <script>
@@ -26,5 +30,26 @@ export default {
     HomeAbout,
     HomeConnection,
   },
+  data() {
+    return {
+      isMobile: false,
+    };
+  },
+  methods: {
+    detectMobileUser() {
+      if (screen.width < 1120) {
+        this.isMobile = true;
+      }
+    },
+  },
+  created() {
+    this.detectMobileUser();
+  },
 };
 </script>
+
+<style lang="scss">
+.home-mobile {
+  padding-top: 70px;
+}
+</style>
