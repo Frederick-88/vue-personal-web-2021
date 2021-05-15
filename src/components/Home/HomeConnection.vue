@@ -40,7 +40,7 @@ export default {
         this.$toast.error("Please Fill the Email Inputs");
       } else {
         const link =
-          "mailto:chen.frederick88@gmail.com" +
+          "mailto:me@chenfrederick.com" +
           "&subject=" +
           encodeURIComponent(
             `Hi Fred, I'm ${this.nameInput} from ${this.locationInput}`
