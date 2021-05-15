@@ -1,7 +1,7 @@
 <template lang="pug">
   section.navigation__bar
       div
-        router-link.nav__item.main-nav(to="/") CHENFREDERICK.ASIA
+        router-link.nav__item.main-nav(to="/") ChenFrederick.com
         hr.nav__line
       a.nav__item(href="#my-intro") My Intro
       a.nav__item(href="#works") Works
@@ -30,6 +30,7 @@ export default {
       color: var(--text-color-secondary);
       font-size: 1rem;
       margin-right: 45px;
+      text-transform: uppercase;
     }
 
     // &.router-link-exact-active {

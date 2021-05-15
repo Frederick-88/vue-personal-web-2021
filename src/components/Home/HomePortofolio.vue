@@ -173,7 +173,7 @@ export default {
           website: null,
           previews: [
             require("@/assets/images/works/personal-web.png"),
-            require("@/assets/images/works/personal-web.png"),
+            require("@/assets/images/works/personal-web-2.png"),
           ],
           skills: [
             "VueJS",
