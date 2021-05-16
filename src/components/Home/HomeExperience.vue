@@ -253,12 +253,6 @@ export default {
         color: var(--button-text-3);
       }
     }
-
-    .card-image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
   }
 
   .company-list-carousel__wrapper {
