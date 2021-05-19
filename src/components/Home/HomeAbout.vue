@@ -47,7 +47,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "HomeAbout",
+};
 </script>
 
 <style lang="scss">
@@ -166,7 +168,15 @@ export default {};
   }
 }
 
-@media only screen and (max-width: 1450px) {
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .home-about__content {
+    .content-container {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
   .home-about__content {
     .content-container {
       width: 80%;
