@@ -1,5 +1,7 @@
 <template lang="pug">
-  section.mobile-navigation__bar
+  section.mobile-navigation__bar(
+    :class="{ 'is-scrolled': isScrolled }"
+  )
     div
       router-link.nav__item.main-nav(to="/") ChenFrederick.com
       hr.nav__line
@@ -72,8 +74,18 @@ export default {
   computed: {
     ...mapState(["webTheme"]),
   },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
     ...mapMutations(["setWebTheme"]),
+    handleScroll() {
+      const position = document.documentElement;
+      this.isScrolled = position.scrollTop > 100;
+    },
     toggleTheme() {
       if (this.webTheme === "darkMode") {
         this.setWebTheme("");
@@ -95,12 +107,12 @@ export default {
   left: 0;
   width: 100%;
   padding: 15px 25px;
-  transition: background 0.25s ease-in-out;
+  transition: background 0.15s ease-in-out, padding 0.15s ease-in-out;
   z-index: 10;
 
   &.is-scrolled {
-    padding: 5px 0;
-    background: $darkGrey3;
+    background: var(--background-color);
+    padding: 10px 25px;
   }
 
   .nav__item {
@@ -169,20 +181,20 @@ export default {
       position: absolute;
       width: 24px;
       height: 20px;
-      right: 275px;
+      right: 280px;
       top: 23px;
       outline: 0;
       border: 0;
       background: none;
+      z-index: 55;
 
       &.is-scrolled {
-        top: 13px;
+        top: 18px;
       }
 
       &.is-active {
         width: 28px;
         right: 13px;
-        z-index: 6;
         top: 27px;
 
         .line {
@@ -221,6 +233,7 @@ export default {
     top: 0;
     right: 0;
     margin: 0;
+    z-index: 50;
 
     .navigation__item {
       height: 40px; // so clickable
@@ -243,7 +256,7 @@ export default {
     position: absolute;
     right: 150px;
     top: 20px;
-    z-index: 5;
+    z-index: 55;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -279,6 +292,7 @@ export default {
     position: absolute;
     top: 275px;
     right: 85px;
+    z-index: 55;
 
     .social-media__button {
       padding: 15px 10px;
