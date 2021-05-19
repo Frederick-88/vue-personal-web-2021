@@ -1,6 +1,8 @@
 <template lang="pug">
   div#app
-    main.main-section(v-if="!isMobile" :style="backgroundImage")   
+    main(v-if="isTabletAndSmallDesktop")
+      router-view
+    main.main-section(v-else-if="!isMobile" :style="backgroundImage")   
       div.main-section__container
         Navbar.navigation__bar
         router-view
@@ -12,6 +14,9 @@
     main.main-mobile__section(v-else :style="backgroundImage")
       MobileNavbar
       router-view
+      div.mobile-wave-wrapper(v-if="webTheme !== 'darkMode'")
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320")
+          path(fill="#f6f6f6" fill-opacity="1" d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,208C840,245,960,267,1080,250.7C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z")
 </template>
 
 <script>
@@ -26,7 +31,7 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   metaInfo: {
-    title: "Chen Frederick's -- Website",
+    title: "Chen Frederick | Website",
   },
   components: {
     Navbar,
@@ -36,6 +41,7 @@ export default {
   data() {
     return {
       isMobile: false,
+      isTabletAndSmallDesktop: false,
     };
   },
   computed: {
@@ -64,9 +70,15 @@ export default {
         this.isMobile = true;
       }
     },
+    detectTabletToSmallDesktopUser() {
+      if (screen.width > 600 && screen.width < 1120) {
+        this.isTabletAndSmallDesktop = true;
+      }
+    },
   },
   mounted() {
     this.detectMobileUser();
+    this.detectTabletToSmallDesktopUser();
 
     let localTheme = localStorage.getItem("theme");
     if (!localTheme) {
@@ -177,6 +189,13 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+
+    .mobile-wave-wrapper {
+      position: absolute;
+      bottom: -10px;
+      z-index: 3;
+      width: 100%;
+    }
   }
 }
 </style>
