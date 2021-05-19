@@ -1,9 +1,9 @@
 <template lang="pug">
-  section.home-banner__content
+  section.mobile-home-banner__content
     div.left-column
       div.left-column__content
-        h3.title Hello!
-        h3.title I'm Chen Frederick
+        h3.title Hello! I'm 
+        h3.title Chen Frederick
         
         p.subtitle 
           | A Passionate 
@@ -14,12 +14,13 @@
             p.word.typing__height-secure Developer
           | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
         
-        a.home-banner__button(
+        a.mobile-home-banner__button(
           :href="CvFile"
           download="Chen Frederick - CV"
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) Download My CV
-        a.home-banner__button(
+        a.mobile-home-banner__button(
+          v-if="!isSmallMobileDevice"
           href="#skills"
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) My Skills
@@ -35,7 +36,7 @@ import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
 export default {
-  name: "HomeBanner",
+  name: "MobileHomeBanner",
   components: {
     GlobalAnimationLoader,
   },
@@ -43,21 +44,24 @@ export default {
     return {
       CvFile: Cv,
       workingLaptopJson: JsonFile,
+      isSmallMobileDevice: false,
     };
   },
   computed: {
     ...mapState(["webTheme"]),
   },
   mounted() {
+    this.detectSmallMobileUser();
     // typing logic
     const words = ["Fullstack", "Web", "Frontend"];
     let wordQueueNumber = 0;
 
-    function typingEffect() {
+    const typingEffect = () => {
       let word = words[wordQueueNumber].split("");
-      var loopTyping = function() {
+      const loopTyping = () => {
         if (word.length > 0) {
           document.getElementById("typing-word").innerHTML += word.shift();
+          // word.splice(0, 1);
         } else {
           setTimeout(deletingEffect, 3000);
           return false;
@@ -65,10 +69,10 @@ export default {
         setTimeout(loopTyping, 250);
       };
       loopTyping();
-    }
-    function deletingEffect() {
+    };
+    const deletingEffect = () => {
       let word = words[wordQueueNumber].split("");
-      var loopDeleting = function() {
+      const loopDeleting = () => {
         if (word.length > 0) {
           word.pop();
           document.getElementById("typing-word").innerHTML = word.join("");
@@ -84,23 +88,25 @@ export default {
         setTimeout(loopDeleting, 200);
       };
       loopDeleting();
-    }
+    };
 
     typingEffect();
+  },
+  methods: {
+    detectSmallMobileUser() {
+      if (screen.width < 375) {
+        this.isSmallMobileDevice = true;
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss">
-.home-banner__content {
-  display: flex;
-  flex-wrap: wrap;
+.mobile-home-banner__content {
   color: var(--text-color-primary);
-  margin: 50px 100px 0;
 
   .left-column {
-    flex: 55%;
-    width: 55%;
     padding: 30px;
     display: flex;
 
@@ -127,35 +133,32 @@ export default {
   }
 
   .right-column {
-    flex: 45%;
-    width: 45%;
+    width: 100%;
     justify-content: center;
     display: flex;
 
     .animation-loader__image {
       width: 100% !important;
-      max-width: 600px;
-      min-width: 500px;
     }
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
   }
 
   .subtitle {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.7;
     max-width: 555px;
     margin: 30px 0;
   }
 }
 
-.home-banner__button {
-  font-size: 0.825rem;
+.mobile-home-banner__button {
+  font-size: 0.6875rem;
   font-weight: 600;
-  padding: 14px 30px;
+  padding: 14px 25px;
   background: transparent;
   border: 1px solid var(--button-outline-background);
   color: var(--button-outline-background);
@@ -167,18 +170,8 @@ export default {
   margin-right: 15px;
   transition: background 0.3s, color 0.3s, border-color 0.3s;
 
-  &.--light {
-    &:hover {
-      background: var(--button-outline-hover-bg);
-      color: var(--button-text);
-    }
-  }
-
-  &.--dark {
-    &:hover {
-      color: var(--button-outline-hover-bg);
-      border-color: var(--button-outline-hover-bg);
-    }
+  @include small-mobile() {
+    font-size: 0.75rem;
   }
 }
 </style>
