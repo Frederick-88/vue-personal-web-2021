@@ -11,6 +11,9 @@
           div.card-list
             i.card-icon(:class="skill.icon")
             h2.card-title {{skill.title}}
+            p.level-text(
+              :class="{'text--green': skill.level === 'Familiar', 'text--orange': skill.level === 'Fluent'}"
+            ) {{skill.level}}
 </template>
 
 <script>
@@ -136,6 +139,7 @@ export default {
   }
 
   .card-list {
+    position: relative;
     padding: 20px;
     min-height: 125px;
     background: var(--dark-white);
@@ -160,6 +164,25 @@ export default {
     .card-title {
       font-size: 0.875rem;
       font-weight: 600;
+    }
+
+    .level-text {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 4px;
+      padding: 5px 10px;
+      color: $white;
+
+      &.text--green {
+        background: $primarySolid;
+      }
+
+      &.text--orange {
+        background: $orange;
+      }
     }
   }
 
