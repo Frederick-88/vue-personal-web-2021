@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#works.home-portofolio__content
+  section#works.home-portofolio__content(data-aos="fade-up" data-aos-duration="1000")
     h4.header-title My Portofolio - Recent Works
     div.portofolio-carousel__container
       div.carousel-arrow__buttons
