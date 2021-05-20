@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#my-intro.home-about__content
+  section#my-intro.home-about__content(data-aos="fade-right" data-aos-duration="600")
     div.content-container
       div.left-column
         img.column-image(:src="require('@/assets/images/me.jpeg')")
