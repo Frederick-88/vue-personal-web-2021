@@ -1,5 +1,6 @@
 <template lang="pug">
   section.mobile-navigation__bar(
+    data-aos="fade-down" data-aos-duration="1000"
     :class="{ 'is-scrolled': isScrolled }"
   )
     div
