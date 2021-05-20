@@ -28,6 +28,7 @@ export default {
         arrows: false,
         dots: true,
         infinite: false,
+        swipe: false,
         rows: 2,
         speed: 500,
         slidesToShow: 3,
