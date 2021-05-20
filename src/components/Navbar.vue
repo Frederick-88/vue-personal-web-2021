@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.navigation__bar
+  section.navigation__bar(data-aos="fade-down" data-aos-duration="1000")
       div
         router-link.nav__item.main-nav(to="/") ChenFrederick.com
         hr.nav__line
