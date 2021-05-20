@@ -9,6 +9,7 @@
       VueSlickCarousel.portofolio-list-carousel(
         ref="c2"
         v-bind="portofolioCarouselSettings"
+        :swipe="false"
       )
         div.company-card-list(v-for="portofolio in portofolioLists")
           div.card-list
@@ -21,6 +22,7 @@
       :slides-to-show="1"
       :arrows="false"
       :style="{ height: carouselHeight }"
+      :swipe="false"
     )
       div.main-card-list(
         v-for="(portofolio, index) in portofolioLists"
@@ -430,6 +432,10 @@ export default {
   }
 
   // rewrite vue slick carousel stylings
+  .slick-track {
+    transition: transform 0.5s ease-in-out;
+  }
+
   .slick-dots {
     bottom: -40px;
 
