@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#my-intro.mobile-home-about__content
+  section#my-intro.mobile-home-about__content(data-aos="fade-right" data-aos-duration="1000")
     div.content-container
       p.about-subtitle My Intro
       h2.about-title About Me
