@@ -1,6 +1,6 @@
 <template lang="pug">
   section.mobile-home-banner__content
-    div.left-column
+    div.left-column(data-aos="fade-down" data-aos-duration="1000")
       div.left-column__content
         h3.title Hello! I'm 
         h3.title Chen Frederick
@@ -9,7 +9,7 @@
           | A Passionate 
           span.typing__word-wrapper
             p.typing__height-secure -
-            p#typing-word.word
+            p#mobile-typing-word.word
             p.typing__blink |
             p.word.typing__height-secure Developer
           | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
@@ -25,7 +25,7 @@
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) My Skills
 
-    div.right-column
+    div.right-column(data-aos="fade-right" data-aos-duration="1000")
       GlobalAnimationLoader(:file="workingLaptopJson")
 </template>
 
@@ -60,7 +60,9 @@ export default {
       let word = words[wordQueueNumber].split("");
       const loopTyping = () => {
         if (word.length > 0) {
-          document.getElementById("typing-word").innerHTML += word.shift();
+          document.getElementById(
+            "mobile-typing-word"
+          ).innerHTML += word.shift();
           // word.splice(0, 1);
         } else {
           setTimeout(deletingEffect, 3000);
@@ -75,7 +77,9 @@ export default {
       const loopDeleting = () => {
         if (word.length > 0) {
           word.pop();
-          document.getElementById("typing-word").innerHTML = word.join("");
+          document.getElementById("mobile-typing-word").innerHTML = word.join(
+            ""
+          );
         } else {
           if (words.length > wordQueueNumber + 1) {
             wordQueueNumber++;

@@ -5,6 +5,8 @@ import store from "./store";
 import VueMeta from "vue-meta";
 import VueSlickCarousel from "vue-slick-carousel";
 import Toast from "vue-toastification";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "vue-toastification/dist/index.css";
 
 const options = {
@@ -19,6 +21,9 @@ Vue.use(VueMeta);
 Vue.component("VueSlickCarousel", VueSlickCarousel);
 
 new Vue({
+  created() {
+    AOS.init();
+  },
   router,
   store,
   render: function(h) {
