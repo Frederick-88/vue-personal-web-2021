@@ -26,6 +26,7 @@
       :slides-to-scroll="1",
       :arrows="false"
       :style="{ height: carouselHeight }"
+      :swipe="false"
     )
       div.main-card-list(
         v-for="(experience, index) in experienceLists" 
@@ -373,6 +374,10 @@ export default {
   }
 
   // rewrite vue slick carousel stylings
+  .slick-track {
+    transition: transform 0.5s ease-in-out;
+  }
+
   .slick-dots {
     bottom: -40px;
 
