@@ -5,7 +5,7 @@
   )
     div
       router-link.nav__item.main-nav(to="/") ChenFrederick.com
-      hr.nav__line
+      span.nav__line
     div.mobile-navbar__overlay(v-if="isActive" @click="isActive = false")
     div.mobile-navbar__menu(
       :class="{ 'is-active': isActive }"
@@ -134,9 +134,11 @@ export default {
   }
 
   .nav__line {
+    display: block;
     width: 60px;
-    margin-left: 0;
-    border-color: var(--text-color-secondary);
+    height: 2px;
+    margin-top: 8px;
+    background: var(--text-color-secondary);
   }
 
   .mobile-navbar__overlay {

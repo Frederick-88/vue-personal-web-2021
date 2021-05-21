@@ -216,7 +216,6 @@ export default {
         arrows: false,
         dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
         initialSlide: 0,

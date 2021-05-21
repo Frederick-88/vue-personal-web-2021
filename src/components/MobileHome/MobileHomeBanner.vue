@@ -52,6 +52,7 @@ export default {
   },
   mounted() {
     this.detectSmallMobileUser();
+
     // typing logic
     const words = ["Fullstack", "Web", "Frontend"];
     let wordQueueNumber = 0;
@@ -114,6 +115,10 @@ export default {
     padding: 30px;
     display: flex;
 
+    @include large-mobile() {
+      padding-bottom: 0;
+    }
+
     .typing__blink {
       animation: blink 0.5s infinite;
     }
@@ -143,6 +148,10 @@ export default {
 
     .animation-loader__image {
       width: 100% !important;
+
+      @include large-mobile() {
+        width: 85% !important;
+      }
     }
   }
 

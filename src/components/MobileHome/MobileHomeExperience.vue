@@ -12,8 +12,8 @@
         :slides-to-show="3",
         :arrows="false",
         :dots="false",
-        :swipe="false",
         :swipe-to-slide="false",
+        :infinite="true"
       )
         div.company-card-list(v-for="experience in experienceLists")
           div.card-list
@@ -26,7 +26,7 @@
       :slides-to-scroll="1",
       :arrows="false"
       :style="{ height: carouselHeight }"
-      :swipe="false"
+      :infinite="true"
     )
       div.main-card-list(
         v-for="(experience, index) in experienceLists" 
@@ -158,8 +158,6 @@ export default {
   methods: {
     checkHeight() {
       const activeTitle = `experience-${this.activeIndex}`;
-      console.log(this.activeIndex);
-      console.log(this.$refs[activeTitle].offsetHeight);
       const height = this.$refs[activeTitle].offsetHeight;
 
       this.carouselHeight = height + "px";
