@@ -157,11 +157,9 @@ export default {
 
   // rewrite vue slick carousel stylings
   .slick-dots {
-    bottom: -40px;
-
-    @include small-mobile() {
-      bottom: -50px;
-    }
+    bottom: -30px;
+    overflow: hidden;
+    height: 25px;
 
     li,
     li.slick-active {
