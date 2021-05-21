@@ -185,14 +185,14 @@ export default {
       width: 24px;
       height: 20px;
       right: 280px;
-      top: 23px;
+      top: 20px;
       outline: 0;
       border: 0;
       background: none;
       z-index: 55;
 
       &.is-scrolled {
-        top: 18px;
+        top: 15px;
       }
 
       &.is-active {
