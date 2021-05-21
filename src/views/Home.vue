@@ -70,7 +70,7 @@ export default {
       }
     },
   },
-  created() {
+  beforeMount() {
     this.detectMobileUser();
     this.detectTabletToSmallDesktopUser();
   },
