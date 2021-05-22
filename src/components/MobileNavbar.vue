@@ -1,6 +1,6 @@
 <template lang="pug">
   section.mobile-navigation__bar(
-    data-aos="fade-down" data-aos-duration="1000"
+    data-aos="fade-down" data-aos-duration="1500"
     :class="{ 'is-scrolled': isScrolled }"
   )
     div
@@ -85,7 +85,7 @@ export default {
     ...mapMutations(["setWebTheme"]),
     handleScroll() {
       const position = document.documentElement;
-      this.isScrolled = position.scrollTop > 100;
+      this.isScrolled = position.scrollTop > 65;
     },
     toggleTheme() {
       if (this.webTheme === "darkMode") {
