@@ -5,6 +5,8 @@
     VueSlickCarousel.main-carousel(
       ref="c1"
       :arrows="false"
+      :swipe="false"
+      :infinite="true"
     )
       div.main-card-list(v-for="experience in experienceLists")
         div.card-list.--left
@@ -25,7 +27,7 @@
         :arrows="false"
         :dots="true"
         :swipe="false"
-        :swipe-to-slide="false"
+        :infinite="true"
       )
         div.company-card-list(v-for="experience in experienceLists")
           div.card-list

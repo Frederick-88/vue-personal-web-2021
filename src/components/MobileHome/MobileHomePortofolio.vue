@@ -66,7 +66,6 @@ export default {
         arrows: false,
         dots: false,
         swipe: false,
-        swipeToSlide: false,
         responsive: [
           {
             breakpoint: 320,

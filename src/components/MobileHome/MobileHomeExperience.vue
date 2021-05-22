@@ -12,8 +12,8 @@
         :slides-to-show="3",
         :arrows="false",
         :dots="false",
-        :swipe-to-slide="false",
         :infinite="true"
+        :swipe="false"
       )
         div.company-card-list(v-for="experience in experienceLists")
           div.card-list
@@ -27,6 +27,7 @@
       :arrows="false"
       :style="{ height: carouselHeight }"
       :infinite="true"
+      :swipe="false"
     )
       div.main-card-list(
         v-for="(experience, index) in experienceLists" 
