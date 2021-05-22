@@ -1,5 +1,5 @@
 <template>
-  <div ref="lavContainer" />
+  <div ref="animationContainer" />
 </template>
 
 <script>
@@ -26,13 +26,13 @@ export default {
   methods: {
     setupLottie() {
       this.anim = lottie.loadAnimation({
-        container: this.$refs.lavContainer,
-        renderer: "svg",
-        loop: this.options.loop,
-        autoplay: this.options.autoplay,
-        animationData: this.options.animationData,
-        rendererSettings: this.options.rendererSettings,
-        path: this.options.path || null,
+        container: this.$refs.animationContainer,
+        renderer: process.env.VUE_APP_RENDERER,
+        loop: this.options[process.env.VUE_APP_LOOP],
+        autoplay: this.options[process.env.VUE_APP_AUTOPLAY],
+        animationData: this.options[process.env.VUE_APP_ANIMATION],
+        rendererSettings: this.options[process.env.VUE_APP_SETTINGS],
+        path: this.options[process.env.VUE_APP_PATH] || null,
       });
     },
   },
