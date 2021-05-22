@@ -14,56 +14,13 @@
             div.content
               h2.title {{portofolio.title}}
               button.button(type="button" @click="showPortofolioModal(portofolio)") See More
-
-    GlobalBaseDialog.home-portofolio__modal(
-      v-if="isShowModal"
-      :is-show="isShowModal"
-      :is-primary="true"
-      @close="isShowModal = false"
-    )
-      div.row
-        div.column.column--left
-          div.carousel-arrow__buttons.extra-margin-right
-            i.carousel-arrow.icon-chevron-up(@click="showPrev('vertical-carousel')")
-            i.carousel-arrow.icon-chevron-down(@click="showNext('vertical-carousel')")
-          VueSlickCarousel.modal__carousel(
-            v-bind="verticalSettings" 
-            ref="verticalCarousel"
-          )
-            div.image-wrapper(v-for="(preview, index) in activePortofolio.previews" :key="index")
-              img.image(:src="preview")
-
-        div.column--middle
-
-        div.column.column--right
-          h2.title {{activePortofolio.title}}
-          p.subtitle {{activePortofolio.description}}
-          div.tools-section
-            p.tools-title Leveraged Skills: 
-            div.tools-lists
-              span.tool-text(v-for="(skill, index) in activePortofolio.skills" :key="index") {{skill}}
-          div(v-if="activePortofolio.website")
-            a.button.button--dark(:href="activePortofolio.website" target="blank") 
-              | Visit Website
-              i.icon-earth2
-              
-          div(v-if="activePortofolio.npmWebsite")
-            a.button.button--dark(
-              :href="activePortofolio.npmWebsite" 
-              target="blank"
-            ) 
-              | Visit NPM Package
-              i.icon-earth2
 </template>
 
 <script>
-import GlobalBaseDialog from "@/utilities/GlobalBaseDialog/GlobalBaseDialog.vue";
+import { mapMutations } from "vuex";
 
 export default {
   name: "HomePortofolio",
-  components: {
-    GlobalBaseDialog,
-  },
   data() {
     return {
       isShowModal: false,
@@ -203,16 +160,6 @@ export default {
           ],
         },
       ],
-      verticalSettings: {
-        arrows: false,
-        dots: true,
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
-        swipe: false,
-      },
       settings: {
         arrows: false,
         dots: true,
@@ -252,9 +199,10 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["setIsShowCarouselModal", "setActivePortofolio"]),
     showPortofolioModal(portofolio) {
-      this.isShowModal = true;
-      this.activePortofolio = portofolio;
+      this.setIsShowCarouselModal(true);
+      this.setActivePortofolio(portofolio);
     },
     backgroundImage(imageLocation) {
       const backgroundImageStyle = {
@@ -263,19 +211,11 @@ export default {
 
       return backgroundImageStyle;
     },
-    showNext(target) {
-      if (target === "vertical-carousel") {
-        this.$refs.verticalCarousel.next();
-      } else {
-        this.$refs.carousel.next();
-      }
+    showNext() {
+      this.$refs.carousel.next();
     },
-    showPrev(target) {
-      if (target === "vertical-carousel") {
-        this.$refs.verticalCarousel.prev();
-      } else {
-        this.$refs.carousel.prev();
-      }
+    showPrev() {
+      this.$refs.carousel.prev();
     },
   },
 };
@@ -433,96 +373,6 @@ export default {
       button:before {
         color: var(--dark-white);
       }
-    }
-  }
-}
-
-.home-portofolio__modal {
-  .row {
-    display: flex;
-  }
-
-  .column {
-    &.column--left {
-      display: flex;
-      margin: auto 0;
-      width: 60%;
-      padding: 80px 30px 60px 50px;
-    }
-
-    &.column--right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 40%;
-      padding: 80px 50px 60px 30px;
-      min-height: 465px;
-
-      .icon-earth2 {
-        margin-left: 8px;
-        font-size: 1.25rem;
-      }
-    }
-
-    .image-wrapper {
-      outline: 0;
-      border: 0;
-    }
-
-    .image {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-    }
-
-    .subtitle {
-      margin: 15px 0 25px;
-      text-align: justify;
-      color: $grey2;
-    }
-
-    .tools-section {
-      margin-bottom: 35px;
-      text-align: left;
-
-      .tools-title {
-        margin-bottom: 8px;
-
-        &::before {
-          font-family: "icomoon";
-          content: $icon-design;
-          font-size: 1rem;
-          margin-right: 8px;
-        }
-      }
-
-      .tools-lists {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .tool-text {
-        padding: 5px 8px;
-        border-radius: 4px;
-        margin: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        background-color: var(--button-solid-background-3);
-        color: var(--button-text-3);
-      }
-    }
-  }
-
-  .column--middle {
-    border-right: 1px solid $disabledGrey;
-  }
-
-  .modal__carousel {
-    width: 90%;
-
-    .slick-dots {
-      bottom: -35px;
     }
   }
 }

@@ -88,11 +88,12 @@ export default {
   height: 100%;
   background: rgba($black, 0.35);
   cursor: pointer;
+  z-index: 15;
 }
 
 .global-dialog-modal__content {
   position: relative;
-  z-index: 2;
+  z-index: 20;
   width: 100%;
   background: $white;
   max-width: 1200px;

@@ -16,6 +16,7 @@
       HomeSkills
       HomeAbout
       HomeConnection
+      CarouselModal
 </template>
 
 <script>
@@ -33,6 +34,7 @@ import MobileHomeSkills from "@/components/MobileHome/MobileHomeSkills.vue";
 import MobileHomeAbout from "@/components/MobileHome/MobileHomeAbout.vue";
 import MobileHomeConnection from "@/components/MobileHome/MobileHomeConnection.vue";
 
+import CarouselModal from "@/components/CarouselModal.vue";
 import UnsupportedDevice from "@/components/UnsupportedDevice.vue";
 
 export default {
@@ -51,6 +53,7 @@ export default {
     MobileHomeAbout,
     MobileHomeConnection,
     UnsupportedDevice,
+    CarouselModal,
   },
   data() {
     return {
