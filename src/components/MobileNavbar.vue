@@ -109,7 +109,7 @@ export default {
   width: 100%;
   padding: 15px 25px;
   transition: background 0.15s ease-in-out, padding 0.15s ease-in-out;
-  z-index: 10;
+  z-index: 15;
 
   &.is-scrolled {
     background: var(--background-color);

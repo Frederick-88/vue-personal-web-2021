@@ -109,6 +109,8 @@ export default {
 
 <style lang="scss">
 .mobile-home-banner__content {
+  position: relative;
+  z-index: 10;
   color: var(--text-color-primary);
 
   .left-column {

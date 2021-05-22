@@ -95,6 +95,8 @@ export default {
 .home-banner__content {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
   color: var(--text-color-primary);
   margin: 50px 100px 0;
 
