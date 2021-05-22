@@ -1,6 +1,6 @@
 <template lang="pug">
   section.mobile-home-banner__content
-    div.left-column(data-aos="fade-down" data-aos-duration="1000")
+    div.left-column(data-aos="fade-down" data-aos-duration="1500")
       div.left-column__content
         h3.title Hello! I'm 
         h3.title Chen Frederick
@@ -25,7 +25,7 @@
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) My Skills
 
-    div.right-column(data-aos="fade-right" data-aos-duration="1000")
+    div.right-column(data-aos="fade-right" data-aos-duration="1500")
       GlobalAnimationLoader(:file="workingLaptopJson")
 </template>
 
