@@ -1,4 +1,4 @@
-## vue-personal-web-2021
+## vue-responsive-personal-web-2021
 
 ### References :
 
