@@ -108,16 +108,31 @@ export default {
             "Responsive Web App",
           ],
         },
-        // {
-        //   title: "React E-Commerce",
-        //   description:
-        //     "Full Version of ReactJS & Redux E-Commerce made by Fullstack Development (Frontend, Backend until Deployment), Inspiration based on Best Seller E-Commerce app in theme forest (PickBazar). When user register & stored data to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
-        //   thumbnail: require("@/assets/images/works/react-ecommerce1.png"),
-        //   website: "https://s2-boutique.netlify.app/",
-        //   skills: [
-
-        //    ]
-        // },
+        {
+          title: "React E-Commerce",
+          description:
+            "Full Version of ReactJS & Redux E-Commerce made by Fullstack Development (Frontend, Backend until Deployments), Inspiration based on Best Seller E-Commerce app in theme forest (PickBazar). When user register & data stored to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
+          thumbnail: require("@/assets/images/works/react-ecommerce1.png"),
+          website: "https://s2-boutique.netlify.app/",
+          previews: [
+            require("@/assets/images/works/react-ecommerce1.png"),
+            require("@/assets/images/works/react-ecommerce2.png"),
+            require("@/assets/images/works/react-ecommerce3.png"),
+            require("@/assets/images/works/react-ecommerce4.png"),
+            require("@/assets/images/works/react-ecommerce5.png"),
+          ],
+          skills: [
+            "ReactJS",
+            "React Redux",
+            "ExpressJS",
+            "MongoDB",
+            "AWS",
+            "Heroku",
+            "Cloudflare",
+            "REST API",
+            "API Creation",
+          ],
+        },
         {
           title: "SmartLocal Gists Page",
           description:
