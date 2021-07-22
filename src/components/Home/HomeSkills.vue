@@ -32,7 +32,7 @@ export default {
         rows: 2,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         initialSlide: 0,
       },
     };

@@ -40,8 +40,8 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "AWS",
-    icon: "icon-amazonaws",
+    title: "Unit Testing",
+    icon: "icon-jest",
     level: "Familiar",
   },
   {
@@ -58,6 +58,11 @@ module.exports = [
     title: "Linux / UNIX System",
     icon: "icon-linux",
     level: "Fluent",
+  },
+  {
+    title: "AWS",
+    icon: "icon-amazonaws",
+    level: "Familiar",
   },
   {
     title: "Mongo DB",
