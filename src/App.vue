@@ -121,13 +121,12 @@ body {
   }
 
   &::-webkit-scrollbar {
-    border-radius: 4px;
-    width: 6px;
+    width: 10px;
     background-color: var(--background-color);
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: var(--scroll-color);
   }
 }
