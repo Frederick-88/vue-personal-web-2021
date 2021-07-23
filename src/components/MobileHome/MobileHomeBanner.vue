@@ -31,7 +31,7 @@
 
 <script>
 import { mapState } from "vuex";
-import Cv from "@/assets/images/my-cv.jpeg";
+import Cv from "@/assets/images/my-resume.jpg";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
