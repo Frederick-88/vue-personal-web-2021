@@ -11,7 +11,7 @@
         v-bind="portofolioCarouselSettings"
         :swipe="false"
       )
-        div.company-card-list(v-for="portofolio in portofolioLists")
+        div.company-card-list(v-for="portofolio in portofolioList")
           div.card-list
             img.card-image(:src='portofolio.thumbnail')
       div.icon-wrapper
@@ -25,7 +25,7 @@
       :swipe="false"
     )
       div.main-card-list(
-        v-for="(portofolio, index) in portofolioLists"
+        v-for="(portofolio, index) in portofolioList"
         :ref="`portofolio-${index}`"
       )
         div.card-list.--left
@@ -267,7 +267,7 @@ export default {
       this.carouselHeight = height + 20 + "px";
     },
     showNext() {
-      const maxIndex = this.portofolioLists.length - 1;
+      const maxIndex = this.portofolioList.length - 1;
       this.$refs.c1.next();
       this.$refs.c2.next();
 
@@ -279,7 +279,7 @@ export default {
       this.checkHeight();
     },
     showPrev() {
-      const lastContentIndex = this.portofolioLists.length - 1;
+      const lastContentIndex = this.portofolioList.length - 1;
       this.$refs.c1.prev();
       this.$refs.c2.prev();
 
