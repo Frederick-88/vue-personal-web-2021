@@ -56,24 +56,24 @@ export default {
           title: "OFFEO SG",
           logo: require("@/assets/images/experience/offeo.jpg"),
           description:
-            "Junior Frontend Developer, collaborate together with art director to develop UI & features that give remarkable experience for users. Lead users interactions to be saved in Database by integrating REST API method. Contributed to increased SEO & web performance of OFFEO. Building clean & readable code methodology.",
+            "As a Frontend Developer, collaborate together with art director to develop UI & features that give remarkable experience for users.  Integrate API from backend to exchange data within database. Contributed to increased SEO & web performance of OFFEO. Do Unit Testing for OFFEO Components. Building scalability by implementing clean & readable code methodology.",
           skills: [
-            "Frontend Development",
-            "REST API",
             "Vue.js",
             "Vuex",
             "Nuxt.js",
+            "REST API",
             "SEO & Web Performance",
-            "UNIX System (Linux)",
-            "Agile Scrum Development",
             "Git (Bitbucket & Github)",
+            "SCSS",
+            "UNIX System (Linux)",
+            "Webpack",
           ],
         },
         {
-          title: "Infinity Batam / Exotica",
+          title: "Infinity Batam (Exotica Batam)",
           logo: require("@/assets/images/experience/infinity.jpeg"),
           description:
-            "As Senior Graphic Designer, work closely to founder to bring 3D interior & graphic design ideas into reality, managing junior team, managing event preparations with production team, held meetings with big companies like RIWAY, JOTUN, SIIX, PHILIPS, etc.",
+            "As Senior Graphic Designer, work closely to founder to bring 3D interior & graphic design ideas into reality. Brief & prepare production team on material needs & production schedules for a successful event setup, held events & build relationship with big companies like RIWAY, JOTUN, SIIX, PHILIPS, etc.",
           skills: [
             "Interior & Graphic Design",
             "Teamwork & Management",
@@ -92,9 +92,9 @@ export default {
           skills: [
             "React.js",
             "React Redux",
-            "Node.js",
             "Express.js",
             "MongoDB",
+            "Node.js",
             "AWS",
             "Heroku",
             "SCSS & CSS",
@@ -105,11 +105,11 @@ export default {
           ],
         },
         {
-          title: "Glints Industrial Trainer",
+          title: "Glints Web Development Instructor",
           logo: require("@/assets/images/experience/glints.png"),
           description:
             "Provide guidance through newcomers in web development. Become a mentor of javascript & web development. Share best practices, experience, give live code tests & live code trainings.",
-          skills: ["Mentoring", "Javascript", "Live Code Interviewer"],
+          skills: ["Mentoring", "Javascript", "Web Development"],
         },
         {
           title: "Fingerfast Laboratory",
@@ -130,7 +130,7 @@ export default {
           title: "Leader of Maitreyawira's English Debate Club",
           logo: require("@/assets/images/experience/leader.png"),
           description:
-            "Managing Juniors, improve talents, participated in several competitions with teammates & win some, support this community and each family inside to their best versions.",
+            "Managing Juniors, improve talents, participated in several competitions with teammates & win some, support this community and each part of team inside to their best versions.",
           skills: [
             "Leadership",
             "Teamwork",
