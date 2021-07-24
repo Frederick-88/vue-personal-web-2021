@@ -54,3 +54,8 @@
 5. Carousel :
 
 - https://www.npmjs.com/package/vue-slick-carousel
+
+6. SEO :
+
+- https://stackoverflow.com/questions/1092329/what-are-the-important-meta-tags-i-must-put-in-my-website
+- https://search.google.com/search-console/about
