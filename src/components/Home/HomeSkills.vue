@@ -7,7 +7,7 @@
         i.carousel-arrow.icon-chevron-left(@click="showPrev")
         i.carousel-arrow.icon-chevron-right(@click="showNext")
       VueSlickCarousel.skills-carousel(v-bind="settings" ref="carousel")
-        div.skills__card-lists(v-for="skill in SkillLists")
+        div.skills__card-lists(v-for="skill in SkillList")
           div.card-list
             i.card-icon(:class="skill.icon")
             h2.card-title {{skill.title}}
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import SkillLists from "@/utilities/SkillLists";
+import SkillList from "@/utilities/SkillList";
 
 export default {
   name: "HomeSkills",
   data() {
     return {
-      SkillLists: SkillLists,
+      SkillList: SkillList,
       settings: {
         arrows: false,
         dots: true,
