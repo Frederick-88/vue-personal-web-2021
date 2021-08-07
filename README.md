@@ -59,3 +59,7 @@
 
 - https://stackoverflow.com/questions/1092329/what-are-the-important-meta-tags-i-must-put-in-my-website
 - https://search.google.com/search-console/about
+
+7. Subdomain Configuration Reference :
+
+- https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain
