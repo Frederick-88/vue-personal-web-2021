@@ -32,7 +32,7 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
   metaInfo: {
-    title: "Chen Frederick | Website",
+    title: "Chen Frederick | Staging Website",
   },
   components: {
     Navbar,
