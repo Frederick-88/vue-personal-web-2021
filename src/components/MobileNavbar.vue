@@ -4,7 +4,7 @@
     :class="{ 'is-scrolled': isScrolled }"
   )
     div
-      router-link.nav__item.main-nav(to="/") ChenFrederick.com
+      router-link.nav__item.main-nav(to="/") Staging-ChenFrederick.com
       span.nav__line
     div.mobile-navbar__overlay(v-if="isActive" @click="isActive = false")
     div.mobile-navbar__menu(
