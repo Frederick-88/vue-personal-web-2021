@@ -66,6 +66,7 @@ module.exports = [
       "VueJS",
       "Vuex",
       "Vue Slick Carousel",
+      "Responsive Web App",
       "Dark Mode",
       "SCSS",
       "Icomoon",
@@ -82,6 +83,10 @@ module.exports = [
     previews: [
       require("@/assets/images/works/weatherpedia-pwa1.png"),
       require("@/assets/images/works/weatherpedia-pwa2.png"),
+      require("@/assets/images/works/weatherpedia-pwa3.png"),
+      require("@/assets/images/works/weatherpedia-pwa4.png"),
+      require("@/assets/images/works/weatherpedia-pwa5.png"),
+      require("@/assets/images/works/weatherpedia-pwa6.png"),
     ],
     skills: [
       "ReactJS",
