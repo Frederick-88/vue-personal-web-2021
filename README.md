@@ -1,5 +1,11 @@
 ## vue-responsive-personal-web-2021
 
+### Production URL -> https://www.chenfrederick.com/
+
+### Staging URL -> http://staging.chenfrederick.com/
+
+---
+
 ### References :
 
 - Sections :
@@ -63,3 +69,8 @@
 7. Subdomain Configuration Reference :
 
 - https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain
+
+### Web Performance Improvements Useful Link / References :
+
+- https://www.webtips.dev/10-critical-performance-optimization-steps-you-should-take
+- https://github.com/flowforfrank/performance-checklist
