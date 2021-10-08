@@ -74,3 +74,18 @@
 
 - https://www.webtips.dev/10-critical-performance-optimization-steps-you-should-take
 - https://github.com/flowforfrank/performance-checklist
+- https://blog.logrocket.com/methods-optimizing-vue-js-applications/
+- https://www.bacancytechnology.com/blog/vuejs-app-performance-optimization
+
+---
+
+#### Methods Done Initially :
+
+-
+
+#### Methods Done in The Process :
+
+- Lazy Loadings
+- Optimize/Compress Images
+- Remove Repetitive CSS
+-
