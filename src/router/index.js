@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
+// if you are about to add a route please use a lazy loading of vue-routes
+// for reference can look on offeo-canvas / on readme references
 const routes = [
   {
     path: "/",
