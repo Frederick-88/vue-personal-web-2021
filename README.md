@@ -76,6 +76,7 @@
 - https://github.com/flowforfrank/performance-checklist
 - https://blog.logrocket.com/methods-optimizing-vue-js-applications/
 - https://www.bacancytechnology.com/blog/vuejs-app-performance-optimization
+- https://www.youtube.com/watch?v=OmyL0nSmXmw
 
 ---
 
@@ -85,7 +86,9 @@
 
 #### Methods Done in The Process :
 
-- Lazy Loadings
+- Lazy Loadings of Image, etc
+- Lazy Loadings of Vue Component
+- Lazy Loadings of Vue Route
 - Optimize/Compress Images
 - Remove Repetitive CSS
 -
