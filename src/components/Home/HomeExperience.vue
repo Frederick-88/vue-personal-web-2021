@@ -10,7 +10,10 @@
     )
       div.main-card-list(v-for="experience in ExperienceList")
         div.card-list.--left
-          img.card-image(:src='experience.logo')
+          img.card-image(
+            :src='experience.logo'
+            loading="lazy"
+          )
         div.card-list.--right
           h2.card-title {{experience.title}}
           p.card-subtitle {{experience.description}}
@@ -31,7 +34,10 @@
       )
         div.company-card-list(v-for="experience in ExperienceList")
           div.card-list
-            img.card-image(:src='experience.logo')
+            img.card-image(
+              loading="lazy"
+              :src='experience.logo'
+            )
       div.icon-wrapper
         i.carousel-arrow.icon-chevron-right(@click="showNext")
 </template>
