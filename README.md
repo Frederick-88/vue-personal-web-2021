@@ -6,6 +6,14 @@
 
 ---
 
+### Todo :
+
+- Update About Me Content
+- Update Scrollbar
+- Add Blog Nav + Lazy Route to Keep good web performance
+- Update Skills + Portofolio Section
+- Check for 1366 x 768 screen
+
 ### References :
 
 - Sections :
@@ -70,6 +78,8 @@
 
 - https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain
 
+---
+
 ### Web Performance Improvements Useful Link / References :
 
 - https://www.webtips.dev/10-critical-performance-optimization-steps-you-should-take
@@ -77,18 +87,22 @@
 - https://blog.logrocket.com/methods-optimizing-vue-js-applications/
 - https://www.bacancytechnology.com/blog/vuejs-app-performance-optimization
 - https://www.youtube.com/watch?v=OmyL0nSmXmw
+- explanation of vue prefetch to avoid bad UX of lazy load, without affecting web performance https://vueschool.io/articles/vuejs-tutorials/lazy-loading-individual-vue-components-and-prefetching/
+- https://web.dev/minify-css/
+- from google chrome developers if curious -> https://www.youtube.com/watch?v=5fLW5Q5ODiE
+- about do we need to add width & height attribute in <img> html tags, does it affect web performance? -> https://stackoverflow.com/questions/32719345/performance-wise-do-or-dont-add-width-and-height-to-an-img-tag
 
 ---
 
-#### Methods Done Initially :
+#### Methods Todo in The Future :
 
--
+- Lazy Loadings of Vue Route
 
 #### Methods Done in The Process :
 
-- Lazy Loadings of Image, etc
-- Lazy Loadings of Vue Component
-- Lazy Loadings of Vue Route
-- Optimize/Compress Images
-- Remove Repetitive CSS
--
+- Decrease the Usage / Dependence on Plugins or Third Party Libraries that are not mandatary or necessary :heavy_check_mark:
+- Lazy Loadings of Image :heavy_check_mark:
+- Lazy Loadings of Vue Component :heavy_check_mark:
+- Optimize/Compress Images :heavy_check_mark:
+- Minify CSS by Removing Repetitive CSS or Unused CSS :heavy_check_mark:
+- Serve images in new gen formats (webp) + reduce size of image. Since for mobile they also dont need a big or HD image ( 1920 x 1080 )
