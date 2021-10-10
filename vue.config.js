@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
-      args[0].title = "Chen Frederick | Staging-Website";
+      args[0].title = "Chen Frederick | Website";
       args[0].meta = {
         description:
           "A React & Vue Frontend Developer's Personal Website Who Has Extensive Capability on Fullstack Development, Web Performance & Scalability.",
