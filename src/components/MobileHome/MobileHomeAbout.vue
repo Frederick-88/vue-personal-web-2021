@@ -4,7 +4,10 @@
       p.about-subtitle My Intro
       h2.about-title About Me
       div.left-column
-        img.column-image(:src="require('@/assets/images/me.jpeg')")
+        img.column-image(
+          loading="lazy"
+          :src="require('@/assets/images/me.jpeg')"
+        )
       div.right-column
         p.about-description I believe new challenges and obstacles are made for a better version of me.
         p.about-description I empower learning and hardwork is the key to deliver quality in advance.

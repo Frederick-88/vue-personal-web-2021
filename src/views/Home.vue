@@ -34,11 +34,10 @@ import MobileHomeSkills from "@/components/MobileHome/MobileHomeSkills.vue";
 import MobileHomeAbout from "@/components/MobileHome/MobileHomeAbout.vue";
 import MobileHomeConnection from "@/components/MobileHome/MobileHomeConnection.vue";
 
-import CarouselModal from "@/components/CarouselModal.vue";
-import UnsupportedDevice from "@/components/UnsupportedDevice.vue";
-
 export default {
   name: "Home",
+  // () => import() means we are lazy loading them
+  // () => import(/* webpackPrefetch: true */) means we are lazy loading them, but after webpage already loaded, we want to directly fetch them.
   components: {
     HomeBanner,
     HomePortofolio,
@@ -52,8 +51,8 @@ export default {
     MobileHomeSkills,
     MobileHomeAbout,
     MobileHomeConnection,
-    UnsupportedDevice,
-    CarouselModal,
+    UnsupportedDevice: () => import("@/components/UnsupportedDevice.vue"),
+    CarouselModal: () => import("@/components/CarouselModal.vue"),
   },
   data() {
     return {

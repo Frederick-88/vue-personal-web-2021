@@ -2,7 +2,10 @@
   section#my-intro.home-about__content(data-aos="fade-right" data-aos-duration="600")
     div.content-container
       div.left-column
-        img.column-image(:src="require('@/assets/images/me.jpeg')")
+        img.column-image(
+          loading="lazy"
+          :src="require('@/assets/images/me.jpeg')"
+        )
       div.right-column
         p.about-subtitle My Intro
         h2.about-title About Me

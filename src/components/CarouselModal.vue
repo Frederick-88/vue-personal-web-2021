@@ -15,7 +15,10 @@
           ref="verticalCarousel"
         )
           div.image-wrapper(v-for="(preview, index) in activePortofolio.previews" :key="index")
-            img.image(:src="preview")
+            img.image(
+              :src="preview"
+              loading="lazy"
+            )
 
       div.column--middle
 

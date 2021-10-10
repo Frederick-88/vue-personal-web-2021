@@ -13,7 +13,10 @@
       )
         div.company-card-list(v-for="portofolio in PortofolioList")
           div.card-list
-            img.card-image(:src='portofolio.thumbnail')
+            img.card-image(
+              loading="lazy"
+              :src='portofolio.thumbnail'
+            )
       div.icon-wrapper
         i.carousel-arrow.icon-chevron-right(@click="showNext")
 
@@ -29,7 +32,10 @@
         :ref="`portofolio-${index}`"
       )
         div.card-list.--left
-          img.card-image(:src='portofolio.thumbnail')
+          img.card-image(
+            loading="lazy"
+            :src='portofolio.thumbnail'
+          )
           span.info-label View all the images in desktop!
         div.card-list.--right
           h2.card-title {{portofolio.title}}
