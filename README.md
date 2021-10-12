@@ -13,6 +13,7 @@
 - Add Blog Nav + Lazy Route to Keep good web performance
 - Update Skills + Portofolio Section
 - Check for 1366 x 768 screen
+- Add Live Code Interview Tests in Github
 
 ### References :
 
