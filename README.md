@@ -9,8 +9,7 @@
 ### Todo :
 
 - Update About Me Content
-- Update Scrollbar
-- Add Blog Nav + Lazy Route to Keep good web performance
+- Add Blog about web performance & unit test
 - Update Skills + Portofolio Section
 - Check for 1366 x 768 screen
 - Add Live Code Interview Tests in Github

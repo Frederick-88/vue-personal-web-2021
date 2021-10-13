@@ -115,14 +115,8 @@ body {
     margin: 0;
   }
 
-  &::-webkit-scrollbar-track {
-    background-color: var(--background-color);
-    width: 10px;
-  }
-
   &::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--background-color);
+    width: 8px;
   }
 
   &::-webkit-scrollbar-thumb {

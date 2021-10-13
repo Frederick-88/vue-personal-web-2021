@@ -1,16 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-
 Vue.use(VueRouter);
 
-// if you are about to add a route please use a lazy loading of vue-routes
-// for reference can look on offeo-canvas / on readme references
+// vue-route lazy loading reference => https://www.bacancytechnology.com/blog/vuejs-app-performance-optimization
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: () => import("../views/Home.vue"),
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    component: () => import("../views/Blog.vue"),
   },
 ];
 
