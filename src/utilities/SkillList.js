@@ -40,14 +40,24 @@ module.exports = [
     level: "Fluent",
   },
   {
+    title: "Cloudflare + Web Deployment",
+    icon: "icon-cloudflare",
+    level: "Fluent",
+  },
+  {
     title: "Unit Testing",
     icon: "icon-jest",
     level: "Familiar",
   },
   {
-    title: "Cloudflare + Web Deployment",
-    icon: "icon-cloudflare",
+    title: "Laravel + Laravel Blade",
+    icon: "icon-laravel",
     level: "Fluent",
+  },
+  {
+    title: "MY SQL",
+    icon: "icon-mysql",
+    level: "Familiar",
   },
   {
     title: "SCSS",
@@ -85,11 +95,6 @@ module.exports = [
     level: "Familiar",
   },
   {
-    title: "MY SQL",
-    icon: "icon-mysql",
-    level: "Familiar",
-  },
-  {
     title: "Fullstack Development",
     icon: "icon-code",
     level: "Familiar",
@@ -100,14 +105,14 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "Responsive Web Design",
-    icon: "icon-responsive",
-    level: "Fluent",
-  },
-  {
     title: "Backend Development",
     icon: "icon-database",
     level: "Familiar",
+  },
+  {
+    title: "Responsive Web Design",
+    icon: "icon-responsive",
+    level: "Fluent",
   },
   {
     title: "REST API",
