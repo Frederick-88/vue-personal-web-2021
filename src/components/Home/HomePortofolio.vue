@@ -173,6 +173,7 @@ export default {
   .portofolio-carousel {
     width: 90%;
   }
+
   .portofolio__card-lists {
     border: 0;
     outline: 0;
@@ -229,6 +230,7 @@ export default {
       font-size: 0.875rem;
       font-weight: 600;
       margin-bottom: 12px;
+      text-align: center;
     }
   }
 
