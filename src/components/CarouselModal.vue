@@ -6,7 +6,7 @@
     @close="closeModal"
   )
     div.row
-      div.column.column--left
+      div.column.column--left(:class="{'column--one-preview': hasOnlyOnePreview}")
         div.carousel-arrow__buttons.extra-margin-right
           i.carousel-arrow.icon-chevron-up(@click="showPrev")
           i.carousel-arrow.icon-chevron-down(@click="showNext")
@@ -68,6 +68,9 @@ export default {
   },
   computed: {
     ...mapState(["isShowCarouselModal", "activePortofolio"]),
+    hasOnlyOnePreview() {
+      return this.activePortofolio.previews.length === 1;
+    },
   },
   methods: {
     ...mapMutations(["setIsShowCarouselModal", "setActivePortofolio"]),
@@ -110,6 +113,19 @@ export default {
       .icon-earth2 {
         margin-left: 8px;
         font-size: 1.25rem;
+      }
+    }
+
+    &.column--one-preview {
+      .slick-track {
+        height: 400px !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .carousel-arrow {
+        background: $disabledGrey;
+        pointer-events: none;
       }
     }
 
