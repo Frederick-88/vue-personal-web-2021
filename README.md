@@ -8,10 +8,8 @@
 
 ### Todo :
 
-- Update About Me Content
-- Add Blog about web performance & unit test
-- Update Skills + Portofolio Section
-- Check for 1366 x 768 screen
+- Add Tags in Portofolio ( e.g react/vue/web performance, etc for a better UX ) - todo later
+- Add List of Vue Portofolio, React Portofolio, etc created ( e.g react/vue/web performance, etc for a better UX ) - todo 2022
 - Add Live Code Interview Tests in Github
 
 ### References :
@@ -105,4 +103,4 @@
 - Lazy Loadings of Vue Component :heavy_check_mark:
 - Optimize/Compress Images :heavy_check_mark:
 - Minify CSS by Removing Repetitive CSS or Unused CSS :heavy_check_mark:
-- Serve images in new gen formats (webp) + reduce size of image. Since for mobile they also dont need a big or HD image ( 1920 x 1080 )
+- Serve images in new gen formats (webp) + reduce size of image. Since for mobile they also dont need a big or HD image ( 1920 x 1080 ) :heavy_check_mark:
