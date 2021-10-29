@@ -9,11 +9,12 @@ const routes = [
     name: "Home",
     component: () => import("../views/Home.vue"),
   },
-  {
-    path: "/blog",
-    name: "Blog",
-    component: () => import("../views/Blog.vue"),
-  },
+  // --- blog route/page hasn't needed as for now
+  // {
+  //   path: "/blog",
+  //   name: "Blog",
+  //   component: () => import("../views/Blog.vue"),
+  // },
 ];
 
 const router = new VueRouter({

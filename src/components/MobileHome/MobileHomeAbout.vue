@@ -9,9 +9,8 @@
           :src="require('@/assets/images/me.jpeg')"
         )
       div.right-column
-        p.about-description I believe new challenges and obstacles are made for a better version of me.
-        p.about-description I empower learning and hardwork is the key to deliver quality in advance.
-        p.about-description I could work by individual and team depends on company needs. I trust in every condition, there are space to grow and chance to learn more. So i always give maximum effort in my works.
+        p.about-description Highly adaptable & willing to learn, he consider himself as an enthusiastic and passionate individual that is looking forward to face new challenges daily & contribute to new ideas from organization that he work for.
+        p.about-description In most of chances, whether its after worktime or weekend, he always took extra miles to develop his skills & capabilities to become a more capable & better developer that is dependable and can bring positive impacts to the company that gave him chance.
 
         div.contact-section
           div.section
