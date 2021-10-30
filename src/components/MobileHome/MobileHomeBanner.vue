@@ -19,11 +19,6 @@
           download="Chen Frederick - CV"
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) Download My CV
-        a.mobile-home-banner__button(
-          v-if="!isSmallMobileDevice"
-          href="#skills"
-          :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
-        ) My Skills
 
     div.right-column(data-aos="fade-right" data-aos-duration="1500")
       GlobalAnimationLoader(:file="workingLaptopJson")
@@ -44,15 +39,12 @@ export default {
     return {
       CvFile: Cv,
       workingLaptopJson: JsonFile,
-      isSmallMobileDevice: false,
     };
   },
   computed: {
     ...mapState(["webTheme"]),
   },
   mounted() {
-    this.detectSmallMobileUser();
-
     // typing logic
     const words = ["Fullstack", "Web", "Frontend"];
     let wordQueueNumber = 0;
@@ -96,13 +88,6 @@ export default {
     };
 
     typingEffect();
-  },
-  methods: {
-    detectSmallMobileUser() {
-      if (screen.width < 375) {
-        this.isSmallMobileDevice = true;
-      }
-    },
   },
 };
 </script>
