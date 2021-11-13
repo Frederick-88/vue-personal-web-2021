@@ -53,7 +53,7 @@ module.exports = [
     ],
   },
   {
-    title: "Laravel Fullstack Community Website",
+    title: "Laravel Fullstack Community Website-2021",
     description:
       "Fullstack Laravel Color Palette Community Website Made with MySQL, Laravel Blade, Laravel & Tailwind.css. Integrated with gmail mailing system & deployed to heroku included database. Calm & Consistent Design with Rainbow Animated Navigation Bar.",
     thumbnail: require("@/assets/images/works/laravel-fullstack-app2.png"),
