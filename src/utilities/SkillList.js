@@ -70,8 +70,8 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "AWS",
-    icon: "icon-amazonaws",
+    title: "Firebase",
+    icon: "icon-firebase",
     level: "Familiar",
   },
   {
@@ -87,11 +87,6 @@ module.exports = [
   {
     title: "Node JS",
     icon: "icon-node-js",
-    level: "Familiar",
-  },
-  {
-    title: "PHP",
-    icon: "icon-php",
     level: "Familiar",
   },
   {
@@ -113,6 +108,16 @@ module.exports = [
     title: "Responsive Web Design",
     icon: "icon-responsive",
     level: "Fluent",
+  },
+  {
+    title: "PHP",
+    icon: "icon-php",
+    level: "Familiar",
+  },
+  {
+    title: "AWS",
+    icon: "icon-amazonaws",
+    level: "Familiar",
   },
   {
     title: "REST API",

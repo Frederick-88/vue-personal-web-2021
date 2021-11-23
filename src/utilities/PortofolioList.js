@@ -98,6 +98,24 @@ module.exports = [
     ],
   },
   {
+    title: "Vue Firebase Fullstack Apps-2021",
+    description:
+      "A Vue.js (Frontend Side) + Firebase (Backend Side) website that consist customer management system + todoapp. It is able to handle image uploads, CRUD of database column & clearing of uploaded image in database. This VueFire app was deployed as a live website that can be accessed online.",
+    thumbnail: require("@/assets/images/works/vue-firebase1.png"),
+    website: "https://vue-firebase-todoapp-3a77a.web.app/#/",
+    previews: [
+      require("@/assets/images/works/vue-firebase1.png"),
+      require("@/assets/images/works/vue-firebase2.png"),
+    ],
+    skills: [
+      "VueJS",
+      "Fullstack web development",
+      "Firebase",
+      "Firebase Integration",
+      "Github",
+    ],
+  },
+  {
     title: "Weatherpedia (PWA)-2021",
     description:
       "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the web into a mobile app for a very small size of 332 kb. then user also can search other city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
@@ -120,15 +138,6 @@ module.exports = [
     ],
   },
   {
-    title: "React & Vue Unit Testing Sample Practices-2021",
-    description:
-      "React & Vue Unit Testing Sample Practices (for react - https://github.com/Frederick-88/react-unit-testing) & (for vue - https://github.com/Frederick-88/vue-unit-testing)",
-    thumbnail: require("@/assets/images/works/vue-react-unit-test.png"),
-    website: null,
-    previews: [require("@/assets/images/works/vue-react-unit-test.png")],
-    skills: ["VueJS", "ReactJS", "Unit Testing"],
-  },
-  {
     title: "ChenFrederick.com-2021",
     description:
       "This is my own personal website, at here i try to share with you who i am and what are the things that i'm capable of. Here, you can also access my personal web in phone & any other device too since it's also a responsive web app! Let's get to know each other.",
@@ -149,6 +158,15 @@ module.exports = [
       "Animation Loader System",
       "Github",
     ],
+  },
+  {
+    title: "React & Vue Unit Testing Sample Practices-2021",
+    description:
+      "React & Vue Unit Testing Sample Practices (for react - https://github.com/Frederick-88/react-unit-testing) & (for vue - https://github.com/Frederick-88/vue-unit-testing)",
+    thumbnail: require("@/assets/images/works/vue-react-unit-test.png"),
+    website: null,
+    previews: [require("@/assets/images/works/vue-react-unit-test.png")],
+    skills: ["VueJS", "ReactJS", "Unit Testing"],
   },
   {
     title: "React E-Commerce-2020",
