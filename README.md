@@ -1,4 +1,4 @@
-## <staging> - vue-responsive-personal-web-2021
+## staging - vue-responsive-personal-web-2021
 
 ### Production URL -> https://www.chenfrederick.com/
 
