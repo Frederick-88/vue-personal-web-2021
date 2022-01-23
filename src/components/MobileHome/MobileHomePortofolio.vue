@@ -127,6 +127,8 @@ export default {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   margin: 70px 30px 30px;
+  position: relative;
+  z-index: 99;
 
   @include small-mobile() {
     margin: 70px 15px 30px;

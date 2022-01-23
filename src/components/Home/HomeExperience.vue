@@ -72,6 +72,8 @@ export default {
   margin: 70px auto;
   max-width: 900px;
   padding: 30px;
+  position: relative;
+  z-index: 99;
 
   .subtitle {
     font-weight: 600;
