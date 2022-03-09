@@ -2,7 +2,7 @@
   section.unsupported-device
     div.animation-loader__wrapper
       GlobalAnimationLoader(:file="workingJsonFile")
-    h2.title Work in progress for this screen width. Please kindly visit with bigger desktop / with mobile =)
+    h2.title Work in progress for this device screen resolution. Please kindly visit with bigger desktop / with mobile =)
     div.social-media__wrapper
       a.media-button.icon-email(href="mailto:me@chenfrederick.com?subject=Hi Fred!&body=I'm (name) from (where) (please drop your message kindly here)")
       a.media-button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="blank")
