@@ -39,6 +39,7 @@ export default {
 
   .animation-loader__wrapper {
     width: 50%;
+    margin-top: -10%;
 
     @include tablet() {
       width: 75%;
@@ -51,10 +52,10 @@ export default {
 
   .title {
     color: var(--text-color-secondary);
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
     max-width: 600px;
-    margin: 30px 0;
+    margin: 30px 0 20px;
     line-height: 1.5;
   }
 
@@ -62,12 +63,12 @@ export default {
     display: flex;
 
     .media-button {
-      padding: 20px 10px;
-      margin: 0 20px;
+      padding: 10px;
+      margin: 0 10px;
       display: block;
       background: none;
       color: var(--text-color-secondary);
-      font-size: 1.5rem;
+      font-size: 1.375rem;
       cursor: pointer;
       border: 0;
       outline: 0;
