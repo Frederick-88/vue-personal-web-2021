@@ -1,5 +1,5 @@
 <template lang="pug">
-  aside(data-aos="fade-down" data-aos-duration="1000")
+  aside
       button.darkmode__toggle(@click="toggleTheme" aria-label="Toggle themes")
         span.icon-sun-solid(v-if="this.webTheme == 'darkMode'")
         span.icon-moon-solid(v-else)
