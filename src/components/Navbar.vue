@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.navigation__bar(data-aos="fade-down" data-aos-duration="1000")
+  section.navigation__bar
       div
         router-link.nav__item.main-nav(to="/") Staging-ChenFrederick.com
         hr.nav__line
@@ -17,6 +17,8 @@ export default {
 
 <style lang="scss">
 .navigation__bar {
+  animation: fade-down 2s;
+
   .nav__item {
     display: block;
     font-weight: 500;
