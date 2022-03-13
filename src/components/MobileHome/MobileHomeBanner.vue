@@ -1,6 +1,6 @@
 <template lang="pug">
   section.mobile-home-banner__content
-    div.left-column(data-aos="fade-down" data-aos-duration="1500")
+    div.left-column
       div.left-column__content
         h3.title Hello! I'm 
         h3.title Chen Frederick
@@ -20,7 +20,7 @@
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) Download My CV
 
-    div.right-column(data-aos="fade-right" data-aos-duration="1500")
+    div.right-column
       GlobalAnimationLoader(:file="workingLaptopJson")
 </template>
 
@@ -101,6 +101,7 @@ export default {
   .left-column {
     padding: 30px;
     display: flex;
+    animation: fade-down 2s;
 
     @include large-mobile() {
       padding-bottom: 0;
@@ -132,6 +133,7 @@ export default {
     width: 100%;
     justify-content: center;
     display: flex;
+    animation: fade-right 2s;
 
     .animation-loader__image {
       width: 100% !important;
