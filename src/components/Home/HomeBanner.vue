@@ -1,6 +1,6 @@
 <template lang="pug">
   section.home-banner__content
-    div.left-column(data-aos="fade-down" data-aos-duration="1000")
+    div.left-column
       div.left-column__content
         h3.title Hello!
         h3.title I'm Chen Frederick
@@ -24,7 +24,7 @@
           :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) My Skills
 
-    div.right-column(data-aos="fade-down" data-aos-duration="1000")
+    div.right-column
       GlobalAnimationLoader(:file="workingLaptopJson")
 </template>
 
@@ -100,15 +100,21 @@ export default {
   color: var(--text-color-primary);
   margin: 50px 100px 0;
 
+  .left-column,
+  .right-column {
+    display: flex;
+    animation: fade-down 2s;
+  }
+
   .left-column {
     flex: 55%;
     width: 55%;
     padding: 30px;
-    display: flex;
 
     .typing__blink {
       animation: blink 0.5s infinite;
     }
+
     @keyframes blink {
       to {
         opacity: 0;
@@ -132,7 +138,6 @@ export default {
     flex: 45%;
     width: 45%;
     justify-content: center;
-    display: flex;
 
     .animation-loader__image {
       width: 100% !important;

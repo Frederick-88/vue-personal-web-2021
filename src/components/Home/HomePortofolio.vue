@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#works.home-portofolio__content(data-aos="fade-up" data-aos-duration="1000")
+  section#works.home-portofolio__content
     h4.header-title My Portofolio - Recent Works
     div.portofolio-carousel__container
       div.carousel-arrow__buttons
@@ -93,6 +93,7 @@ export default {
   margin: 50px 100px 0;
   position: relative;
   z-index: 6;
+  animation: fade-up 2s;
 
   .header-title {
     text-align: end;

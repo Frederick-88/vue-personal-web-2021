@@ -22,35 +22,48 @@
 <script>
 import HomeBanner from "@/components/Home/HomeBanner.vue";
 import HomePortofolio from "@/components/Home/HomePortofolio.vue";
-import HomeExperience from "@/components/Home/HomeExperience.vue";
-import HomeSkills from "@/components/Home/HomeSkills.vue";
-import HomeAbout from "@/components/Home/HomeAbout.vue";
-import HomeConnection from "@/components/Home/HomeConnection.vue";
-
 import MobileHomeBanner from "@/components/MobileHome/MobileHomeBanner.vue";
-import MobileHomePortofolio from "@/components/MobileHome/MobileHomePortofolio.vue";
-import MobileHomeExperience from "@/components/MobileHome/MobileHomeExperience.vue";
-import MobileHomeSkills from "@/components/MobileHome/MobileHomeSkills.vue";
-import MobileHomeAbout from "@/components/MobileHome/MobileHomeAbout.vue";
-import MobileHomeConnection from "@/components/MobileHome/MobileHomeConnection.vue";
 
 export default {
   name: "Home",
-  // () => import() means we are lazy loading them
+  // () => import() means we are lazy loading them, will start fetch only when start calling the component
   // () => import(/* webpackPrefetch: true */) means we are lazy loading them, but after webpage already loaded, we want to directly fetch them.
   components: {
     HomeBanner,
     HomePortofolio,
-    HomeExperience,
-    HomeSkills,
-    HomeAbout,
-    HomeConnection,
+    HomeExperience: () =>
+      import(
+        /* webpackPrefetch: true */ "@/components/Home/HomeExperience.vue"
+      ),
+    HomeSkills: () =>
+      import(/* webpackPrefetch: true */ "@/components/Home/HomeSkills.vue"),
+    HomeAbout: () =>
+      import(/* webpackPrefetch: true */ "@/components/Home/HomeAbout.vue"),
+    HomeConnection: () =>
+      import(
+        /* webpackPrefetch: true */ "@/components/Home/HomeConnection.vue"
+      ),
     MobileHomeBanner,
-    MobileHomePortofolio,
-    MobileHomeExperience,
-    MobileHomeSkills,
-    MobileHomeAbout,
-    MobileHomeConnection,
+    MobileHomePortofolio: () =>
+      import(
+        /* webpackPrefetch: true */ "@/components/MobileHome/MobileHomePortofolio.vue"
+      ),
+    MobileHomeExperience: () =>
+      import(
+        /* webpackPrefetch: true */ "@/components/MobileHome/MobileHomeExperience.vue"
+      ),
+    MobileHomeSkills: () =>
+      import(
+        /* webpackPrefetch: true */ "@/components/MobileHome/MobileHomeSkills.vue"
+      ),
+    MobileHomeAbout: () =>
+      import(
+        /* webpackPrefetch: true */ "@/components/MobileHome/MobileHomeAbout.vue"
+      ),
+    MobileHomeConnection: () =>
+      import(
+        /* webpackPrefetch: true */ "@/components/MobileHome/MobileHomeConnection.vue"
+      ),
     UnsupportedDevice: () => import("@/components/UnsupportedDevice.vue"),
     CarouselModal: () => import("@/components/CarouselModal.vue"),
   },

@@ -124,6 +124,7 @@ body {
     background-color: var(--scroll-color);
   }
 }
+
 #app {
   font-family: "Montserrat", sans-serif;
 
@@ -159,6 +160,7 @@ body {
       padding: 40px 15px 0;
       width: 100px;
       right: 0;
+      animation: fade-down 2s;
     }
   }
 
@@ -189,6 +191,39 @@ body {
       bottom: -10px;
       z-index: 3;
       width: 100%;
+    }
+  }
+
+  @keyframes fade-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-75px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(75px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-right {
+    0% {
+      opacity: 0;
+      transform: translateX(-75px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

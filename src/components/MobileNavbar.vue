@@ -1,6 +1,5 @@
 <template lang="pug">
   section.mobile-navigation__bar(
-    data-aos="fade-down" data-aos-duration="1500"
     :class="{ 'is-scrolled': isScrolled }"
   )
     div
@@ -110,6 +109,7 @@ export default {
   padding: 15px 25px;
   transition: background 0.15s ease-in-out, padding 0.15s ease-in-out;
   z-index: 15;
+  animation: fade-down 2s;
 
   &.is-scrolled {
     background: var(--background-color);

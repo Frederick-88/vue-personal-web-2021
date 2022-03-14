@@ -128,7 +128,7 @@ export default {
   font-weight: 300;
   margin: 70px 30px 30px;
   position: relative;
-  z-index: 99;
+  z-index: 10;
 
   @include small-mobile() {
     margin: 70px 15px 30px;
