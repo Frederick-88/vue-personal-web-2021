@@ -31,6 +31,12 @@
               p Email
             p.divider :
             p.section-text me@chenfrederick.com
+          div.section
+            div.section-title
+              i.icon-linkedin-line
+              p Linkedin
+            p.divider :
+            p.section-text Chen Frederick
 
         h4.interest-title My Interests
         div.interest-section
@@ -131,6 +137,7 @@ export default {};
       .section-title {
         display: flex;
         align-items: center;
+        text-align: left;
 
         i {
           color: var(--text-orange-green);
