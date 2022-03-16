@@ -1,9 +1,15 @@
+/*
+--- Total Portofolio = 19
+*/
+
 module.exports = [
   {
-    title: "Asia-Property-2021",
+    title: "Asia-Property",
     description:
       "Beautiful & modern real estate website that developed within full-stack development until deployment all by myself, designed purely with SCSS based from ideas i received from themeforest.com & dribbble.com.",
     thumbnail: require("@/assets/images/works/asia01.png"),
+    year: 2021,
+    tags: ["ReactJS", "Fullstack"],
     website: "https://asiaproperty.netlify.app/",
     previews: [
       require("@/assets/images/works/asia01.png"),
@@ -28,10 +34,35 @@ module.exports = [
     ],
   },
   {
-    title: "Global CSS Framework-2021",
+    title: "Asia-Property (Admin Site)",
+    description: "Description.",
+    thumbnail: require("@/assets/images/works/asia-admin01.png"),
+    year: 2022,
+    tags: ["ReactJS", "Fullstack"],
+    website: "https://asiaproperty.netlify.app/admin?is_visitor=true",
+    previews: [
+      require("@/assets/images/works/asia-admin01.png"),
+      require("@/assets/images/works/asia-admin02.png"),
+      require("@/assets/images/works/asia-admin03.png"),
+      require("@/assets/images/works/asia-admin04.png"),
+      require("@/assets/images/works/asia-admin05.png"),
+      require("@/assets/images/works/asia-admin06.png"),
+      require("@/assets/images/works/asia-admin07.png"),
+      require("@/assets/images/works/asia-admin08.png"),
+      require("@/assets/images/works/asia-admin09.png"),
+      require("@/assets/images/works/asia-admin10.png"),
+      require("@/assets/images/works/asia-admin11.png"),
+      require("@/assets/images/works/asia-admin12.png"),
+    ],
+    skills: ["ReactJS", "ReactRedux"],
+  },
+  {
+    title: "GlobalUI CSS Framework",
     description:
       "A CSS Framework & Components Library that is created with Vue.js. Support the usage for Vue.js or Nuxt.js developers. 1 of my best works so far, a system example for agencies that want to have consistent components / UI. Efficient for future changes & a great tool for teamwork culture.",
     thumbnail: require("@/assets/images/works/css-framework1.png"),
+    year: 2021,
+    tags: ["VueJS", "NPM"],
     website: "https://global-ui-docs.netlify.app/",
     npmWebsite: "https://www.npmjs.com/package/global-ui",
     previews: [
@@ -53,10 +84,12 @@ module.exports = [
     ],
   },
   {
-    title: "Laravel Fullstack Community Website-2021",
+    title: "Laravel Fullstack Community Website",
     description:
       "Fullstack Laravel Color Palette Community Website Made with MySQL, Laravel Blade, Laravel & Tailwind.css. Integrated with gmail mailing system & deployed to heroku included database. Calm & Consistent Design with Rainbow Animated Navigation Bar.",
     thumbnail: require("@/assets/images/works/laravel-fullstack-app2.png"),
+    year: 2021,
+    tags: ["Laravel-PHP", "Fullstack"],
     website: "https://laravel-fd-color-palette.herokuapp.com/",
     previews: [
       require("@/assets/images/works/laravel-fullstack-app1.png"),
@@ -79,15 +112,18 @@ module.exports = [
     ],
   },
   {
-    title: "Web Performance & SEO Improvements Studycase-2021",
+    title: "Web Performance & SEO Improvements Studycase",
     description:
       "Web performance & SEO improvements done on my personal website (chenfrederick.com). Can see the snapshots for before-after of the web performance result inspected with Lighthouse & SEO result where my website exist in page 1 at google search result.",
     thumbnail: require("@/assets/images/works/web-performance-after.jpeg"),
+    year: 2021,
+    tags: ["SEO", "Web Performance"],
     website: "https://www.chenfrederick.com/",
     previews: [
       require("@/assets/images/works/web-performance-before.png"),
       require("@/assets/images/works/web-performance-after.jpeg"),
       require("@/assets/images/works/seo-result.png"),
+      require("@/assets/images/works/personal-web-3.jpeg"),
     ],
     skills: [
       "Web Performance",
@@ -98,81 +134,12 @@ module.exports = [
     ],
   },
   {
-    title: "Vue Firebase Fullstack Apps-2021",
-    description:
-      "A Vue.js (Frontend Side) + Firebase (Backend Side) website that consist customer management system + todoapp. It is able to handle image uploads, CRUD of database column & clearing of uploaded image in database. This VueFire app was deployed as a live website that can be accessed online.",
-    thumbnail: require("@/assets/images/works/vue-firebase1.png"),
-    website: "https://vue-firebase-todoapp-3a77a.web.app/#/",
-    previews: [
-      require("@/assets/images/works/vue-firebase1.png"),
-      require("@/assets/images/works/vue-firebase2.png"),
-    ],
-    skills: [
-      "VueJS",
-      "Fullstack web development",
-      "Firebase",
-      "Firebase Integration",
-      "Github",
-    ],
-  },
-  {
-    title: "Weatherpedia (PWA)-2021",
-    description:
-      "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the web into a mobile app for a very small size of 332 kb. then user also can search other city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
-    thumbnail: require("@/assets/images/works/weatherpedia-pwa1.png"),
-    website: "https://weatherpedia.netlify.app/",
-    previews: [
-      require("@/assets/images/works/weatherpedia-pwa1.png"),
-      require("@/assets/images/works/weatherpedia-pwa2.png"),
-      require("@/assets/images/works/weatherpedia-pwa3.png"),
-      require("@/assets/images/works/weatherpedia-pwa4.png"),
-      require("@/assets/images/works/weatherpedia-pwa5.png"),
-      require("@/assets/images/works/weatherpedia-pwa6.png"),
-    ],
-    skills: [
-      "ReactJS",
-      "Progressive Web App (PWA)",
-      "REST API",
-      "Responsive Web App",
-      "Github",
-    ],
-  },
-  {
-    title: "ChenFrederick.com-2021",
-    description:
-      "This is my own personal website, at here i try to share with you who i am and what are the things that i'm capable of. Here, you can also access my personal web in phone & any other device too since it's also a responsive web app! Let's get to know each other.",
-    thumbnail: require("@/assets/images/works/personal-web.png"),
-    website: null,
-    previews: [
-      require("@/assets/images/works/personal-web.png"),
-      require("@/assets/images/works/personal-web-2.png"),
-    ],
-    skills: [
-      "VueJS",
-      "Vuex",
-      "Vue Slick Carousel",
-      "Responsive Web App",
-      "Dark Mode",
-      "SCSS",
-      "Icomoon",
-      "Animation Loader System",
-      "Github",
-    ],
-  },
-  {
-    title: "React & Vue Unit Testing Sample Practices-2021",
-    description:
-      "React & Vue Unit Testing Sample Practices (for react - https://github.com/Frederick-88/react-unit-testing) & (for vue - https://github.com/Frederick-88/vue-unit-testing)",
-    thumbnail: require("@/assets/images/works/vue-react-unit-test.png"),
-    website: null,
-    previews: [require("@/assets/images/works/vue-react-unit-test.png")],
-    skills: ["VueJS", "ReactJS", "Unit Testing"],
-  },
-  {
-    title: "React E-Commerce-2020",
+    title: "React E-Commerce",
     description:
       "Full Version of ReactJS & Redux E-Commerce made by Fullstack Development (Frontend, Backend until Deployments), Inspiration based on Best Seller E-Commerce app in theme forest (PickBazar). When user register & data stored to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
     thumbnail: require("@/assets/images/works/react-ecommerce1.png"),
+    year: 2020,
+    tags: ["ReactJS", "Fullstack"],
     website: "https://s2-boutique.netlify.app/",
     previews: [
       require("@/assets/images/works/react-ecommerce1.png"),
@@ -195,10 +162,138 @@ module.exports = [
     ],
   },
   {
+    title: "ChenFrederick.com (Personal Web)",
+    description:
+      "This is my own personal website, at here i try to share with you who i am and what are the things that i'm capable of. Here, you can also access my personal web in phone & any other device too since it's also a responsive web app! Let's get to know each other.",
+    thumbnail: require("@/assets/images/works/personal-web.png"),
+    year: 2021,
+    tags: ["VueJS"],
+    website: null,
+    previews: [
+      require("@/assets/images/works/personal-web.png"),
+      require("@/assets/images/works/personal-web-2.png"),
+      require("@/assets/images/works/personal-web-3.jpeg"),
+    ],
+    skills: [
+      "VueJS",
+      "Vuex",
+      "Vue Slick Carousel",
+      "Responsive Web App",
+      "Dark Mode",
+      "SCSS",
+      "Icomoon",
+      "Animation Loader System",
+      "Github",
+    ],
+  },
+  {
+    title: "Vue Firebase Fullstack Apps",
+    description:
+      "A Vue.js (Frontend Side) + Firebase (Backend Side) website that consist customer management system + todoapp. It is able to handle image uploads, CRUD of database column & clearing of uploaded image in database. This VueFire app was deployed as a live website that can be accessed online.",
+    thumbnail: require("@/assets/images/works/vue-firebase1.png"),
+    year: 2021,
+    tags: ["VueJS-Firebase", "Fullstack"],
+    website: "https://vue-firebase-todoapp-3a77a.web.app/#/",
+    previews: [
+      require("@/assets/images/works/vue-firebase1.png"),
+      require("@/assets/images/works/vue-firebase2.png"),
+    ],
+    skills: [
+      "VueJS",
+      "Fullstack web development",
+      "Firebase",
+      "Firebase Integration",
+      "Github",
+    ],
+  },
+  {
+    title: "PHP + MYSQL - Payroll Website",
+    description: "Description.",
+    thumbnail: require("@/assets/images/works/payroll01.jpeg"),
+    year: 2020,
+    tags: ["PHP", "MYSQL", "Fullstack"],
+    website: null,
+    github: "https://github.com/Frederick-88/PHP-SQL-PAYROLL-WEB",
+    previews: [
+      require("@/assets/images/works/payroll01.jpeg"),
+      require("@/assets/images/works/payroll02.jpeg"),
+      require("@/assets/images/works/payroll03.jpeg"),
+      require("@/assets/images/works/payroll04.jpeg"),
+      require("@/assets/images/works/payroll05.jpeg"),
+      require("@/assets/images/works/payroll06.jpeg"),
+      require("@/assets/images/works/payroll07.jpeg"),
+      require("@/assets/images/works/payroll08.jpeg"),
+      require("@/assets/images/works/payroll09.jpeg"),
+    ],
+    skills: ["ReactJS", "ReactRedux"],
+  },
+  {
+    title: "Weatherpedia (PWA)-2021",
+    description:
+      "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the web into a mobile app for a very small size of 332 kb. then user also can search other city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
+    thumbnail: require("@/assets/images/works/weatherpedia-pwa1.png"),
+    year: 2021,
+    tags: ["ReactJS", "PWA"],
+    website: "https://weatherpedia.netlify.app/",
+    previews: [
+      require("@/assets/images/works/weatherpedia-pwa1.png"),
+      require("@/assets/images/works/weatherpedia-pwa2.png"),
+      require("@/assets/images/works/weatherpedia-pwa3.png"),
+      require("@/assets/images/works/weatherpedia-pwa4.png"),
+      require("@/assets/images/works/weatherpedia-pwa5.png"),
+      require("@/assets/images/works/weatherpedia-pwa6.png"),
+    ],
+    skills: [
+      "ReactJS",
+      "Progressive Web App (PWA)",
+      "REST API",
+      "Responsive Web App",
+      "Github",
+    ],
+  },
+  {
+    title: "React & Vue Unit Testing Sample Practices-2021",
+    description:
+      "React & Vue Unit Testing Sample Practices (for react - https://github.com/Frederick-88/react-unit-testing) & (for vue - https://github.com/Frederick-88/vue-unit-testing)",
+    thumbnail: require("@/assets/images/works/vue-react-unit-test.png"),
+    year: 2021,
+    tags: ["ReactJS", "VueJS"],
+    website: null,
+    previews: [require("@/assets/images/works/vue-react-unit-test.png")],
+    skills: ["VueJS", "ReactJS", "Unit Testing"],
+  },
+  {
+    title: "Vue Text to Speech AI",
+    description: "Description.",
+    thumbnail: require("@/assets/images/works/vue-text-to-speech.png"),
+    year: 2022,
+    tags: ["ReactJS", "Fullstack"],
+    website: "https://vue-text-to-speech.netlify.app/",
+    previews: [require("@/assets/images/works/vue-text-to-speech.png")],
+    skills: ["ReactJS", "ReactRedux"],
+  },
+  {
+    title: "FD-Technologies (Personal Web)",
+    description: "Description.",
+    thumbnail: require("@/assets/images/works/fdtech01.png"),
+    year: 2020,
+    tags: ["ReactJS", "Fullstack"],
+    website: "https://fd-tech.netlify.app/",
+    previews: [
+      require("@/assets/images/works/fdtech01.png"),
+      require("@/assets/images/works/fdtech02.png"),
+      require("@/assets/images/works/fdtech03.png"),
+      require("@/assets/images/works/fdtech04.png"),
+    ],
+    skills: ["ReactJS", "ReactRedux"],
+  },
+  {
     title: "SmartLocal Gists Page-2020",
     description:
       "This is 1 of the test from a company based on Singapore. With a github opensource api given (https://api.github.com/gists/public),then creatively display it to users. Here, user can see any topic of github gists, search based on github usernames, favourite gists, look through gists author, etc.",
     thumbnail: require("@/assets/images/works/smartlocal1.png"),
+    year: 2020,
+    tags: ["ReactJS", "Fullstack"],
     website: "https://github-gists.netlify.app/",
     previews: [
       require("@/assets/images/works/smartlocal1.png"),
@@ -220,6 +315,8 @@ module.exports = [
     description:
       "A Real-Time messenger app which is a team final project in glints academy bootcamp. Here, users could send image, documents and even show expressions with emoji here!",
     thumbnail: require("@/assets/images/works/circle-messenger1.png"),
+    year: 2020,
+    tags: ["ReactJS", "Fullstack"],
     website: null,
     previews: [
       require("@/assets/images/works/circle-messenger1.png"),
@@ -238,10 +335,52 @@ module.exports = [
     ],
   },
   {
+    title: "Kos45 - No Bullying Community Web",
+    description: "Description.",
+    thumbnail: require("@/assets/images/works/kos45-01.png"),
+    year: 2020,
+    tags: ["ReactJS", "Fullstack"],
+    website: "https://kos45.netlify.app/#/",
+    previews: [
+      require("@/assets/images/works/kos45-01.png"),
+      require("@/assets/images/works/kos45-02.png"),
+      require("@/assets/images/works/kos45-03.png"),
+    ],
+    skills: ["ReactJS", "ReactRedux"],
+  },
+  {
+    title: "Technical Test - Photo Album Website",
+    description: "Description.",
+    thumbnail: require("@/assets/images/works/photo-album-test-01.png"),
+    year: 2021,
+    tags: ["ReactJS", "Fullstack"],
+    website: "https://fd-photoalbum.netlify.app/",
+    previews: [
+      require("@/assets/images/works/photo-album-test-01.png"),
+      require("@/assets/images/works/photo-album-test-02.png"),
+      require("@/assets/images/works/photo-album-test-03.png"),
+      require("@/assets/images/works/photo-album-test-04.png"),
+      require("@/assets/images/works/photo-album-test-05.png"),
+    ],
+    skills: ["ReactJS", "ReactRedux"],
+  },
+  {
+    title: "Pair Programming Test - PokeAPI",
+    description: "Description.",
+    thumbnail: require("@/assets/images/works/pair-programming-test-01.png"),
+    year: 2021,
+    tags: ["ReactJS", "Fullstack"],
+    website: "https://pokeapi-test.netlify.app/",
+    previews: [require("@/assets/images/works/pair-programming-test-01.png")],
+    skills: ["ReactJS", "ReactRedux"],
+  },
+  {
     title: "AzurDrones with Vue-2020",
     description:
       "A drone company website which made with VueJS. Interactive Gradient & Animated UI with Fantastic Toast Notifications!",
     thumbnail: require("@/assets/images/works/azurdrones1.png"),
+    year: 2020,
+    tags: ["VueJS"],
     website: "https://azurdrones.netlify.app/",
     previews: [
       require("@/assets/images/works/azurdrones1.png"),
