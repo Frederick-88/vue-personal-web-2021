@@ -245,9 +245,9 @@ export default {
     outline: 0;
 
     .card-list {
-      height: 80px;
-      width: 80px;
-      padding: 20px;
+      height: 75px;
+      width: 75px;
+      padding: 18px;
       margin: 0 5px;
       background: $white;
       border-radius: 50%;
