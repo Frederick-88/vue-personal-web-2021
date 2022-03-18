@@ -9,7 +9,7 @@
         div.sub-content
           input.content-input(placeholder="Your Name" v-model="nameInput")
           input.content-input(placeholder="From Where" v-model="locationInput")
-          input.content-input(placeholder="How can i help?" v-model="descriptionInput")
+          textarea.content-input.input--textarea(:rows="5"  placeholder="How can i help?" v-model="descriptionInput")
         button.connection-button(type="button" @click="sendEmail") Get in Touch
 </template>
 
@@ -105,7 +105,7 @@ export default {
     width: 100%;
     padding: 10px 15px;
     border-radius: 4px;
-    border: 1px solid $disabledGrey;
+    border: 2px solid $disabledGrey;
     font-weight: 500;
     font-size: 0.875rem;
     color: $black;
@@ -116,6 +116,10 @@ export default {
 
     &:focus {
       border-color: var(--input-outline-color);
+    }
+
+    &.input--textarea {
+      resize: none;
     }
   }
 
