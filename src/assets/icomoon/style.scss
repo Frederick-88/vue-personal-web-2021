@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4q9ccf');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4q9ccf#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4q9ccf') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4q9ccf') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4q9ccf##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3sfz7a');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3sfz7a#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3sfz7a') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3sfz7a') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3sfz7a##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
 .icon-firebase {
   &:before {
     content: $icon-firebase; 
