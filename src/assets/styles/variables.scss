@@ -11,10 +11,10 @@ $primarySolid: #23866b;
 
 // Dark Variables
 $black: #000000;
+$black2: #202020;
 $darkGrey1: #222831;
 $darkGrey2: #393e46;
 $darkGrey3: #5d5f63;
-$darkGrey4: #182c4f;
 
 // Light Variables
 $white: #ffffff;
@@ -38,6 +38,7 @@ $disabledGrey: #e1e4e8;
   --text-color-secondary-notfocus: #{$darkGrey3};
   --text-orange-green: #{$orange};
   --text-grey: #{$grey2};
+  --text-grey-2: #{$grey2};
   --sidebar-line: #{$lightGrey4};
   --button-outline-background: #{$darkGrey1};
   --button-solid-background: #{$darkGrey1};
@@ -49,6 +50,7 @@ $disabledGrey: #e1e4e8;
   --button-text-3: #{$lightGrey1};
   --scroll-color: #{$darkGrey1};
   --input-outline-color: #{$blue};
+  --white-black2: #{$white};
 }
 
 [data-theme="darkMode"] {
@@ -62,6 +64,7 @@ $disabledGrey: #e1e4e8;
   --text-color-secondary-notfocus: #{$primaryNotFocus};
   --text-orange-green: #{$primary};
   --text-grey: #{$lightGrey1};
+  --text-grey-2: #{$lightGrey4};
   --sidebar-line: #{$primaryNotFocus};
   --button-outline-background: #{$primary};
   --button-solid-background: #{$primarySolid};
@@ -73,6 +76,7 @@ $disabledGrey: #e1e4e8;
   --button-text-3: #{$lightGrey1};
   --scroll-color: #{$primarySolid};
   --input-outline-color: #{$primary};
+  --white-black2: #{$black2};
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,6 +90,7 @@ $disabledGrey: #e1e4e8;
     --text-color-secondary-notfocus: #{$primaryNotFocus};
     --text-orange-green: #{$primary};
     --text-grey: #{$lightGrey1};
+    --text-grey-2: #{$lightGrey4};
     --sidebar-line: #{$primaryNotFocus};
     --button-outline-background: #{$primary};
     --button-solid-background: #{$primarySolid};
@@ -97,5 +102,6 @@ $disabledGrey: #e1e4e8;
     --button-text-3: #{$lightGrey1};
     --scroll-color: #{$primarySolid};
     --input-outline-color: #{$primary};
+    --white-black2: #{$black2};
   }
 }
