@@ -354,6 +354,23 @@ module.exports = [
     ],
   },
   {
+    title: "Technical Test - Photo Album Website",
+    description:
+      'A Sample Technical Test (Real-Life) of ReactJS (Responsive Web App) to Fetch API from an Opensource API - "https://jsonplaceholder.typicode.com".',
+    thumbnail: require("@/assets/images/works/photo-album-test-01.png"),
+    year: 2021,
+    tags: ["ReactJS", "Responsive Web App"],
+    website: "https://fd-photoalbum.netlify.app/",
+    previews: [
+      require("@/assets/images/works/photo-album-test-01.png"),
+      require("@/assets/images/works/photo-album-test-02.png"),
+      require("@/assets/images/works/photo-album-test-03.png"),
+      require("@/assets/images/works/photo-album-test-04.png"),
+      require("@/assets/images/works/photo-album-test-05.png"),
+    ],
+    skills: ["ReactJS", "Responsive Web App", "REST API", "SCSS", "Github"],
+  },
+  {
     title: "Circle Messenger",
     description:
       "A Real-Time messenger app which is a team final project in glints academy bootcamp. Here, users could send image, documents and even show expressions with emoji here!",
@@ -392,23 +409,6 @@ module.exports = [
       require("@/assets/images/works/kos45-03.png"),
     ],
     skills: ["ReactJS", "Responsive Web App", "FontAwesome", "SCSS", "Github"],
-  },
-  {
-    title: "Technical Test - Photo Album Website",
-    description:
-      'A Sample Technical Test (Real-Life) of ReactJS (Responsive Web App) to Fetch API from an Opensource API - "https://jsonplaceholder.typicode.com".',
-    thumbnail: require("@/assets/images/works/photo-album-test-01.png"),
-    year: 2021,
-    tags: ["ReactJS", "Responsive Web App"],
-    website: "https://fd-photoalbum.netlify.app/",
-    previews: [
-      require("@/assets/images/works/photo-album-test-01.png"),
-      require("@/assets/images/works/photo-album-test-02.png"),
-      require("@/assets/images/works/photo-album-test-03.png"),
-      require("@/assets/images/works/photo-album-test-04.png"),
-      require("@/assets/images/works/photo-album-test-05.png"),
-    ],
-    skills: ["ReactJS", "Responsive Web App", "REST API", "SCSS", "Github"],
   },
   {
     title: "Pair Programming Test - PokeAPI",
