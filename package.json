@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "debounce": "^1.2.0",
     "lottie-web": "^5.7.8",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
