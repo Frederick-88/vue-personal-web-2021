@@ -60,11 +60,7 @@ export default {};
 
 <style lang="scss">
 .mobile-home-about__content {
-  margin: 100px 30px 0;
-
-  @include small-mobile() {
-    margin: 100px 15px 0;
-  }
+  margin: 80px 30px 0;
 
   .content-container {
     display: flex;
@@ -101,10 +97,6 @@ export default {};
     .right-column {
       padding: 20px;
 
-      @include small-mobile() {
-        padding: 10px;
-      }
-
       .about-description {
         color: var(--text-grey);
         font-size: 0.8125rem;
@@ -128,10 +120,6 @@ export default {};
         margin: 0 20px 0 15px;
         color: var(--text-color-primary);
         font-weight: 500;
-
-        @include small-mobile() {
-          margin: 0 12px 0 8px;
-        }
       }
 
       .section-title {
@@ -173,10 +161,6 @@ export default {};
     .section-title {
       display: flex;
       margin-right: 15px;
-
-      @include small-mobile() {
-        margin-right: 10px;
-      }
     }
 
     i {
@@ -187,10 +171,63 @@ export default {};
     p {
       font-size: 0.8125rem;
       font-weight: 500;
-      color: var(--text-color-primary);
+      color: var(--text-grey);
+    }
+  }
+}
 
-      @include mobile() {
-        color: var(--text-grey);
+@include small-mobile() {
+  .mobile-home-about__content {
+    margin: 80px 15px 0;
+
+    .content-container {
+      .right-column {
+        padding: 10px;
+      }
+    }
+
+    .contact-section {
+      .divider {
+        margin: 0 12px 0 8px !important;
+      }
+    }
+
+    .interest-section {
+      .section-title {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .mobile-home-about__content {
+    .content-container {
+      .column-image {
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .mobile-home-about__content {
+    .about-title {
+      font-size: 1.625rem !important;
+    }
+
+    .about-subtitle {
+      font-size: 0.8125rem !important;
+    }
+
+    .content-container {
+      .column-image {
+        max-width: 400px;
+      }
+
+      .right-column {
+        margin: auto;
+        max-width: 500px;
       }
     }
   }
