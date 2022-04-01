@@ -103,13 +103,10 @@ export default {
     display: flex;
     animation: fade-down 2s;
 
-    @include large-mobile() {
-      padding-bottom: 0;
-    }
-
     .typing__blink {
       animation: blink 0.5s infinite;
     }
+
     @keyframes blink {
       to {
         opacity: 0;
@@ -137,10 +134,6 @@ export default {
 
     .animation-loader__image {
       width: 100% !important;
-
-      @include large-mobile() {
-        width: 85% !important;
-      }
     }
   }
 
@@ -155,25 +148,59 @@ export default {
     max-width: 555px;
     margin: 30px 0;
   }
+
+  .mobile-home-banner__button {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 14px 25px;
+    background: transparent;
+    border: 1px solid var(--button-outline-background);
+    color: var(--button-outline-background);
+    text-transform: uppercase;
+    border-radius: 4px;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
 }
 
-.mobile-home-banner__button {
-  font-size: 0.6875rem;
-  font-weight: 600;
-  padding: 14px 25px;
-  background: transparent;
-  border: 1px solid var(--button-outline-background);
-  color: var(--button-outline-background);
-  text-transform: uppercase;
-  border-radius: 4px;
-  outline: 0;
-  text-decoration: none;
-  cursor: pointer;
-  margin-right: 15px;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+@include small-mobile() {
+  .mobile-home-banner__content {
+    .mobile-home-banner__button {
+      font-size: 0.75rem;
+    }
+  }
+}
 
-  @include small-mobile() {
-    font-size: 0.75rem;
+@include large-mobile() {
+  .mobile-home-banner__content {
+    .left-column {
+      padding-bottom: 0;
+    }
+
+    .right-column {
+      margin: 0 auto;
+      width: 85%;
+    }
+  }
+}
+
+@include tablet() {
+  .mobile-home-banner__content {
+    max-width: 650px;
+    margin: 0 auto;
+    width: 90%;
+
+    .left-column {
+      padding-bottom: 0;
+    }
+
+    .right-column {
+      margin: 0 auto;
+      width: 80%;
+    }
   }
 }
 </style>
