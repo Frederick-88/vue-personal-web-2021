@@ -7,30 +7,27 @@
       div.icon-wrapper
         i.carousel-arrow.icon-chevron-left(@click="showPrev")
       VueSlickCarousel.company-list-carousel(
-        ref="c2"
-        :slides-to-scroll="1",
-        :slides-to-show="3",
-        :arrows="false",
-        :dots="false",
-        :infinite="true"
-        :swipe="false"
+        ref="mobileHomeExperienceCarousel02"
+        :as-nav-for="c1"
+        v-bind="experienceCarouselSettings"
       )
         div.company-card-list(v-for="experience in ExperienceList")
           div.card-list
             img.card-image(
-              loading="lazy"
               :src='experience.logo'
             )
       div.icon-wrapper
         i.carousel-arrow.icon-chevron-right(@click="showNext")
 
     VueSlickCarousel.main-carousel(
-      ref="c1"
+      ref="mobileHomeExperienceCarousel01"
+      :as-nav-for="c2"
       :slides-to-scroll="1",
       :arrows="false"
       :style="{ height: carouselHeight }"
       :infinite="true"
       :swipe="false"
+      lazyLoad="ondemand"
     )
       div.main-card-list(
         v-for="(experience, index) in ExperienceList" 
@@ -38,7 +35,6 @@
       )
         div.card-list.--left
           img.card-image(
-            loading="lazy"
             :src='experience.logo'
           )
         div.card-list.--right
@@ -60,6 +56,32 @@ export default {
       ExperienceList: ExperienceList,
       carouselHeight: "auto",
       activeIndex: 0,
+      c1: undefined,
+      c2: undefined,
+
+      experienceCarouselSettings: {
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        swipeToSlide: true,
+        lazyLoad: "ondemand",
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 350,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+        ],
+      },
     };
   },
   methods: {
@@ -70,29 +92,33 @@ export default {
       this.carouselHeight = height + "px";
     },
     showNext() {
-      const maxIndex = this.ExperienceList.length - 1;
-      this.$refs.c1.next();
-      this.$refs.c2.next();
+      this.$refs.mobileHomeExperienceCarousel01.next();
 
+      const maxIndex = this.ExperienceList.length - 1;
       if (this.activeIndex === maxIndex) {
         this.activeIndex = 0;
       } else {
         this.activeIndex++;
       }
+
       this.checkHeight();
     },
     showPrev() {
-      const lastContentIndex = this.ExperienceList.length - 1;
-      this.$refs.c1.prev();
-      this.$refs.c2.prev();
+      this.$refs.mobileHomeExperienceCarousel01.prev();
 
+      const lastContentIndex = this.ExperienceList.length - 1;
       if (this.activeIndex === 0) {
         this.activeIndex = lastContentIndex;
       } else {
         this.activeIndex--;
       }
+
       this.checkHeight();
     },
+  },
+  mounted() {
+    this.c1 = this.$refs.mobileHomeExperienceCarousel01;
+    this.c2 = this.$refs.mobileHomeExperienceCarousel02;
   },
 };
 </script>
@@ -101,11 +127,7 @@ export default {
 .mobile-home-experience__content {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  margin: 0 30px;
-
-  @include small-mobile() {
-    margin: 0 15px;
-  }
+  margin: 50px 30px;
 
   .subtitle {
     font-weight: 600;
@@ -206,20 +228,12 @@ export default {
 
     .company-list-carousel {
       width: 80%;
-
-      @include small-mobile() {
-        width: 84%;
-      }
     }
 
     .icon-wrapper {
       width: 10%;
       display: flex;
       justify-content: center;
-
-      @include small-mobile() {
-        width: 8%;
-      }
 
       .carousel-arrow {
         padding: 10px;
@@ -229,11 +243,6 @@ export default {
         border-radius: 4px;
         margin: 10px 0;
         cursor: pointer;
-
-        @include small-mobile() {
-          padding: 8px;
-          font-size: 0.875rem;
-        }
       }
     }
   }
@@ -255,7 +264,7 @@ export default {
       @include small-mobile() {
         height: 65px;
         width: 65px;
-        padding: 10px;
+        padding: 12px;
       }
 
       @include mini-mobile() {
@@ -265,6 +274,12 @@ export default {
       }
 
       @include large-mobile() {
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+      }
+
+      @include tablet() {
         height: 100px;
         width: 100px;
         padding: 20px;
@@ -291,6 +306,35 @@ export default {
       button:before {
         color: var(--dark-white);
       }
+    }
+  }
+}
+
+@include small-mobile() {
+  .mobile-home-experience__content {
+    margin: 50px 20px;
+
+    .company-list-carousel__wrapper {
+      .carousel-arrow {
+        padding: 8px;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .mobile-home-experience__content {
+    max-width: 650px;
+    margin: 50px auto;
+    width: 90%;
+
+    .title {
+      font-size: 1.625rem !important;
+    }
+
+    .subtitle {
+      font-size: 0.8125rem !important;
     }
   }
 }
