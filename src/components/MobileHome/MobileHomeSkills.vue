@@ -28,12 +28,32 @@ export default {
         arrows: false,
         dots: true,
         infinite: false,
-        swipe: false,
+        swipeToSlide: true,
         rows: 2,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 850,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 350,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+        ],
       },
     };
   },
@@ -51,10 +71,6 @@ export default {
 <style lang="scss">
 .mobile-home-skills__content {
   margin: 50px 30px;
-
-  @include small-mobile() {
-    margin: 50px 10px;
-  }
 
   .subtitle {
     font-weight: 600;
@@ -87,85 +103,107 @@ export default {
       border-radius: 4px;
       margin: 0 20px;
       cursor: pointer;
+    }
+  }
 
-      @include small-mobile() {
-        padding: 8px;
-        font-size: 0.875rem;
+  .mobile-skills-carousel__container {
+    margin-top: 10px;
+
+    .card-list {
+      position: relative;
+      padding: 20px;
+      min-height: 115px;
+      background: var(--dark-white);
+      color: var(--white-dark);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      margin: 10px;
+
+      .card-icon {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+
+        &.icon-mysql {
+          font-size: 2rem;
+        }
+      }
+
+      .card-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .level-text {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+        padding: 3px 7px;
+        color: $white;
+
+        &.text--green {
+          background: $primarySolid;
+        }
+
+        &.text--orange {
+          background: $orange;
+        }
+      }
+    }
+
+    // rewrite vue slick carousel stylings
+    .slick-dots {
+      bottom: -30px;
+      overflow: hidden;
+      height: 25px;
+
+      li,
+      li.slick-active {
+        button:before {
+          color: var(--dark-white);
+        }
       }
     }
   }
 }
 
-.mobile-skills-carousel__container {
-  margin-top: 10px;
+@include small-mobile() {
+  .mobile-home-skills__content {
+    margin: 50px 10px;
 
-  .card-list {
-    position: relative;
-    padding: 20px;
-    min-height: 115px;
-    background: var(--dark-white);
-    color: var(--white-dark);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    margin: 10px;
-
-    @include small-mobile() {
-      min-height: 130px;
-    }
-
-    .card-icon {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-
-      &.icon-mysql {
-        font-size: 2rem;
+    .title-wrapper {
+      .carousel-arrow {
+        padding: 8px;
+        font-size: 0.875rem;
       }
     }
 
-    .card-title {
-      font-size: 0.75rem;
-      font-weight: 600;
-
-      @include small-mobile() {
-        font-size: 0.6875rem;
-      }
-    }
-
-    .level-text {
-      position: absolute;
-      top: -3px;
-      right: -3px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border-radius: 4px;
-      padding: 3px 7px;
-      color: $white;
-
-      &.text--green {
-        background: $primarySolid;
+    .mobile-skills-carousel__container {
+      .card-list {
+        min-height: 130px;
       }
 
-      &.text--orange {
-        background: $orange;
+      .card-title {
+        font-size: 0.6875rem !important;
       }
     }
   }
+}
 
-  // rewrite vue slick carousel stylings
-  .slick-dots {
-    bottom: -30px;
-    overflow: hidden;
-    height: 25px;
+@include tablet() {
+  .mobile-home-skills__content {
+    .title {
+      font-size: 1.625rem !important;
+    }
 
-    li,
-    li.slick-active {
-      button:before {
-        color: var(--dark-white);
-      }
+    .subtitle {
+      font-size: 0.8125rem !important;
     }
   }
 }
