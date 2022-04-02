@@ -18,6 +18,15 @@ export default {
 <style lang="scss">
 .navigation__bar {
   animation: fade-down 2s;
+  display: flex;
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 1400px;
+
+  @include large-monitor {
+    max-width: 1700px;
+  }
 
   .nav__item {
     display: block;
