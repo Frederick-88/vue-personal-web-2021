@@ -60,7 +60,9 @@ export default {
 
 <style lang="scss">
 .home-connection__content {
-  margin: 80px 150px 100px;
+  margin: 100px auto;
+  width: 85%;
+  max-width: 1400px;
 
   .content-container {
     display: flex;
@@ -80,7 +82,7 @@ export default {
 
     .right-column {
       width: 55%;
-      padding: 20px 20px 20px 50px;
+      padding-left: 50px;
     }
 
     .title {
@@ -127,7 +129,6 @@ export default {
     padding: 12px 20px;
     color: var(--button-text);
     background: var(--button-solid-background);
-    transition: background 0.2s, color 0.2s;
     font-weight: 500;
     border-radius: 4px;
     margin: 10px 0;
@@ -135,10 +136,22 @@ export default {
     border: 0;
     outline: 0;
     float: right;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 
     &:hover {
       background: var(--button-text);
       color: var(--button-solid-background);
+      box-shadow: 5px 5px 20px rgba(100, 100, 100, 0.15);
+    }
+  }
+
+  @include large-monitor {
+    max-width: 1700px;
+  }
+
+  @include desktop {
+    .title {
+      font-size: 1.5rem !important;
     }
   }
 }
