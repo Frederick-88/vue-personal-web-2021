@@ -35,7 +35,7 @@
           div.section
             div.section-title
               i.icon-linkedin-line
-              p Linkedin
+              p LinkedIn
             p.divider :
             p.section-text Chen Frederick
 
@@ -65,11 +65,12 @@ export default {
 .home-about__content {
   display: flex;
   justify-content: center;
-  margin: 120px 150px 0;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 900px;
 
   .content-container {
     display: flex;
-    width: 65%;
 
     .left-column {
       width: 45%;
@@ -106,7 +107,7 @@ export default {
         font-size: 0.875rem;
         margin-bottom: 8px;
         font-weight: 500;
-        line-height: 1.4;
+        line-height: 1.6;
         text-align: justify;
       }
     }
@@ -121,7 +122,7 @@ export default {
       font-size: 0.875rem;
 
       .divider {
-        margin: 0 40px 0 30px;
+        margin: 0 30px;
         color: var(--text-color-primary);
         font-weight: 500;
       }
@@ -175,20 +176,14 @@ export default {
       color: var(--text-color-primary);
     }
   }
-}
 
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-  .home-about__content {
-    .content-container {
-      width: 100%;
+  @include desktop {
+    .about-subtitle {
+      font-size: 0.8125rem !important;
     }
-  }
-}
 
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
-  .home-about__content {
-    .content-container {
-      width: 80%;
+    .about-title {
+      font-size: 1.5rem !important;
     }
   }
 }
