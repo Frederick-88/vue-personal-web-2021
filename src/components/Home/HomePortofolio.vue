@@ -1,72 +1,139 @@
 <template lang="pug">
   section#works.home-portofolio__content
-    h4.header-title My Portofolio - Recent Works
-    div.portofolio-carousel__container
-      div.carousel-arrow__buttons
+    p.subtitle Recent Works
+    h2.title My Portofolio
+
+    //- section of carousel for skills keywords, when selected will show works with that skill
+    div.portofolio-keyword__carousel-wrapper
+      div.icon-wrapper
         i.carousel-arrow.icon-chevron-left(@click="showPrev")
+      VueSlickCarousel.portofolio-keyword-carousel(
+        ref="homePortofolioKeywordCarousel"
+        v-bind="portofolioCarouselSettings"
+      )
+        div(
+          v-for="keyword in portofolioKeywords"
+          :key="keyword.value"
+        )
+          button.keyword-item(
+            type="button"
+            :class="{'item--active': activePortofolioKeyword === keyword.value}"
+            @click="setActivePortofolioKeyword(keyword.value)"
+          ) {{ keyword.name }}
+      div.icon-wrapper
         i.carousel-arrow.icon-chevron-right(@click="showNext")
-      VueSlickCarousel.portofolio-carousel(v-bind="settings" ref="carousel")
-        div.portofolio__card-lists(v-for="portofolio in PortofolioList")
-          div.card-list(
-            :style="backgroundImage(portofolio.thumbnail)" 
-          )
-            div.overlay
-            div.content
-              h2.title {{portofolio.title}}
-              button.button(type="button" @click="showPortofolioModal(portofolio)") See More
+
+    div.portofolio__list
+      div.portofolio__item-container(
+        v-for="portofolio in filteredPortofolioList"
+        :class="{'container--two-column': isSmallDesktopScreen}"
+      )
+        div.portofolio-item
+          div.portofolio-tags
+            span.tag(v-for="tag in portofolio.tags") {{tag}}
+            //- span.tag {{portofolio.year}}
+          div.portofolio__header
+            h4.portofolio-title {{portofolio.title}}
+            button.portofolio__see-more-button(
+              type="button"
+              @click="showPortofolioModal(portofolio)"
+            )
+              p See More
+              i.icon-arrow-right
+          div.portofolio__image-wrapper
+            img.image(:src="portofolio.thumbnail" :alt="portofolio.title")
+            
+    div.portofolio__view-more-button-container(
+      v-if="getRemainingHiddenPortofolioCount && !isFilteringPortofolio"
+    )
+      button.portofolio__view-more-button(
+        type="button"
+        @click="showMorePortofolio(showPortofolioCount)"
+      ) View More ({{getRemainingHiddenPortofolioCount}})
 </template>
 
 <script>
+import { mapMutations, mapGetters } from "vuex";
 import PortofolioList from "@/utilities/PortofolioList";
-import { mapMutations } from "vuex";
+import { portofolioKeywords } from "@/assets/scripts/variables";
 
 export default {
   name: "HomePortofolio",
   data() {
     return {
-      PortofolioList: PortofolioList,
+      portofolioList: PortofolioList,
+      portofolioKeywords: portofolioKeywords,
+
       isShowModal: false,
-      activePortofolio: {},
-      settings: {
-        arrows: false,
-        dots: true,
-        swipe: false,
-        infinite: false,
-        slidesToShow: 4,
+      getPortofolioList: [],
+
+      activePortofolioKeyword: "all",
+      portofolioCarouselSettings: {
+        slidesToShow: 5,
         slidesToScroll: 1,
-        initialSlide: 0,
+        arrows: false,
+        dots: false,
+        swipeToSlide: true,
+        infinite: true,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1366,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true,
-            },
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
             },
           },
         ],
       },
     };
   },
+  computed: {
+    ...mapGetters(["isSmallDesktopScreen"]),
+    showPortofolioCount() {
+      // how many to show when click view more
+      return this.isSmallDesktopScreen ? 2 : 3;
+    },
+    getPortofolioListLength() {
+      return this.getPortofolioList.length;
+    },
+    getRemainingHiddenPortofolioCount() {
+      return this.portofolioList.length - this.getPortofolioList.length;
+    },
+    isFilteringPortofolio() {
+      return this.activePortofolioKeyword !== "all";
+    },
+    filteredPortofolioList() {
+      const filteredPortofolio = this.portofolioList.filter((portofolio) => {
+        let isPortofolioMatch = false;
+
+        portofolio.skills.forEach((skill) => {
+          if (skill.toLowerCase().includes(this.activePortofolioKeyword))
+            isPortofolioMatch = true;
+        });
+
+        return isPortofolioMatch;
+      });
+
+      if (this.isFilteringPortofolio) return filteredPortofolio;
+      return this.getPortofolioList;
+    },
+  },
+  created() {
+    this.setupPortofolioList();
+  },
+  watch: {
+    isSmallDesktopScreen() {
+      // so when resizing screen can reset the portofolio to intended new system
+      this.setupPortofolioList(true);
+    },
+  },
   methods: {
     ...mapMutations(["setIsShowCarouselModal", "setActivePortofolio"]),
+    setupPortofolioList(isReset = false) {
+      if (isReset) this.getPortofolioList = [];
+
+      const getInitialShowPortofolioCount = this.showPortofolioCount * 2;
+      this.showMorePortofolio(getInitialShowPortofolioCount);
+    },
     showPortofolioModal(portofolio) {
       this.setIsShowCarouselModal(true);
       this.setActivePortofolio(portofolio);
@@ -78,11 +145,23 @@ export default {
 
       return backgroundImageStyle;
     },
+    showMorePortofolio(portofolioCount) {
+      const start = this.getPortofolioListLength;
+      const end = this.getPortofolioListLength + portofolioCount;
+      const getExtraPortofolio = this.portofolioList.slice(start, end);
+
+      this.getPortofolioList = this.getPortofolioList.concat(
+        getExtraPortofolio
+      );
+    },
     showNext() {
-      this.$refs.carousel.next();
+      this.$refs.homePortofolioKeywordCarousel.next();
     },
     showPrev() {
-      this.$refs.carousel.prev();
+      this.$refs.homePortofolioKeywordCarousel.prev();
+    },
+    setActivePortofolioKeyword(keyword) {
+      this.activePortofolioKeyword = keyword;
     },
   },
 };
@@ -90,159 +169,238 @@ export default {
 
 <style lang="scss">
 .home-portofolio__content {
-  margin: 50px 100px 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin: 50px auto 100px;
+  width: 85%;
   position: relative;
-  z-index: 6;
+  z-index: 99;
+  max-width: 1400px;
   animation: fade-up 2s;
 
-  .header-title {
-    text-align: end;
-    font-weight: 500;
-    color: var(--text-color-primary);
-    margin-right: 30px;
+  .subtitle {
+    font-weight: 600;
+    color: var(--text-orange-green);
     font-size: 0.875rem;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
   }
 
-  .carousel-arrow__buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
+  .title {
+    color: var(--text-color-primary);
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 4px 0 15px;
+    text-align: center;
+  }
 
-    &.extra-margin-right {
-      margin-right: 5px;
+  .portofolio-keyword__carousel-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+
+    .portofolio-keyword-carousel {
+      width: 90%;
+
+      .keyword-item {
+        padding: 10px;
+        width: 92%;
+        margin: 0 10px;
+        border-radius: 30px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        background: var(--dark-white);
+        color: var(--white-dark);
+        font-size: 0.875rem;
+        font-weight: 500;
+        opacity: 0.3;
+        transition: opacity 0.3s;
+
+        &:hover,
+        &.item--active {
+          opacity: 1;
+        }
+
+        &.item--active {
+          background: var(--text-orange-green);
+        }
+      }
+    }
+
+    .icon-wrapper {
+      width: 5%;
+      display: flex;
+      justify-content: center;
+
+      .carousel-arrow {
+        padding: 10px;
+        color: var(--button-text);
+        background: var(--button-solid-background);
+        transition: background 0.2s, color 0.2s;
+        border-radius: 4px;
+        margin: 10px 0;
+        cursor: pointer;
+
+        &:hover {
+          background: var(--button-text);
+          color: var(--button-solid-background);
+        }
+      }
     }
   }
 
-  .carousel-arrow {
-    padding: 10px;
+  .portofolio__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .portofolio__item-container {
+      padding: 20px 10px;
+      width: 33%;
+
+      &.container--two-column {
+        width: 50%;
+      }
+    }
+
+    .portofolio-item {
+      width: 100%;
+      padding-left: 15px;
+      border: 2px solid var(--button-solid-background-3);
+      border-radius: 4px;
+      color: var(--text-color-primary);
+      position: relative;
+
+      &:hover {
+        transform: translateY(-10px);
+        transition: all 0.3s;
+      }
+    }
+
+    .portofolio__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 25px 0 15px;
+      padding-right: 15px;
+
+      .portofolio-title {
+        width: calc(100% - 90px - 5%);
+        margin: 0;
+        color: var(--text-color-primary);
+        font-weight: 500;
+        font-size: 0.9375rem;
+      }
+
+      .portofolio__see-more-button {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        color: var(--text-color-primary);
+        width: 90px;
+        cursor: pointer;
+
+        &:hover {
+          transition: color 0.3s ease-in-out;
+          color: var(--text-orange-green);
+
+          p {
+            transition: border-bottom-color 0.3s ease-in-out;
+            border-bottom-color: var(--text-orange-green);
+          }
+        }
+
+        p {
+          font-size: 0.8125rem;
+          font-weight: 500;
+          margin: 0;
+          padding-bottom: 2px;
+          border-bottom: 1px solid var(--text-color-primary);
+        }
+
+        i {
+          font-size: 0.875rem;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .portofolio__image-wrapper {
+      width: 100%;
+      height: 200px;
+
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 30px 0 0 0;
+      }
+    }
+
+    .portofolio-tags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      position: absolute;
+      z-index: 3;
+      top: -15px;
+      left: 15px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+      border-radius: 4px;
+      margin-right: 5px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--button-solid-background-3);
+      color: var(--button-text-3);
+    }
+  }
+
+  .portofolio__view-more-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .portofolio__view-more-button {
+    border: 0;
+    outline: 0;
+    padding: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: var(--button-text);
     background: var(--button-solid-background);
-    transition: background 0.2s, color 0.2s;
     border-radius: 4px;
-    margin: 10px 0;
+    margin-top: 30px;
+    width: 300px;
     cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 
     &:hover {
       background: var(--button-text);
       color: var(--button-solid-background);
+      box-shadow: 5px 5px 20px rgba(100, 100, 100, 0.15);
     }
   }
 
-  .button {
-    padding: 10px;
-    color: var(--button-text-2);
-    background: var(--button-solid-background-2);
-    transition: background 0.2s, color 0.2s;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: 0;
-    border: 0;
-
-    &.button--dark {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--button-solid-background-3);
-      color: var(--button-text-3);
-      font-weight: 600;
-      font-size: 0.875rem;
-      padding: 12px;
-      margin: 5px 0;
-      width: 50%;
-      text-decoration: none;
-
-      &:hover {
-        background: var(--button-text-3);
-        color: var(--button-solid-background-3);
-      }
-    }
-
-    &:hover {
-      color: var(--button-solid-background-2);
-      background: var(--button-text-2);
-    }
-  }
-}
-
-.portofolio-carousel__container {
-  margin: 20px 0 30px;
-  display: flex;
-
-  .portofolio-carousel {
-    width: 90%;
+  @include large-monitor {
+    max-width: 1700px;
   }
 
-  .portofolio__card-lists {
-    border: 0;
-    outline: 0;
-  }
-
-  .card-list {
-    position: relative;
-    padding: 30px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 10px;
-    height: 150px;
-    width: 95%;
-
-    &:hover {
-      .overlay,
-      .content {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 4px;
-      background: rgba($black, 0.65);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .content {
-      position: relative;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      z-index: 6;
-      opacity: 0;
-      transition: opacity 0.3s, transform 0.3s;
-      transform: translateY(25px);
-      color: $white;
-      font-size: 0.825rem;
+  @include desktop {
+    .subtitle {
+      font-size: 0.8125rem;
     }
 
     .title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      text-align: center;
-    }
-  }
-
-  .slick-dots {
-    bottom: -40px;
-
-    li,
-    li.slick-active {
-      button:before {
-        color: var(--dark-white);
-      }
+      font-size: 1.5rem;
     }
   }
 }
