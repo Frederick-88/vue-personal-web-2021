@@ -6,31 +6,11 @@
 
 ---
 
-### Todo :
-
-A. Desktop & Mobile
-
-- Portofolio Section :
-
-1. Add Tags & View Photo Button
-2. Divide Portofolio to "All, ReactJS, VueJS, Web Performance, etc" then show the list based on selected ones
-
-- allow drag for carousels
-- responsive updates, for bigger screen add max-width, like a professional website
-- when do responsive try to wrap all media query in single codeblock rather than on each component
-- be aware of carousel different photo heights, make when next and prev there is no height change spotted
-- dark mode of modal if there are
-- (LAST) -> update chenfrederick.com portofolio photos when all done
-
-B. Mobile
-
-- desktop UI updates to also bring to mobile side
-
 ### References :
 
 - Sections :
 
-1. Profile (add waveslide)
+1. Profile
 
 2. My Portofolio - Recent Works
 
