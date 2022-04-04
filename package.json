@@ -1,6 +1,6 @@
 {
   "name": "vue-personal-web-2021",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "debounce": "^1.2.0",
     "lottie-web": "^5.7.8",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",

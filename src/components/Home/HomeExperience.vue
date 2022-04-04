@@ -3,16 +3,17 @@
     p.subtitle Wonderful Journey
     h2.title My Experience
     VueSlickCarousel.main-carousel(
-      ref="c1"
+      ref="homeExperienceCarousel01"
+      :as-nav-for="c2"
       :arrows="false"
       :swipe="false"
       :infinite="true"
+      lazyLoad="ondemand"
     )
       div.main-card-list(v-for="experience in ExperienceList")
         div.card-list.--left
           img.card-image(
             :src='experience.logo'
-            loading="lazy"
           )
         div.card-list.--right
           h2.card-title {{experience.title}}
@@ -25,17 +26,18 @@
       div.icon-wrapper
         i.carousel-arrow.icon-chevron-left(@click="showPrev")
       VueSlickCarousel.company-list-carousel(
-        ref="c2"
+        ref="homeExperienceCarousel02"
+        :as-nav-for="c1"
         :slides-to-show="6"
         :arrows="false"
-        :dots="true"
-        :swipe="false"
+        :dots="false"
+        :swipe-to-slide="true",
         :infinite="true"
+        lazyLoad="ondemand"
       )
         div.company-card-list(v-for="experience in ExperienceList")
           div.card-list
             img.card-image(
-              loading="lazy"
               :src='experience.logo'
             )
       div.icon-wrapper
@@ -50,17 +52,21 @@ export default {
   data() {
     return {
       ExperienceList: ExperienceList,
+      c1: undefined,
+      c2: undefined,
     };
   },
   methods: {
     showNext() {
-      this.$refs.c1.next();
-      this.$refs.c2.next();
+      this.$refs.homeExperienceCarousel01.next();
     },
     showPrev() {
-      this.$refs.c1.prev();
-      this.$refs.c2.prev();
+      this.$refs.homeExperienceCarousel01.prev();
     },
+  },
+  mounted() {
+    this.c1 = this.$refs.homeExperienceCarousel01;
+    this.c2 = this.$refs.homeExperienceCarousel02;
   },
 };
 </script>
@@ -69,9 +75,9 @@ export default {
 .home-experience__content {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  margin: 70px auto;
+  margin: 0 auto;
+  width: 85%;
   max-width: 900px;
-  padding: 30px;
   position: relative;
   z-index: 99;
 
@@ -109,6 +115,7 @@ export default {
         .card-image {
           width: 75%;
           background: $white;
+          -webkit-user-drag: none;
         }
       }
 
@@ -121,7 +128,7 @@ export default {
 
         .card-subtitle {
           text-align: justify;
-          line-height: 1.4;
+          line-height: 1.6;
           color: var(--text-grey);
           font-weight: 500;
           font-size: 0.9375rem;
@@ -214,6 +221,7 @@ export default {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      -webkit-user-drag: none;
     }
   }
 
@@ -226,6 +234,16 @@ export default {
       button:before {
         color: var(--dark-white);
       }
+    }
+  }
+
+  @include desktop {
+    .subtitle {
+      font-size: 0.8125rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
     }
   }
 }

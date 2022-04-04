@@ -5,9 +5,9 @@
     h2.title Work in progress for this device screen resolution. Please kindly visit with bigger desktop / with mobile =)
     div.social-media__wrapper
       a.media-button.icon-email(href="mailto:me@chenfrederick.com?subject=Hi Fred!&body=I'm (name) from (where) (please drop your message kindly here)")
-      a.media-button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="blank")
-      a.media-button.icon-whatsapp(href="https://wa.link/fqa4e7" target="blank")
-      a.media-button.icon-github(href="https://github.com/Frederick-88" target="blank")
+      a.media-button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="_blank")
+      a.media-button.icon-whatsapp(href="https://wa.link/fqa4e7" target="_blank")
+      a.media-button.icon-github(href="https://github.com/Frederick-88" target="_blank")
 </template>
 
 <script>

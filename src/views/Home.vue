@@ -1,14 +1,18 @@
 <template lang="pug">
   section
-    div.unsupported-device(v-if="isTabletAndSmallDesktop")
-      UnsupportedDevice
-    div.home-mobile(v-else-if="isMobile")
+    //- ---
+    //- --- keep, in case later might need another lottie page 
+    //- ---
+    //- div.unsupported-device(v-if="isTabletScreen")
+    //-   UnsupportedDevice
+    div.home-mobile(v-if="isMobileScreen || isTabletScreen")
       MobileHomeBanner
       MobileHomePortofolio
       MobileHomeExperience
       MobileHomeSkills
       MobileHomeAbout
       MobileHomeConnection
+      p.copyright-text(v-if="isTabletScreen && isShowCopyrightText") © ChenFrederick.com - 2020
     div.home(v-else)
       HomeBanner
       HomePortofolio
@@ -16,10 +20,12 @@
       HomeSkills
       HomeAbout
       HomeConnection
+      p.copyright-text(v-if="isShowCopyrightText") © ChenFrederick.com - 2020
       CarouselModal
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import HomeBanner from "@/components/Home/HomeBanner.vue";
 import HomePortofolio from "@/components/Home/HomePortofolio.vue";
 import MobileHomeBanner from "@/components/MobileHome/MobileHomeBanner.vue";
@@ -69,25 +75,17 @@ export default {
   },
   data() {
     return {
-      isMobile: false,
-      isTabletAndSmallDesktop: false,
+      isShowCopyrightText: false,
     };
   },
-  methods: {
-    detectMobileUser() {
-      if (screen.width < 1120) {
-        this.isMobile = true;
-      }
-    },
-    detectTabletToSmallDesktopUser() {
-      if (screen.width > 600 && screen.width < 1120) {
-        this.isTabletAndSmallDesktop = true;
-      }
-    },
+  mounted() {
+    setTimeout(() => {
+      // avoid it shows early upon rendering contents
+      this.isShowCopyrightText = true;
+    }, 3000);
   },
-  beforeMount() {
-    this.detectMobileUser();
-    this.detectTabletToSmallDesktopUser();
+  computed: {
+    ...mapGetters(["isMobileScreen", "isTabletScreen"]),
   },
 };
 </script>
@@ -95,5 +93,14 @@ export default {
 <style lang="scss">
 .home-mobile {
   padding-top: 70px;
+}
+
+.copyright-text {
+  color: var(--dark-white);
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 </style>

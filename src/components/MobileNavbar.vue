@@ -33,9 +33,9 @@
           ) {{ nav.name }}
       div.mobile-social-icons
         a.social-media__button.icon-email(href="mailto:me@chenfrederick.com?subject=Hi Fred!&body=I'm (name) from (where) (please drop your message kindly here)")
-        a.social-media__button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="blank")
-        a.social-media__button.icon-whatsapp(href="https://wa.link/fqa4e7" target="blank")
-        a.social-media__button.icon-github(href="https://github.com/Frederick-88" target="blank")
+        a.social-media__button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="_blank")
+        a.social-media__button.icon-whatsapp(href="https://wa.link/fqa4e7" target="_blank")
+        a.social-media__button.icon-github(href="https://github.com/Frederick-88" target="_blank")
 </template>
 
 <script>
@@ -105,7 +105,6 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   padding: 15px 25px;
   transition: background 0.15s ease-in-out, padding 0.15s ease-in-out;
   z-index: 15;

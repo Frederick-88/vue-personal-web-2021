@@ -6,22 +6,18 @@
 
 ---
 
-### Todo :
-
-- Add Tags in Portofolio ( e.g react/vue/web performance, etc for a better UX ) - todo later
-- Add List of Vue Portofolio, React Portofolio, etc created ( e.g react/vue/web performance, etc for a better UX ) - todo 2022
-- Add Live Code Interview Tests in Github
-
 ### References :
 
 - Sections :
 
-1. Profile(add waveslide)
+1. Profile
+
 2. My Portofolio - Recent Works
 
 - http://kos45.netlify.app/
+- https://dribbble.com/shots/16991520-Adams-Personal-Portfolio-Website
 
-3. Experience - Awesome Journey (add notification kinda like cookie to visit linkedin), reference :
+3. Experience - Awesome Journey, reference :
 
 - https://dribbble.com/shots/11235233-Personal-Website
 - Carousel Presentation Structure = https://dribbble.com/shots/14943796-Personal-portfolio-website
@@ -38,6 +34,7 @@
 
 - https://dribbble.com/shots/7662998/attachments/412970?mode=media
 - https://dribbble.com/shots/11172881-Website-Redesign-for-a-Freelance-Marketer-UX-UI-Designer/attachments/2776907?mode=media
+- https://dribbble.com/shots/16826954-Portoplay-Portofolio-Landing-Page-UI-KIT
 
 ---
 
@@ -92,11 +89,7 @@
 
 ---
 
-#### Methods Todo in The Future :
-
-- Lazy Loadings of Vue Route
-
-#### Methods Done in The Process :
+#### Web Performance Methods Done in The Process :
 
 - Decrease the Usage / Dependence on Plugins or Third Party Libraries that are not mandatary or necessary :heavy_check_mark:
 - Lazy Loadings of Image :heavy_check_mark:
@@ -104,3 +97,4 @@
 - Optimize/Compress Images :heavy_check_mark:
 - Minify CSS by Removing Repetitive CSS or Unused CSS :heavy_check_mark:
 - Serve images in new gen formats (webp) + reduce size of image. Since for mobile they also dont need a big or HD image ( 1920 x 1080 ) :heavy_check_mark:
+- Remove Unused Code Sections on Files (Minification)

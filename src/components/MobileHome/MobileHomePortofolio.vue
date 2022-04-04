@@ -7,25 +7,26 @@
       div.icon-wrapper
         i.carousel-arrow.icon-chevron-left(@click="showPrev")
       VueSlickCarousel.portofolio-list-carousel(
-        ref="c2"
+        ref="mobileHomePortofolioCarousel02"
+        :as-nav-for="c1"
         v-bind="portofolioCarouselSettings"
-        :swipe="false"
       )
         div.company-card-list(v-for="portofolio in PortofolioList")
           div.card-list
             img.card-image(
-              loading="lazy"
               :src='portofolio.thumbnail'
             )
       div.icon-wrapper
         i.carousel-arrow.icon-chevron-right(@click="showNext")
 
     VueSlickCarousel.main-carousel(
-      ref="c1"
+      ref="mobileHomePortofolioCarousel01"
+      :as-nav-for="c2"
       :slides-to-show="1"
       :arrows="false"
       :style="{ height: carouselHeight }"
       :swipe="false"
+      lazyLoad="ondemand"
     )
       div.main-card-list(
         v-for="(portofolio, index) in PortofolioList"
@@ -33,26 +34,33 @@
       )
         div.card-list.--left
           img.card-image(
-            loading="lazy"
             :src='portofolio.thumbnail'
           )
           span.info-label View all the images in desktop!
         div.card-list.--right
           h2.card-title {{portofolio.title}}
           p.card-subtitle {{portofolio.description}}
-          div.button-list(v-if="portofolio.website || portofolio.npmWebsite")
-            div(v-if="portofolio.website")
-              a.button(:href="portofolio.website" target="blank") 
+          div.button-list(v-if="portofolio.website || portofolio.npmWebsite || portofolio.github")
+            template(v-if="portofolio.website")
+              a.button(:href="portofolio.website" target="_blank") 
                 | Visit Website
                 i.icon-earth2
                 
-            div(v-if="portofolio.npmWebsite")
+            template(v-if="portofolio.npmWebsite")
               a.button(
                 :href="portofolio.npmWebsite" 
-                target="blank"
+                target="_blank"
               ) 
                 | Visit NPM Package
                 i.icon-earth2
+            template(v-if="portofolio.github")
+              a.button(
+                :href="portofolio.github" 
+                target="_blank"
+              ) 
+                | Visit Github Repository
+                i.icon-earth2
+
           div.tools-section
             p.tools-title Leveraged Skills: 
             div.tools-lists
@@ -70,21 +78,36 @@ export default {
       carouselHeight: "auto",
       activeIndex: 0,
       portofolioCarouselSettings: {
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
-        swipe: false,
+        swipeToSlide: true,
+        lazyLoad: "ondemand",
         responsive: [
           {
-            breakpoint: 320,
+            breakpoint: 850,
+            settings: {
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 400,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 1,
             },
           },
         ],
       },
+
+      c1: undefined,
+      c2: undefined,
     };
   },
   methods: {
@@ -95,29 +118,33 @@ export default {
       this.carouselHeight = height + 20 + "px";
     },
     showNext() {
-      const maxIndex = this.PortofolioList.length - 1;
-      this.$refs.c1.next();
-      this.$refs.c2.next();
+      this.$refs.mobileHomePortofolioCarousel01.next();
 
+      const maxIndex = this.PortofolioList.length - 1;
       if (this.activeIndex === maxIndex) {
         this.activeIndex = 0;
       } else {
         this.activeIndex++;
       }
+
       this.checkHeight();
     },
     showPrev() {
-      const lastContentIndex = this.PortofolioList.length - 1;
-      this.$refs.c1.prev();
-      this.$refs.c2.prev();
+      this.$refs.mobileHomePortofolioCarousel01.prev();
 
+      const lastContentIndex = this.PortofolioList.length - 1;
       if (this.activeIndex === 0) {
         this.activeIndex = lastContentIndex;
       } else {
         this.activeIndex--;
       }
+
       this.checkHeight();
     },
+  },
+  mounted() {
+    this.c1 = this.$refs.mobileHomePortofolioCarousel01;
+    this.c2 = this.$refs.mobileHomePortofolioCarousel02;
   },
 };
 </script>
@@ -129,10 +156,6 @@ export default {
   margin: 70px 30px 30px;
   position: relative;
   z-index: 10;
-
-  @include small-mobile() {
-    margin: 70px 15px 30px;
-  }
 
   .subtitle {
     font-weight: 600;
@@ -229,11 +252,9 @@ export default {
         text-decoration: none;
 
         i {
-          margin-left: 8px;
-
-          @include small-mobile() {
-            display: none;
-          }
+          margin-left: 5px;
+          font-size: 0.875rem;
+          margin-top: -1px;
         }
       }
     }
@@ -282,20 +303,12 @@ export default {
 
     .portofolio-list-carousel {
       width: 80%;
-
-      @include small-mobile() {
-        width: 84%;
-      }
     }
 
     .icon-wrapper {
       width: 10%;
       display: flex;
       justify-content: center;
-
-      @include small-mobile() {
-        width: 8%;
-      }
 
       .carousel-arrow {
         padding: 10px;
@@ -305,11 +318,6 @@ export default {
         border-radius: 4px;
         margin: 10px 0;
         cursor: pointer;
-
-        @include small-mobile() {
-          padding: 8px;
-          font-size: 0.875rem;
-        }
       }
     }
   }
@@ -321,14 +329,9 @@ export default {
     outline: 0;
 
     .card-list {
-      height: 80px;
+      height: 70px;
       width: 80px;
       margin: 0 5px;
-
-      @include large-mobile() {
-        height: 100px;
-        width: 100px;
-      }
     }
 
     .card-image {
@@ -351,6 +354,54 @@ export default {
       button:before {
         color: var(--dark-white);
       }
+    }
+  }
+}
+
+@include small-mobile() {
+  .mobile-home-portofolio__content {
+    margin: 50px 15px 30px;
+
+    .main-card-list {
+      .--right {
+        i {
+          display: none;
+        }
+      }
+    }
+
+    .portofolio-list-carousel__wrapper {
+      .carousel-arrow {
+        padding: 8px;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@include large-mobile() {
+  .mobile-home-portofolio__content {
+    .company-card-list {
+      .card-list {
+        height: 80px;
+        width: 100px;
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .mobile-home-portofolio__content {
+    max-width: 650px;
+    margin: 50px auto;
+    width: 90%;
+
+    .title {
+      font-size: 1.625rem !important;
+    }
+
+    .subtitle {
+      font-size: 0.8125rem !important;
     }
   }
 }

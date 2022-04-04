@@ -17,11 +17,9 @@
         a.home-banner__button(
           :href="CvFile"
           download="Chen Frederick - CV"
-          :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) Download My CV
         a.home-banner__button(
           href="#skills"
-          :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
         ) My Skills
 
     div.right-column
@@ -29,7 +27,6 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
 import Cv from "@/assets/images/my-resume.jpg";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
@@ -44,9 +41,6 @@ export default {
       CvFile: Cv,
       workingLaptopJson: JsonFile,
     };
-  },
-  computed: {
-    ...mapState(["webTheme"]),
   },
   mounted() {
     // typing logic
@@ -98,7 +92,9 @@ export default {
   position: relative;
   z-index: 10;
   color: var(--text-color-primary);
-  margin: 50px 100px 0;
+  width: 85%;
+  max-width: 1400px;
+  margin: 50px auto 0;
 
   .left-column,
   .right-column {
@@ -109,7 +105,8 @@ export default {
   .left-column {
     flex: 55%;
     width: 55%;
-    padding: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
 
     .typing__blink {
       animation: blink 0.5s infinite;
@@ -139,6 +136,10 @@ export default {
     width: 45%;
     justify-content: center;
 
+    .animation-loader {
+      margin-top: -15px;
+    }
+
     .animation-loader__image {
       width: 100% !important;
       max-width: 600px;
@@ -157,34 +158,44 @@ export default {
     max-width: 555px;
     margin: 30px 0;
   }
-}
 
-.home-banner__button {
-  font-size: 0.825rem;
-  font-weight: 600;
-  padding: 14px 30px;
-  background: transparent;
-  border: 1px solid var(--button-outline-background);
-  color: var(--button-outline-background);
-  text-transform: uppercase;
-  border-radius: 4px;
-  outline: 0;
-  text-decoration: none;
-  cursor: pointer;
-  margin-right: 15px;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  .home-banner__button {
+    font-size: 0.825rem;
+    font-weight: 600;
+    padding: 14px 30px;
+    background: transparent;
+    border: 1px solid var(--button-outline-background);
+    color: var(--button-outline-background);
+    text-transform: uppercase;
+    border-radius: 4px;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
 
-  &.--light {
     &:hover {
       background: var(--button-outline-hover-bg);
       color: var(--button-text);
+      border-color: var(--button-outline-hover-bg);
     }
   }
 
-  &.--dark {
-    &:hover {
-      color: var(--button-outline-hover-bg);
-      border-color: var(--button-outline-hover-bg);
+  @include large-monitor {
+    max-width: 1700px;
+  }
+
+  @include desktop {
+    .title {
+      font-size: 2.75rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .home-banner__button {
+      font-size: 0.75rem;
     }
   }
 }

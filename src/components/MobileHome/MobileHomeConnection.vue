@@ -9,7 +9,7 @@
         div.sub-content
           input.content-input(placeholder="Your Name" v-model="nameInput")
           input.content-input(placeholder="From Where" v-model="locationInput")
-          input.content-input(placeholder="How can i help?" v-model="descriptionInput")
+          textarea.content-input.input--textarea(:rows="4" placeholder="How can i help?" v-model="descriptionInput")
         button.connection-button(type="button" @click="sendEmail") Get in Touch
 </template>
 
@@ -61,11 +61,7 @@ export default {
 <style lang="scss">
 .mobile-home-connection__content {
   display: inline-block;
-  margin: 60px 30px 80px;
-
-  @include small-mobile() {
-    margin: 60px 15px 80px;
-  }
+  margin: 50px 30px 80px;
 
   .content-container {
     .left-column {
@@ -104,7 +100,7 @@ export default {
     width: 100%;
     padding: 10px 15px;
     border-radius: 4px;
-    border: 1px solid $disabledGrey;
+    border: 2px solid $disabledGrey;
     font-weight: 500;
     font-size: 0.8125rem;
     color: $black;
@@ -115,6 +111,10 @@ export default {
 
     &:focus {
       border-color: var(--input-outline-color);
+    }
+
+    &.input--textarea {
+      resize: none;
     }
   }
 
@@ -131,6 +131,26 @@ export default {
     border: 0;
     outline: 0;
     float: right;
+  }
+}
+
+@include small-mobile() {
+  .mobile-home-connection__content {
+    margin: 50px 15px 80px;
+  }
+}
+
+@include tablet() {
+  .mobile-home-connection__content {
+    display: block;
+    max-width: 650px;
+    margin: 50px auto 100px;
+    width: 90%;
+
+    .left-column {
+      max-width: 500px;
+      margin: 0 auto;
+    }
   }
 }
 </style>

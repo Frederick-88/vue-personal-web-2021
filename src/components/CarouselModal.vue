@@ -1,46 +1,55 @@
 <template lang="pug">
   GlobalBaseDialog.home-portofolio__modal(
     v-if="isShowCarouselModal"
-    :is-show="isShowCarouselModal"
-    :is-primary="true"
     @close="closeModal"
   )
-    div.row
-      div.column.column--left(:class="{'column--one-preview': hasOnlyOnePreview}")
-        div.carousel-arrow__buttons.extra-margin-right
-          i.carousel-arrow.icon-chevron-up(@click="showPrev")
-          i.carousel-arrow.icon-chevron-down(@click="showNext")
+    div.modal__header
+      h2.title {{activePortofolio.title}}
+      div.portofolio-tags
+        span.tag(v-for="tag in activePortofolio.tags") {{tag}}
+
+    div.modal__image-preview(:class="{'preview--single': hasOnlyOnePreview}")
+      div.carousel-arrow__buttons
+        i.carousel-arrow.icon-chevron-left(@click="showPrev")
+        i.carousel-arrow.icon-chevron-right(@click="showNext")
+      div.modal__carousel-container
         VueSlickCarousel.modal__carousel(
-          v-bind="verticalSettings" 
-          ref="verticalCarousel"
+          v-bind="carouselSettings" 
+          ref="modalCarousel"
         )
           div.image-wrapper(v-for="(preview, index) in activePortofolio.previews" :key="index")
             img.image(
               :src="preview"
-              loading="lazy"
             )
 
-      div.column--middle
-
-      div.column.column--right
-        h2.title {{activePortofolio.title}}
+    div.modal__description-container
+      div.modal__description
         p.subtitle {{activePortofolio.description}}
         div.tools-section
           p.tools-title Leveraged Skills: 
           div.tools-lists
             span.tool-text(v-for="(skill, index) in activePortofolio.skills" :key="index") {{skill}}
-        div(v-if="activePortofolio.website")
-          a.button.button--dark(:href="activePortofolio.website" target="blank") 
-            | Visit Website
-            i.icon-earth2
-            
-        div(v-if="activePortofolio.npmWebsite")
-          a.button.button--dark(
-            :href="activePortofolio.npmWebsite" 
-            target="blank"
-          ) 
-            | Visit NPM Package
-            i.icon-earth2
+        div.button-list
+          template(v-if="activePortofolio.website")
+            a.button(:href="activePortofolio.website" target="_blank") 
+              | Visit Website
+              i.icon-earth2
+              
+          template(v-if="activePortofolio.npmWebsite")
+            a.button(
+              :href="activePortofolio.npmWebsite" 
+              target="_blank"
+            ) 
+              | Visit NPM Package
+              i.icon-earth2
+
+          template(v-if="activePortofolio.github")
+            a.button(
+              :href="activePortofolio.github" 
+              target="_blank"
+            ) 
+              | Visit Github Repository
+              i.icon-earth2
 </template>
 
 <script>
@@ -54,14 +63,13 @@ export default {
   },
   data() {
     return {
-      verticalSettings: {
+      carouselSettings: {
         arrows: false,
         dots: true,
         infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
+        adaptiveHeight: true,
         swipe: false,
       },
     };
@@ -79,10 +87,10 @@ export default {
       this.setActivePortofolio({});
     },
     showNext() {
-      this.$refs.verticalCarousel.next();
+      this.$refs.modalCarousel.next();
     },
     showPrev() {
-      this.$refs.verticalCarousel.prev();
+      this.$refs.modalCarousel.prev();
     },
   },
 };
@@ -90,33 +98,43 @@ export default {
 
 <style lang="scss">
 .home-portofolio__modal {
-  .row {
+  .modal__header {
+    margin: 50px 0 30px;
     display: flex;
-  }
+    flex-direction: column;
+    align-items: center;
 
-  .column {
-    &.column--left {
-      display: flex;
-      margin: auto 0;
-      width: 60%;
-      padding: 80px 30px 60px 50px;
+    .title {
+      font-size: 1.375rem;
+      font-weight: 500;
     }
 
-    &.column--right {
+    .portofolio-tags {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 40%;
-      padding: 80px 50px 60px 30px;
-      min-height: 465px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
 
-      .icon-earth2 {
-        margin-left: 8px;
-        font-size: 1.25rem;
+      .tag {
+        padding: 5px 12px;
+        border-radius: 4px;
+        margin-right: 5px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background-color: var(--button-solid-background-3);
+        color: var(--button-text-3);
       }
     }
+  }
 
-    &.column--one-preview {
+  .modal__image-preview {
+    position: relative;
+    display: flex;
+    margin: auto 0;
+    width: 100%;
+    padding: 0 30px;
+
+    &.preview--single {
       .slick-track {
         height: 400px !important;
         display: flex;
@@ -124,30 +142,96 @@ export default {
       }
 
       .carousel-arrow {
-        background: $disabledGrey;
+        opacity: 0.4;
         pointer-events: none;
       }
+    }
+
+    div {
+      height: 100% !important;
     }
 
     .image-wrapper {
       outline: 0;
       border: 0;
+
+      .image {
+        height: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+        max-height: 520px;
+      }
     }
 
-    .image {
-      height: 100%;
+    .modal__carousel-container {
       width: 100%;
-      object-fit: contain;
+      display: flex;
+      justify-content: center;
+
+      .modal__carousel {
+        width: 85%;
+
+        .slick-dots {
+          bottom: -35px;
+
+          li {
+            button::before {
+              color: var(--dark-white);
+            }
+          }
+        }
+      }
     }
+
+    .carousel-arrow__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+    }
+
+    .carousel-arrow {
+      padding: 10px;
+      color: var(--button-text);
+      background: var(--button-solid-background);
+      transition: background 0.2s, color 0.2s;
+      border-radius: 4px;
+      margin: 10px 0;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--button-text-3);
+        color: var(--button-solid-background);
+      }
+    }
+  }
+
+  .modal__description-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+  }
+
+  .modal__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
 
     .subtitle {
       margin: 15px 0 25px;
       text-align: justify;
-      color: $grey2;
+      color: var(--text-grey-2);
     }
 
     .tools-section {
-      margin-bottom: 35px;
+      margin-bottom: 40px;
       text-align: left;
 
       .tools-title {
@@ -177,50 +261,18 @@ export default {
         color: var(--button-text-3);
       }
     }
-  }
 
-  .column--middle {
-    border-right: 1px solid $disabledGrey;
-  }
-
-  .carousel-arrow__buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 10%;
-
-    &.extra-margin-right {
-      margin-right: 5px;
+    .button-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-  }
 
-  .carousel-arrow {
-    padding: 10px;
-    color: var(--button-text);
-    background: var(--button-solid-background);
-    transition: background 0.2s, color 0.2s;
-    border-radius: 4px;
-    margin: 10px 0;
-    cursor: pointer;
-
-    &:hover {
-      background: var(--button-text);
-      color: var(--button-solid-background);
-    }
-  }
-
-  .button {
-    padding: 10px;
-    color: var(--button-text-2);
-    background: var(--button-solid-background-2);
-    transition: background 0.2s, color 0.2s;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: 0;
-    border: 0;
-
-    &.button--dark {
+    .button {
+      border-radius: 4px;
+      cursor: pointer;
+      outline: 0;
+      border: 0;
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -228,28 +280,22 @@ export default {
       color: var(--button-text-3);
       font-weight: 600;
       font-size: 0.875rem;
+      font-weight: 500;
       padding: 12px;
-      margin: 5px 0;
-      width: 50%;
+      width: calc(50% - 15px);
       text-decoration: none;
+      transition: background 0.2s, color 0.2s;
 
       &:hover {
         background: var(--button-text-3);
         color: var(--button-solid-background-3);
       }
-    }
 
-    &:hover {
-      color: var(--button-solid-background-2);
-      background: var(--button-text-2);
-    }
-  }
-
-  .modal__carousel {
-    width: 90%;
-
-    .slick-dots {
-      bottom: -35px;
+      .icon-earth2 {
+        margin-left: 8px;
+        font-size: 1.125rem;
+        margin-top: -2px;
+      }
     }
   }
 }

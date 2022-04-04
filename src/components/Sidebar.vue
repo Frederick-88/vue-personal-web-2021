@@ -4,9 +4,9 @@
         span.icon-sun-solid(v-if="this.webTheme == 'darkMode'")
         span.icon-moon-solid(v-else)
       a.social-media__button.icon-email(href="mailto:me@chenfrederick.com?subject=Hi Fred!&body=I'm (name) from (where) (please drop your message kindly here)")
-      a.social-media__button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="blank")
-      a.social-media__button.icon-whatsapp(href="https://wa.link/fqa4e7" target="blank")
-      a.social-media__button.icon-github(href="https://github.com/Frederick-88" target="blank")
+      a.social-media__button.icon-linkedin-solid(href="https://www.linkedin.com/in/chen-frederick" target="_blank")
+      a.social-media__button.icon-whatsapp(href="https://wa.link/fqa4e7" target="_blank")
+      a.social-media__button.icon-github(href="https://github.com/Frederick-88" target="_blank")
       div.sidebar__line
 </template>
 
