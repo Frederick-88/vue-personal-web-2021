@@ -10,11 +10,11 @@
 
     div.modal__image-preview(:class="{'preview--single': hasOnlyOnePreview}")
       div.carousel-arrow__buttons
-        i.carousel-arrow.icon-chevron-up(@click="showPrev")
-        i.carousel-arrow.icon-chevron-down(@click="showNext")
+        i.carousel-arrow.icon-chevron-left(@click="showPrev")
+        i.carousel-arrow.icon-chevron-right(@click="showNext")
       div.modal__carousel-container
         VueSlickCarousel.modal__carousel(
-          v-bind="verticalSettings" 
+          v-bind="carouselSettings" 
           ref="modalCarousel"
         )
           div.image-wrapper(v-for="(preview, index) in activePortofolio.previews" :key="index")
@@ -63,14 +63,12 @@ export default {
   },
   data() {
     return {
-      verticalSettings: {
+      carouselSettings: {
         arrows: false,
         dots: true,
         infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
         adaptiveHeight: true,
         swipe: false,
       },
@@ -149,15 +147,19 @@ export default {
       }
     }
 
+    div {
+      height: 100% !important;
+    }
+
     .image-wrapper {
       outline: 0;
       border: 0;
 
       .image {
         height: 100%;
-        max-height: 520px;
-        width: 100%;
         object-fit: contain;
+        margin: 0 auto;
+        max-height: 520px;
       }
     }
 
