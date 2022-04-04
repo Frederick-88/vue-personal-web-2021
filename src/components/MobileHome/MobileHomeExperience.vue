@@ -128,6 +128,8 @@ export default {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   margin: 50px 30px;
+  position: relative;
+  z-index: 10;
 
   .subtitle {
     font-weight: 600;
