@@ -140,7 +140,7 @@ module.exports = [
       require("@/assets/images/works/web-performance-before.png"),
       require("@/assets/images/works/web-performance-after.jpeg"),
       require("@/assets/images/works/seo-result.png"),
-      require("@/assets/images/works/personal-web-3.jpeg"),
+      require("@/assets/images/works/personal-web09.jpeg"),
     ],
     skills: [
       "Web Performance",
@@ -182,15 +182,21 @@ module.exports = [
   {
     title: "ChenFrederick.com (Personal Web)",
     description:
-      "My latest personal website, at here i try to share with you more about myself, my portofolios, my experiences and also my skills. Here, you can also access my personal web in phone & set to dark mode if you need! Let's get to know each other.",
-    thumbnail: require("@/assets/images/works/personal-web.png"),
+      "My latest responsive personal website, accessible within any device and screen from 320px to larger than 2560px & you can visit with dark mode if you need! At here i try to share with you more about myself, my portofolios, my experiences and also my skills. Let's get to know each other.",
+    thumbnail: require("@/assets/images/works/personal-web01.png"),
     year: 2021,
-    tags: ["VueJS", "Dark Mode"],
+    tags: ["VueJS", "Responsive Web App"],
     website: null,
     previews: [
-      require("@/assets/images/works/personal-web.png"),
-      require("@/assets/images/works/personal-web-2.png"),
-      require("@/assets/images/works/personal-web-3.jpeg"),
+      require("@/assets/images/works/personal-web01.png"),
+      require("@/assets/images/works/personal-web02.png"),
+      require("@/assets/images/works/personal-web03.png"),
+      require("@/assets/images/works/personal-web04.png"),
+      require("@/assets/images/works/personal-web05.png"),
+      require("@/assets/images/works/personal-web06.png"),
+      require("@/assets/images/works/personal-web07.png"),
+      require("@/assets/images/works/personal-web08.png"),
+      require("@/assets/images/works/personal-web09.jpeg"),
     ],
     skills: [
       "VueJS",
