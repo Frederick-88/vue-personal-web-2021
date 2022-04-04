@@ -1,12 +1,15 @@
 <template lang="pug">
   div#app
-    main(v-if="isTabletAndSmallDesktop")
-      router-view
+    //- ---
+    //- --- keep, in case later might need another lottie page, see Home.vue
+    //- ---
+    //- main(v-if="isTabletScreen")
+    //-   router-view
 
-    main.main-mobile__section(v-else-if="isMobile" :style="backgroundImage")
+    main.main-mobile__section(v-if="isMobileScreen || isTabletScreen" :style="backgroundImage")
       MobileNavbar
       router-view
-      div.mobile-wave-wrapper(v-if="webTheme !== 'darkMode'")
+      div.mobile-wave-wrapper(v-if="!isDarkMode")
         svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320")
           path(fill="#f6f6f6" fill-opacity="1" d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,208C840,245,960,267,1080,250.7C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z")
 
@@ -15,13 +18,14 @@
         Navbar.navigation__bar
         router-view
       Sidebar.sidebar
-      div.wave-wrapper(v-if="webTheme !== 'darkMode'")
+      div.wave-wrapper(v-if="!isDarkMode")
         svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320")
           path(fill="#f6f6f6" fill-opacity="1" d="M0,224L60,197.3C120,171,240,117,360,117.3C480,117,600,171,720,208C840,245,960,267,1080,250.7C1200,235,1320,181,1380,154.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z")
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapMutations, mapGetters } from "vuex";
+import { debounce } from "debounce";
 import Navbar from "./components/Navbar";
 import MobileNavbar from "./components/MobileNavbar";
 import Sidebar from "./components/Sidebar";
@@ -39,14 +43,12 @@ export default {
     Sidebar,
     MobileNavbar,
   },
-  data() {
-    return {
-      isMobile: false,
-      isTabletAndSmallDesktop: false,
-    };
-  },
   computed: {
     ...mapState(["webTheme"]),
+    ...mapGetters(["isMobileScreen", "isTabletScreen"]),
+    isDarkMode() {
+      return this.webTheme === "darkMode";
+    },
     backgroundImage() {
       // creating black/white overlay effect
       const darkBackground = {
@@ -61,40 +63,59 @@ export default {
           require("@/assets/images/wallpaper-white.jpeg") +
           ")",
       };
-      return this.webTheme === "darkMode" ? darkBackground : lightBackground;
+      return this.isDarkMode ? darkBackground : lightBackground;
     },
   },
   methods: {
-    ...mapMutations(["setWebTheme"]),
-    detectMobileUser() {
-      if (screen.width < 1120) {
-        this.isMobile = true;
+    ...mapMutations(["setWebTheme", "setScreenType"]),
+    darkModeSetup() {
+      let localTheme = localStorage.getItem("theme");
+      if (!localTheme) {
+        this.setWebTheme("");
+      } else {
+        this.setWebTheme("darkMode");
       }
+      // documentElement select the root tag of our html which is <html/>
+      document.documentElement.setAttribute("data-theme", localTheme);
     },
-    detectTabletToSmallDesktopUser() {
-      if (screen.width > 600 && screen.width < 1120) {
-        this.isTabletAndSmallDesktop = true;
+
+    debounceDetectScreenSize: debounce(function() {
+      this.detectScreenSize();
+    }, 250),
+    detectScreenSize() {
+      /*
+      mobile size = 0px - 600px
+      tablet size = 600px - 1024px
+      small-desktop size = 1024px - 1366px
+      desktop size = 1366px - 2560px / larger
+      */
+      if (screen.width <= 600) {
+        this.setScreenType("mobile");
+      } else if (screen.width < 1025) {
+        this.setScreenType("tablet");
+      } else if (screen.width < 1366) {
+        this.setScreenType("small-desktop");
+      } else {
+        this.setScreenType("");
       }
     },
   },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.debounceDetectScreenSize);
+  },
   beforeMount() {
-    this.detectMobileUser();
-    this.detectTabletToSmallDesktopUser();
-
-    let localTheme = localStorage.getItem("theme");
-    if (!localTheme) {
-      this.setWebTheme("");
-    } else {
-      this.setWebTheme("darkMode");
-    }
-    // documentElement select the root tag of our html which is <html/>
-    document.documentElement.setAttribute("data-theme", localTheme);
+    this.detectScreenSize();
+    this.darkModeSetup();
+  },
+  mounted() {
+    window.addEventListener("resize", this.debounceDetectScreenSize);
   },
 };
 </script>
 
 <style lang="scss">
 @import "@/assets/icomoon/style.scss"; // import at parent of all components for global usage
+
 html {
   scroll-behavior: smooth;
 }
@@ -169,11 +190,6 @@ body {
     width: 100%;
     min-height: 100vh;
     width: calc(100% - 100px);
-
-    .navigation__bar {
-      padding: 40px 130px 0;
-      display: flex;
-    }
   }
 
   // <-- Mobile Section -->
