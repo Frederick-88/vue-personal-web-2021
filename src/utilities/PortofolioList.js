@@ -183,13 +183,13 @@ module.exports = [
     title: "ChenFrederick.com (Personal Web)",
     description:
       "My latest responsive personal website, accessible within any device and screen from 320px to larger than 2560px & you can visit with dark mode if you need! At here i try to share with you more about myself, my portofolios, my experiences and also my skills. Let's get to know each other.",
-    thumbnail: require("@/assets/images/works/personal-web01.png"),
+    thumbnail: require("@/assets/images/works/personal-web02.png"),
     year: 2021,
     tags: ["VueJS", "Responsive Web App"],
     website: null,
     previews: [
-      require("@/assets/images/works/personal-web01.png"),
       require("@/assets/images/works/personal-web02.png"),
+      require("@/assets/images/works/personal-web01.png"),
       require("@/assets/images/works/personal-web03.png"),
       require("@/assets/images/works/personal-web04.png"),
       require("@/assets/images/works/personal-web05.png"),
