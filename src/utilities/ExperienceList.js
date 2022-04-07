@@ -3,7 +3,7 @@ module.exports = [
     title: "OFFEO SG",
     logo: require("@/assets/images/experience/offeo.jpg"),
     description:
-      "As a Frontend Developer, collaborate together with art director to develop UI & features that give remarkable experience for users.  Integrate API from backend to exchange data within database. Contributed to increased SEO & web performance of OFFEO. Do Unit Testing for OFFEO Components. Building scalability by implementing clean & readable code methodology.",
+      "As a Frontend Developer, collaborate together with art director to develop beautiful UIs & features to give remarkable experience for users. Integrate API from backend to exchange data within database. Contributed to increased SEO & web performance of OFFEO. Apply unit testings across OFFEO sites with Jest. Building scalability by implementing clean & readable code methodology. Develop internal site within fullstack development with Inertia-Vue-Laravel-MySQL.",
     skills: [
       "Vue.js",
       "Vuex",
@@ -14,6 +14,10 @@ module.exports = [
       "SCSS",
       "UNIX System (Linux)",
       "Webpack",
+      "Inertia.js",
+      "Laravel",
+      "PHP",
+      "MYSQL",
     ],
   },
   {

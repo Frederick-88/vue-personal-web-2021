@@ -38,7 +38,7 @@ module.exports = [
   {
     title: "Asia-Property (Admin Site)",
     description:
-      "An excellent & convenient admin site developed within full-stack development. Inspired by admin website ideas from dribbble.com, created flawless interface that brings good experience to users.",
+      "An excellent & convenient admin site developed within fullstack development. Inspired by admin website ideas from dribbble.com, created flawless interface that brings good experience to users.",
     thumbnail: require("@/assets/images/works/asia-admin01.png"),
     year: 2022,
     tags: ["ReactJS", "Fullstack"],
@@ -75,7 +75,7 @@ module.exports = [
   {
     title: "GlobalUI CSS Framework",
     description:
-      "A CSS Framework & Components Library that is created with Vue.js. Support the usage for Vue.js or Nuxt.js developers. 1 of my best works so far, a system example for agencies that want to have consistent components / UI. Efficient for future changes & a great tool for teamwork culture.",
+      "A CSS Framework & Components Library that is created with Vue.js. Support the usage for Vue.js or Nuxt.js developers. A system example for agencies that want to have consistent UI. Also have UI documentation created with StorybookJS. Deployed as a NPM package to be an opensource package installable for any developers around the world.",
     thumbnail: require("@/assets/images/works/css-framework1.png"),
     year: 2021,
     tags: ["VueJS", "NPM"],
@@ -90,7 +90,7 @@ module.exports = [
     skills: [
       "VueJS",
       "Storybook",
-      "NPM Package Deployment",
+      "NPM",
       "Component Documentation System",
       "Component Library System",
       "Animation Loader System",
@@ -172,7 +172,6 @@ module.exports = [
       "MongoDB",
       "Heroku",
       "AWS",
-      "Cloudflare",
       "REST API",
       "Fullstack Web Development",
       "SCSS",
@@ -182,7 +181,7 @@ module.exports = [
   {
     title: "ChenFrederick.com (Personal Web)",
     description:
-      "My latest responsive personal website, accessible within any device and screen from 320px to larger than 2560px & you can visit with dark mode if you need! At here i try to share with you more about myself, my portofolios, my experiences and also my skills. Let's get to know each other.",
+      "Amazing responsive personal website with dark mode feature & web animations. Accessible within any device and screen from 320px to larger than 2560px. Sharing more about my capabilities, experience & skills. Designed purely with SCSS. All components, features & stylings here were made by myself without help from any CSS framework. Let's get to know each other.",
     thumbnail: require("@/assets/images/works/personal-web02.png"),
     year: 2021,
     tags: ["VueJS", "Responsive Web App"],
@@ -265,7 +264,7 @@ module.exports = [
   {
     title: "Weatherpedia (PWA)",
     description:
-      "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the web into a mobile app for a very small size of 332 kb. then user also can search other city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
+      "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the whole web to their tablets/phones for a very small size of 332 kb. then user also can search other city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
     thumbnail: require("@/assets/images/works/weatherpedia-pwa1.png"),
     year: 2021,
     tags: ["ReactJS", "PWA"],

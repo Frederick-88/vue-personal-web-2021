@@ -10,8 +10,8 @@
         p.about-subtitle My Intro
         h2.about-title About Me
 
-        p.about-description Highly adaptable & willing to learn, he consider himself as an enthusiastic and passionate individual that is looking forward to face new challenges daily & contribute to new ideas from organization that he work for.
-        p.about-description In most of chances, whether its after worktime or weekend, he always took extra miles to develop his skills & capabilities to become a more capable & better developer that is dependable and can bring positive impacts to the company that gave him chance.
+        p.about-description An enthusiastic & solution-driven fullstack web developer specialised in front-end development who is experienced on building websites along the stages of web development cycle, created several websites listed on personal web as a result of constant practice over the years, developing user-focused products for desktop, tablet and mobile app meeting highest standards of best practices.
+        p.about-description In most of chances after worktime/weekend, he took extra miles to improve his skills & capacity to become a more capable & better developer that is dependable and can bring positive impacts to the organization that he contribute at.
 
         div.contact-section
           div.section

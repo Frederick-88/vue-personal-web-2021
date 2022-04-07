@@ -12,7 +12,7 @@
             p#typing-word.word
             p.typing__blink |
             p.word.typing__height-secure Developer
-          | who thrives in fast paced environment, love to learn new things in technology & empower to deliver quality in advance.
+          | who focus on delivering key outcomes, collaborate together with organization that he work for to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
         
         a.home-banner__button(
           :href="CvFile"
