@@ -2,7 +2,7 @@
   section.navigation__bar
       div
         router-link.nav__item.main-nav(to="/") ChenFrederick.com
-        hr.nav__line
+        span.nav__line
       a.nav__item(href="#my-intro") My Intro
       a.nav__item(href="#works") Works
       a.nav__item(href="#experience") Experience
@@ -46,9 +46,11 @@ export default {
   }
 
   .nav__line {
+    display: block;
+    margin-top: 10px;
     width: 60px;
-    margin-left: 0;
-    border-color: var(--text-color-secondary);
+    height: 2px;
+    background-color: var(--text-color-secondary);
   }
 }
 </style>
