@@ -26,7 +26,6 @@
       :arrows="false"
       :style="{ height: carouselHeight }"
       :swipe="false"
-      lazyLoad="ondemand"
     )
       div.main-card-list(
         v-for="(portofolio, index) in PortofolioList"
@@ -145,6 +144,8 @@ export default {
   mounted() {
     this.c1 = this.$refs.mobileHomePortofolioCarousel01;
     this.c2 = this.$refs.mobileHomePortofolioCarousel02;
+
+    this.checkHeight(); // ensure receive the ideal height from the first view
   },
 };
 </script>
