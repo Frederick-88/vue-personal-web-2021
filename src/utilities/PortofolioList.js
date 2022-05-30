@@ -1,5 +1,5 @@
 /*
---- Total Portofolio = 19
+--- Total Portofolio = 20
 */
 
 module.exports = [
@@ -211,23 +211,34 @@ module.exports = [
     ],
   },
   {
-    title: "Vue Firebase Fullstack Apps",
+    title: "Sma Mw Library",
     description:
-      "A Vue.js (Frontend Side) + Firebase (Backend Side) website that consist customer management system + todoapp. It is able to handle image uploads, CRUD of database column & clearing of uploaded image in database. This VueFire app was deployed as a live website that can be accessed online.",
-    thumbnail: require("@/assets/images/works/vue-firebase1.png"),
-    year: 2021,
-    tags: ["VueJS-Firebase", "Fullstack"],
-    website: "https://fd-vue-firebase.web.app/#/",
+      "A VueJS - Vuex (Frontend Side) + Firebase (Backend Side) responsive library profile website with admin content management system (CMS). Accessible within any device and screen from 320px to larger than 2560px. Used Vuetify as plugin for styling purposes with Firebase hosting and database system integrated to VueJS and Vuex frontend side. Together, as a fullstack website app.",
+    thumbnail: require("@/assets/images/works/smw-library01.jpg"),
+    year: 2022,
+    tags: ["VueJS", "Firebase"],
+    website: "https://sma-mw-library.web.app/",
     previews: [
-      require("@/assets/images/works/vue-firebase1.png"),
-      require("@/assets/images/works/vue-firebase2.png"),
+      require("@/assets/images/works/smw-library01.jpg"),
+      require("@/assets/images/works/smw-library02.jpg"),
+      require("@/assets/images/works/smw-library03.jpg"),
+      require("@/assets/images/works/smw-library04.jpg"),
+      require("@/assets/images/works/smw-library05.jpg"),
+      require("@/assets/images/works/smw-library06.jpg"),
+      require("@/assets/images/works/smw-library07.jpg"),
+      require("@/assets/images/works/smw-library08.jpg"),
+      require("@/assets/images/works/smw-library09.jpg"),
+      require("@/assets/images/works/smw-library10.jpg"),
+      require("@/assets/images/works/smw-library11.jpg"),
     ],
     skills: [
       "VueJS",
       "Firebase",
+      "Vuex",
+      "Responsive Web App",
+      "Vuetify",
       "Fullstack Web Development",
-      "Firebase Integration",
-      "Firebase Multisite Deployment",
+      "Cookie",
       "SCSS",
       "Github",
     ],
@@ -425,6 +436,28 @@ module.exports = [
     website: "https://pokeapi-test.netlify.app/",
     previews: [require("@/assets/images/works/pair-programming-test-01.png")],
     skills: ["ReactJS", "REST API", "SCSS", "Github"],
+  },
+  {
+    title: "Vue Firebase Fullstack Apps",
+    description:
+      "A Vue.js (Frontend Side) + Firebase (Backend Side) website that consist customer management system + todoapp. It is able to handle image uploads, CRUD of database column & clearing of uploaded image in database. This VueFire app was deployed as a live website that can be accessed online.",
+    thumbnail: require("@/assets/images/works/vue-firebase1.png"),
+    year: 2021,
+    tags: ["VueJS-Firebase", "Fullstack"],
+    website: "https://fd-vue-firebase.web.app/#/",
+    previews: [
+      require("@/assets/images/works/vue-firebase1.png"),
+      require("@/assets/images/works/vue-firebase2.png"),
+    ],
+    skills: [
+      "VueJS",
+      "Firebase",
+      "Fullstack Web Development",
+      "Firebase Integration",
+      "Firebase Multisite Deployment",
+      "SCSS",
+      "Github",
+    ],
   },
   {
     title: "AzurDrones with Vue",

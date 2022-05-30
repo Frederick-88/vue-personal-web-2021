@@ -27,7 +27,6 @@
       :style="{ height: carouselHeight }"
       :infinite="true"
       :swipe="false"
-      lazyLoad="ondemand"
     )
       div.main-card-list(
         v-for="(experience, index) in ExperienceList" 
