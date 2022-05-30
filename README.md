@@ -97,5 +97,6 @@
 - Optimize/Compress Images :heavy_check_mark:
 - Minify CSS by Removing Repetitive CSS or Unused CSS :heavy_check_mark:
 - Serve images in new gen formats (webp) + reduce size of image. Since for mobile they also dont need a big or HD image ( 1920 x 1080 ) :heavy_check_mark:
+- If dont want to use webp, rather than use png, can use jpg images since most of jpg filesize are smaller :heavy_check_mark:
 - Remove Unused Code Sections on Files (Minification)
 - Chunks Code-Splitting
