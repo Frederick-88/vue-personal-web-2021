@@ -181,11 +181,11 @@ module.exports = [
   {
     title: "ChenFrederick.com (Personal Web)",
     description:
-      "Amazing responsive personal website with dark mode feature & web animations. Accessible within any device and screen from 320px to larger than 2560px. Sharing more about my capabilities, experience & skills. Designed purely with SCSS. All components, features & stylings here were made by myself without help from any CSS framework. Let's get to know each other.",
+      "Amazing responsive personal website with dark mode feature & web animations. Accessible within any device and screen from 320px to larger than 2560px. Sharing more about my capabilities, experience & skills. This web has staging site and production site system (the one you're accessing now). All components, features & stylings here were made purely without help from any CSS framework. Let's get to know each other.",
     thumbnail: require("@/assets/images/works/personal-web02.png"),
     year: 2021,
     tags: ["VueJS", "Responsive Web App"],
-    website: null,
+    website: "https://staging.chenfrederick.com/",
     previews: [
       require("@/assets/images/works/personal-web02.png"),
       require("@/assets/images/works/personal-web01.png"),
@@ -205,15 +205,16 @@ module.exports = [
       "Animation Loader System",
       "SCSS",
       "Website Domain Handling & Deployment",
+      "Staging & Production Site System",
       "Cloudflare",
       "Icomoon",
       "Github",
     ],
   },
   {
-    title: "Sma Mw Library",
+    title: "Sma Mw Library Profile + Admin CMS Site",
     description:
-      "A VueJS - Vuex (Frontend Side) + Firebase (Backend Side) responsive library profile website with admin content management system (CMS). Accessible within any device and screen from 320px to larger than 2560px. Used Vuetify as plugin for styling purposes with Firebase hosting and database system integrated to VueJS and Vuex frontend side. Together, as a fullstack website app.",
+      "A VueJS - Vuex (Frontend Side) + Firebase (Backend Side) responsive library profile website with admin content management system (CMS) that is created for one of the most well-known high school at Batam, Indonesia. Accessible within any device and screen from 320px to larger than 2560px. Used Vuetify as plugin for styling purposes with Firebase hosting and database system integrated to VueJS and Vuex frontend side. Together, as a fullstack website app.",
     thumbnail: require("@/assets/images/works/smw-library01.jpg"),
     year: 2022,
     tags: ["VueJS", "Firebase"],
