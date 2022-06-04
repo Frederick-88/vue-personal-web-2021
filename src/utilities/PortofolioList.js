@@ -153,7 +153,7 @@ module.exports = [
   {
     title: "Full Version S2 Boutique E-Commerce",
     description:
-      "Full Version of ReactJS & Redux E-Commerce made by Fullstack Development (Frontend, Backend until Deployments), Inspiration based on Best Seller E-Commerce app in theme forest (PickBazar). When user register & data stored to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
+      "Full Version of ReactJS & Redux E-Commerce made with Fullstack Development (Frontend, Backend until Deployments), Inspiration based on Best Seller E-Commerce app in themeforest (PickBazar). When user register & data stored to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
     thumbnail: require("@/assets/images/works/react-ecommerce1.png"),
     year: 2020,
     tags: ["ReactJS", "Fullstack"],
