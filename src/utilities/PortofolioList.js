@@ -151,7 +151,7 @@ module.exports = [
     ],
   },
   {
-    title: "React E-Commerce",
+    title: "Full Version S2 Boutique E-Commerce",
     description:
       "Full Version of ReactJS & Redux E-Commerce made by Fullstack Development (Frontend, Backend until Deployments), Inspiration based on Best Seller E-Commerce app in theme forest (PickBazar). When user register & data stored to database, CRUD products of admin, and everything that runs here was made by me. Check out this cool E-commerce!",
     thumbnail: require("@/assets/images/works/react-ecommerce1.png"),
@@ -203,12 +203,13 @@ module.exports = [
       "Dark Mode",
       "Responsive Web App",
       "Animation Loader System",
-      "SCSS",
       "Website Domain Handling & Deployment",
       "Staging & Production Site System",
       "Cloudflare",
-      "Icomoon",
+      "Webpack",
+      "SCSS",
       "Github",
+      "Icomoon",
     ],
   },
   {
