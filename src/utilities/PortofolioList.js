@@ -183,13 +183,14 @@ module.exports = [
     title: "ChenFrederick.com (Personal Web)",
     description:
       "Amazing responsive personal website with dark mode feature & web animations. Accessible within any device and screen from 320px to larger than 2560px. Sharing more about my capabilities, experience & skills. This web has staging site and production site system (the one you're accessing now). All components, features & stylings here were made purely without help from any CSS framework. Let's get to know each other.",
-    thumbnail: require("@/assets/images/works/personal-web02.png"),
+    thumbnail: require("@/assets/images/works/personal-web-responsive.jpg"),
     year: 2021,
     tags: ["VueJS", "Responsive Web App"],
     website: "https://staging.chenfrederick.com/",
     previews: [
       require("@/assets/images/works/personal-web02.png"),
       require("@/assets/images/works/personal-web01.png"),
+      require("@/assets/images/works/personal-web-responsive.jpg"),
       require("@/assets/images/works/personal-web03.png"),
       require("@/assets/images/works/personal-web04.png"),
       require("@/assets/images/works/personal-web05.png"),
@@ -217,13 +218,14 @@ module.exports = [
     title: "Sma Mw Library Profile + Admin CMS Site",
     description:
       "A VueJS - Vuex (Frontend Side) + Firebase (Backend Side) responsive library profile website with admin content management system (CMS) that is created for one of the most well-known high school at Batam, Indonesia. Accessible within any device and screen from 320px to larger than 2560px. Used Vuetify as plugin for styling purposes with Firebase hosting and database system integrated to VueJS and Vuex frontend side. Together, as a fullstack website app.",
-    thumbnail: require("@/assets/images/works/smw-library01.jpg"),
+    thumbnail: require("@/assets/images/works/smw-library-responsive.jpg"),
     year: 2022,
     tags: ["VueJS", "Firebase"],
     website: "https://sma-mw-library.web.app/",
     previews: [
       require("@/assets/images/works/smw-library01.jpg"),
       require("@/assets/images/works/smw-library02.jpg"),
+      require("@/assets/images/works/smw-library-responsive.jpg"),
       require("@/assets/images/works/smw-library03.jpg"),
       require("@/assets/images/works/smw-library04.jpg"),
       require("@/assets/images/works/smw-library05.jpg"),
