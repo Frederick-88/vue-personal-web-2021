@@ -156,6 +156,7 @@ export default {
       border: 0;
 
       .image {
+        width: 98%; // avoid content overflowed with the next slide if image resolution/size is not the same
         height: 100%;
         object-fit: contain;
         margin: 0 auto;

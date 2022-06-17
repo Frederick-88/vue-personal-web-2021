@@ -50,6 +50,16 @@ module.exports = [
     level: "Familiar",
   },
   {
+    title: "Responsive Web Design",
+    icon: "icon-responsive",
+    level: "Fluent",
+  },
+  {
+    title: "REST API",
+    icon: "icon-earth",
+    level: "Fluent",
+  },
+  {
     title: "Laravel + Laravel Blade",
     icon: "icon-laravel",
     level: "Fluent",
@@ -67,6 +77,11 @@ module.exports = [
   {
     title: "Linux / UNIX System",
     icon: "icon-linux",
+    level: "Fluent",
+  },
+  {
+    title: "BrowserStack",
+    icon: "icon-earth2",
     level: "Fluent",
   },
   {
@@ -105,11 +120,6 @@ module.exports = [
     level: "Familiar",
   },
   {
-    title: "Responsive Web Design",
-    icon: "icon-responsive",
-    level: "Fluent",
-  },
-  {
     title: "PHP",
     icon: "icon-php",
     level: "Familiar",
@@ -118,11 +128,6 @@ module.exports = [
     title: "AWS",
     icon: "icon-amazonaws",
     level: "Familiar",
-  },
-  {
-    title: "REST API",
-    icon: "icon-earth",
-    level: "Fluent",
   },
   {
     title: "API Building",
