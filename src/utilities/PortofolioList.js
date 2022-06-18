@@ -76,7 +76,7 @@ module.exports = [
     title: "GlobalUI Components Library",
     description:
       "A UI Components Library that is created with Vue.js, so i created the base and setups for each component, then later on developers can just simply import and use it with my code and settings working in the background ( similar to bootstrap, materialUI, vuetify, etc ). Support the usage for Vue.js or Nuxt.js developers. A system example for agencies that want to have consistent UI. Also have UI documentation created with StorybookJS. Deployed as a NPM package to be an opensource package installable for any developers around the world.",
-    thumbnail: require("@/assets/images/works/css-framework1.png"),
+    thumbnail: require("@/assets/images/works/css-framework5.png"),
     year: 2021,
     tags: ["VueJS", "NPM"],
     website: "https://global-ui-docs.netlify.app/",
@@ -86,6 +86,7 @@ module.exports = [
       require("@/assets/images/works/css-framework2.png"),
       require("@/assets/images/works/css-framework3.png"),
       require("@/assets/images/works/css-framework4.png"),
+      require("@/assets/images/works/css-framework5.png"),
     ],
     skills: [
       "VueJS",
