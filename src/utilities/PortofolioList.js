@@ -316,6 +316,20 @@ module.exports = [
     skills: ["VueJS", "ReactJS", "Unit Testing"],
   },
   {
+    title: "EF SET International English Score (CEFR)",
+    description:
+      "International English Score (76/100) on the EF SET score scale and C2 Proficient according to the Common European Framework of Reference (CEFR).",
+    thumbnail: require("@/assets/images/works/efset-score02.jpg"),
+    year: 2022,
+    tags: ["English"],
+    website: "https://www.efset.org/cert/n5eDJi",
+    previews: [
+      require("@/assets/images/works/efset-score01.jpg"),
+      require("@/assets/images/works/efset-score02.jpg"),
+    ],
+    skills: ["English", "Communication"],
+  },
+  {
     title: "Vue Text to Speech AI",
     description:
       "An AI created on Vue web application about text to speech convertion. It's accessible on any screen size since its a responsive web app which also has playback speed and gender voice options for users to use around.",
