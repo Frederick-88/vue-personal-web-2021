@@ -4,7 +4,7 @@
       div.left-column
         img.column-image(
           loading="lazy"
-          :src="require('@/assets/images/me.jpeg')"
+          :src="require('@/assets/images/me.jpg')"
         )
       div.right-column
         p.about-subtitle My Intro
