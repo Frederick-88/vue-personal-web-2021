@@ -6,7 +6,7 @@
       div.left-column
         img.column-image(
           loading="lazy"
-          :src="require('@/assets/images/me.jpeg')"
+          :src="require('@/assets/images/me.jpg')"
         )
       div.right-column
         p.about-description An enthusiastic & solution-driven fullstack web developer specialised in front-end development who is experienced on building websites along the stages of web development cycle, created several websites listed on personal web as a result of constant practice over the years, developing user-focused products for desktop, tablet and mobile app meeting highest standards of best practices.
