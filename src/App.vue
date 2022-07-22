@@ -71,6 +71,12 @@ export default {
           "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
       },
     ],
+    link: [
+      {
+        rel: "canonical", // Important to Detect Original Site -> https://www.brightedge.com/glossary/canonical-tag
+        href: "https://www.chenfrederick.com/",
+      },
+    ],
   },
   components: {
     Navbar,
