@@ -37,6 +37,40 @@ import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
   metaInfo: {
     title: "Chen Frederick | Staging Website",
+    meta: [
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "description",
+        content:
+          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Frederick, frederick, Chen Frederick, chen frederick, Frederick Website, frederick website, Frederick Batam, Frederick Indonesia, Chen Frederick Batam, React, Vue, ReactJS, VueJS, Frontend, Frontend Developer, Web Developer, Fullstack Developer",
+      },
+
+      // Facebook / OpenGraph
+      { property: "og:url", content: "https://www.chenfrederick.com/" },
+      { property: "og:title", content: "Chen Frederick | Website" },
+      { property: "og:site_name", content: "Chen Frederick | Website" },
+      { property: "og:type", content: "website" },
+      {
+        property: "og:description",
+        content:
+          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
+      },
+
+      // Twitter
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:url", content: "https://www.chenfrederick.com/" },
+      { name: "twitter:title", content: "Chen Frederick | Website" },
+      {
+        name: "twitter:description",
+        content:
+          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
+      },
+    ],
   },
   components: {
     Navbar,
@@ -79,7 +113,7 @@ export default {
       document.documentElement.setAttribute("data-theme", localTheme);
     },
 
-    debounceDetectScreenSize: debounce(function() {
+    debounceDetectScreenSize: debounce(function () {
       this.detectScreenSize();
     }, 250),
     detectScreenSize() {
