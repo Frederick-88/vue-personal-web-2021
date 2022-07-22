@@ -68,6 +68,8 @@
 
 - https://stackoverflow.com/questions/1092329/what-are-the-important-meta-tags-i-must-put-in-my-website
 - https://search.google.com/search-console/about
+- https://clutch.co/seo-firms/resources/meta-tags-that-improve-seo
+- https://www.digitalocean.com/community/tutorials/vuejs-vue-meta
 
 7. Subdomain Configuration Reference :
 
