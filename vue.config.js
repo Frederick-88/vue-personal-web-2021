@@ -6,7 +6,7 @@ module.exports = {
       args[0].title = "Chen Frederick | Staging-Website";
       args[0].meta = {
         description:
-          "A React & Vue Frontend Developer's Personal Website Who Has Extensive Capability on Fullstack Development, Web Performance & Scalability.",
+          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
         keywords:
           "Frederick, frederick, Chen Frederick, chen frederick, Frederick Website, frederick website, Frederick Batam, Frederick Indonesia, Chen Frederick Batam, React, Vue, ReactJS, VueJS, Frontend, Frontend Developer, Web Developer, Fullstack Developer",
       };
