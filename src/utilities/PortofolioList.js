@@ -141,7 +141,8 @@ module.exports = [
     previews: [
       require("@/assets/images/works/web-performance-before.png"),
       require("@/assets/images/works/web-performance-after.jpeg"),
-      require("@/assets/images/works/seo-result.png"),
+      require("@/assets/images/works/seo-result1.png"),
+      require("@/assets/images/works/seo-result2.png"),
       require("@/assets/images/works/personal-web09.jpeg"),
     ],
     skills: [
