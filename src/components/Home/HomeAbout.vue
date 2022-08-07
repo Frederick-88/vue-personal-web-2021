@@ -10,7 +10,7 @@
         p.about-subtitle My Intro
         h2.about-title About Me
 
-        p.about-description An enthusiastic & solution-driven fullstack web developer specialised in front-end development who is experienced on building websites along the stages of web development cycle, created several websites listed on personal web as a result of constant practice over the years, developing user-focused products for desktop, tablet and mobile app meeting highest standards of best practices.
+        p.about-description Professional solution-driven fullstack web developer specialised in frontend development who is experienced on building websites along the stages of web development cycle, created several websites listed on personal web and still counting as a journey for constant practice over the years, developing user-focused products for desktop, tablet and mobile app meeting highest standards of best practices.
         p.about-description In most of chances after worktime/weekend, he took extra miles to improve his skills & capacity to become a more capable & better developer that is dependable and can bring positive impacts to the organization that he contribute at.
 
         div.contact-section
@@ -99,7 +99,7 @@ export default {
         color: var(--text-color-primary);
         font-weight: 700;
         font-size: 1.75rem;
-        margin: 4px 0 15px;
+        margin: 4px 0 20px;
       }
 
       .about-description {
@@ -114,10 +114,10 @@ export default {
   }
 
   .contact-section {
-    margin: 40px 0;
+    margin: 30px 0;
 
     .section {
-      margin: 10px 0;
+      margin: 15px 0;
       display: flex;
       font-size: 0.875rem;
 

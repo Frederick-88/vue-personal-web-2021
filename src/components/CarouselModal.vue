@@ -18,9 +18,16 @@
           ref="modalCarousel"
         )
           div.image-wrapper(v-for="(preview, index) in activePortofolio.previews" :key="index")
-            img.image(
-              :src="preview"
+            a.image-link(
+              :href="preview"
+              target="_blank"
             )
+              img.image(
+                :src="preview"
+              )
+              div.image__preview-sign
+                i.icon-eye.sign-icon
+                p.sign-text View in New Tab
 
     div.modal__description-container
       div.modal__description
@@ -154,6 +161,14 @@ export default {
     .image-wrapper {
       outline: 0;
       border: 0;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        .image__preview-sign {
+          opacity: 1;
+        }
+      }
 
       .image {
         width: 98%; // avoid content overflowed with the next slide if image resolution/size is not the same
@@ -161,6 +176,33 @@ export default {
         object-fit: contain;
         margin: 0 auto;
         max-height: 520px;
+      }
+
+      .image__preview-sign {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($black, 0.65);
+        color: $white;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        .sign-icon {
+          margin-right: 10px;
+          font-size: 1.25rem;
+        }
+
+        .sign-text {
+          font-size: 1rem;
+          margin: 0;
+          padding: 0;
+        }
       }
     }
 
