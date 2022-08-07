@@ -6,13 +6,13 @@
         h3.title I'm Chen Frederick
         
         p.subtitle 
-          | A Passionate 
+          | Professional Solution-Driven 
           span.typing__word-wrapper
             p.typing__height-secure -
             p#typing-word.word
             p.typing__blink |
             p.word.typing__height-secure Developer
-          | who focus on delivering key outcomes, collaborate together with organization that he work for to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
+          | with several years of experience who focus on delivering key outcomes, collaborate together with organization team to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
         
         a.home-banner__button(
           :href="CvFile"
@@ -49,7 +49,7 @@ export default {
 
     function typingEffect() {
       let word = words[wordQueueNumber].split("");
-      var loopTyping = function() {
+      var loopTyping = function () {
         if (word.length > 0) {
           document.getElementById("typing-word").innerHTML += word.shift();
         } else {
@@ -62,7 +62,7 @@ export default {
     }
     function deletingEffect() {
       let word = words[wordQueueNumber].split("");
-      var loopDeleting = function() {
+      var loopDeleting = function () {
         if (word.length > 0) {
           word.pop();
           document.getElementById("typing-word").innerHTML = word.join("");
