@@ -1,11 +1,11 @@
 const portofolioKeywords = [
   {
-    name: "Laravel",
-    value: "laravel",
+    name: "Fullstack",
+    value: "fullstack",
   },
   {
-    name: "PHP",
-    value: "php",
+    name: "NuxtJS",
+    value: "nuxtjs",
   },
   {
     name: "All",
@@ -18,6 +18,14 @@ const portofolioKeywords = [
   {
     name: "ReactJS",
     value: "reactjs",
+  },
+  {
+    name: "Laravel",
+    value: "laravel",
+  },
+  {
+    name: "PHP",
+    value: "php",
   },
   {
     name: "MySQL",
@@ -34,10 +42,6 @@ const portofolioKeywords = [
   {
     name: "Firebase",
     value: "firebase",
-  },
-  {
-    name: "Fullstack",
-    value: "fullstack",
   },
   {
     name: "Responsive Web App",
