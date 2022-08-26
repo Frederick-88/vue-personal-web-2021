@@ -20,6 +20,10 @@ const portofolioKeywords = [
     value: "reactjs",
   },
   {
+    name: "NuxtJS",
+    value: "nuxtjs",
+  },
+  {
     name: "MySQL",
     value: "mysql",
   },
