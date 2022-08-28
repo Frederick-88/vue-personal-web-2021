@@ -156,7 +156,7 @@ module.exports = [
   {
     title: "NIEWS Singapore",
     description:
-      "Stunnning Website Built for Singapore National Institute of Education & Singapore Nanyang Technological University for Their #120 Campaign. Accessible within any device and screen from 320px to larger than 2560px. Hide SEO settings and other privacy informations for partner requirement.",
+      "Stunning Website Built for Singapore National Institute of Education & Singapore Nanyang Technological University for Their #120 Campaign. Accessible within any device and screen from 320px to larger than 2560px. Hide SEO settings and other privacy informations for partner requirement.",
     thumbnail: require("@/assets/images/works/niews-1.jpg"),
     year: 2022,
     tags: ["NuxtJS", "Responsive Web App"],
