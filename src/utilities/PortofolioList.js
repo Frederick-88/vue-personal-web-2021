@@ -312,7 +312,7 @@ module.exports = [
   {
     title: "Weatherpedia (PWA)",
     description:
-      "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the whole web to their tablets/phones for a very small size of 332 kb. then user also can search other city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
+      "Weatherpedia provides weather informations in Singapore ( by default ) and show current weather with attractive & different designs, made with PWA development-model ( Progressive Web App ). With this, user can download the whole web to their tablets/phones for a very small size of 332 kb. then user also can search other country/city to seek their weather information at here. Supported by API from https://api.openweathermap.org",
     thumbnail: require("@/assets/images/works/weatherpedia-pwa1.png"),
     year: 2021,
     tags: ["ReactJS", "PWA"],
@@ -321,9 +321,13 @@ module.exports = [
       require("@/assets/images/works/weatherpedia-pwa1.png"),
       require("@/assets/images/works/weatherpedia-pwa2.png"),
       require("@/assets/images/works/weatherpedia-pwa3.png"),
-      require("@/assets/images/works/weatherpedia-pwa4.png"),
-      require("@/assets/images/works/weatherpedia-pwa5.png"),
+      require("@/assets/images/works/weatherpedia-pwa4.jpeg"),
+      require("@/assets/images/works/weatherpedia-pwa5.jpeg"),
       require("@/assets/images/works/weatherpedia-pwa6.png"),
+      require("@/assets/images/works/weatherpedia-pwa7.png"),
+      require("@/assets/images/works/weatherpedia-pwa8.png"),
+      require("@/assets/images/works/weatherpedia-pwa9.png"),
+      require("@/assets/images/works/weatherpedia-pwa10.png"),
     ],
     skills: [
       "ReactJS",
