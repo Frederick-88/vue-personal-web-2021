@@ -47,7 +47,7 @@ module.exports = [
   {
     title: "Unit Testing",
     icon: "icon-jest",
-    level: "Familiar",
+    level: "Fluent",
   },
   {
     title: "Responsive Web Design",
@@ -62,7 +62,7 @@ module.exports = [
   {
     title: "Laravel + Laravel Blade",
     icon: "icon-laravel",
-    level: "Fluent",
+    level: "Familiar",
   },
   {
     title: "MY SQL",
