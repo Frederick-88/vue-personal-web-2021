@@ -55,6 +55,7 @@ module.exports = [
       "Node.js",
       "AWS",
       "Heroku",
+      "Vercel",
       "SCSS & CSS",
       "Javascript",
       "Trello",
