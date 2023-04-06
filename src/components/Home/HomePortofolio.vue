@@ -41,7 +41,7 @@
               p See More
               i.icon-arrow-right
           div.portofolio__image-wrapper
-            img.image(:src="portofolio.thumbnail" :alt="portofolio.title")
+            img.image(:src="portofolio.thumbnail" :alt="portofolio.title" :class="{'image--position-top': portofolio.thumbnailPosTop}")
             
     div.portofolio__view-more-button-container(
       v-if="getRemainingHiddenPortofolioCount && !isFilteringPortofolio"
@@ -150,9 +150,8 @@ export default {
       const end = this.getPortofolioListLength + portofolioCount;
       const getExtraPortofolio = this.portofolioList.slice(start, end);
 
-      this.getPortofolioList = this.getPortofolioList.concat(
-        getExtraPortofolio
-      );
+      this.getPortofolioList =
+        this.getPortofolioList.concat(getExtraPortofolio);
     },
     showNext() {
       this.$refs.homePortofolioKeywordCarousel.next();
@@ -339,6 +338,10 @@ export default {
         height: 100%;
         object-fit: cover;
         border-radius: 30px 0 0 0;
+
+        &.image--position-top {
+          object-position: top;
+        }
       }
     }
 
