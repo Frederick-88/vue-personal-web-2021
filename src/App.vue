@@ -42,7 +42,7 @@ export default {
       {
         name: "description",
         content:
-          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
+          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
       },
       {
         name: "keywords",
@@ -58,7 +58,7 @@ export default {
       {
         property: "og:description",
         content:
-          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
+          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
       },
 
       // Twitter
@@ -68,7 +68,7 @@ export default {
       {
         name: "twitter:description",
         content:
-          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Several Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
+          "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
       },
     ],
     link: [

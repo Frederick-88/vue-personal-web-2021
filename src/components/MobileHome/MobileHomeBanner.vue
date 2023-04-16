@@ -12,7 +12,7 @@
             p#mobile-typing-word.word
             p.typing__blink |
             p.word.typing__height-secure Developer
-          | with several years of experience who focus on delivering key outcomes, collaborate together with organization team to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
+          | with years of experience who focus on delivering key outcomes, collaborate together with organization team to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
         
         a.mobile-home-banner__button(
           :href="CvFile"
