@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Cv from "@/assets/images/my-resume.jpg";
+import Cv from "@/assets/images/my-resume.jpeg";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
