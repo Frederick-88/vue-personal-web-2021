@@ -6,7 +6,7 @@ module.exports = [
   {
     title: "Asia-Property",
     description:
-      "Beautiful & modern real estate website that developed within full-stack development until deployment all by myself, designed purely with SCSS based from ideas i received from themeforest.com & dribbble.com.",
+      "Beautiful & modern real estate website that is developed with full-stack development (React.js, Redux & Express.js) from first designing phase until last deployment phase based on ideas received from themeforest.com & dribbble.com, styled purely with CSS.",
     thumbnail: require("@/assets/images/works/asia01.png"),
     year: 2021,
     tags: ["ReactJS", "Fullstack"],
