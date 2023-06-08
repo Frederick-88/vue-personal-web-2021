@@ -398,7 +398,7 @@ module.exports = [
     year: 2021,
     tags: ["Laravel-PHP", "Fullstack"],
     website: null,
-    // website: "https://laravel-fd-color-palette.herokuapp.com/", // todo: search laravel + mysql hosting
+    github: "https://github.com/Frederick-88/laravel-fullstack-app",
     previews: [
       require("@/assets/images/works/laravel-fullstack-app1.png"),
       require("@/assets/images/works/laravel-fullstack-app2.png"),
@@ -456,6 +456,7 @@ module.exports = [
     year: 2021,
     tags: ["ReactJS", "Responsive Web App"],
     website: "https://fd-photoalbum.netlify.app/",
+    github: "https://github.com/Frederick-88/sample-react-technical-test",
     previews: [
       require("@/assets/images/works/photo-album-test-01.png"),
       require("@/assets/images/works/photo-album-test-02.png"),
@@ -601,6 +602,7 @@ module.exports = [
     year: 2020,
     tags: ["ReactJS", "Fullstack"],
     website: null,
+    github: "https://github.com/Glints-x-IB-Chat-box",
     previews: [
       require("@/assets/images/works/circle-messenger1.png"),
       require("@/assets/images/works/circle-messenger2.png"),
