@@ -260,6 +260,20 @@ module.exports = [
     ],
   },
   {
+    title: "AWS Tutorials",
+    description:
+      "Created Youtube Videos about AWS Deployments and Uses - With Lots of Tech Stack Inside (Vue, Nuxt, React, Express, S3, RDS, MySQL, etc)",
+    thumbnail: require("@/assets/images/works/aws-1.png"),
+    year: 2023,
+    tags: ["AWS", "Devops"],
+    youtube: "https://www.youtube.com/@frederick88/videos",
+    previews: [
+      require("@/assets/images/works/aws-1.png"),
+      require("@/assets/images/works/aws-2.png"),
+    ],
+    skills: ["AWS", "Devops", "AWS EC2", "AWS RDS", "AWS S3"],
+  },
+  {
     title: "Xeno - React Landing Page",
     description:
       "Beautiful responsive ReactJS website that is accessible within any device and screen from 320px to larger than 2560px.",
@@ -275,25 +289,6 @@ module.exports = [
       require("@/assets/images/works/xeno-4.jpg"),
       require("@/assets/images/works/xeno-5.jpg"),
       require("@/assets/images/works/xeno-6.jpg"),
-    ],
-    skills: ["ReactJS", "Responsive Web App", "SCSS", "Github"],
-  },
-  {
-    title: "Zeno - React Landing Page",
-    description:
-      "Modern responsive ReactJS website that is accessible within any device and screen from 320px to larger than 2560px.",
-    thumbnail: require("@/assets/images/works/zeno-1.jpg"),
-    thumbnailPosTop: true,
-    year: 2023,
-    tags: ["ReactJS", "Responsive Web App"],
-    website: "https://zeno-app.netlify.app/",
-    previews: [
-      require("@/assets/images/works/zeno-1.jpg"),
-      require("@/assets/images/works/zeno-2.jpg"),
-      require("@/assets/images/works/zeno-3.jpg"),
-      require("@/assets/images/works/zeno-4.jpg"),
-      require("@/assets/images/works/zeno-5.jpg"),
-      require("@/assets/images/works/zeno-6.jpg"),
     ],
     skills: ["ReactJS", "Responsive Web App", "SCSS", "Github"],
   },
@@ -354,6 +349,25 @@ module.exports = [
       "SCSS",
       "Github",
     ],
+  },
+  {
+    title: "Zeno - React Landing Page",
+    description:
+      "Modern responsive ReactJS website that is accessible within any device and screen from 320px to larger than 2560px.",
+    thumbnail: require("@/assets/images/works/zeno-1.jpg"),
+    thumbnailPosTop: true,
+    year: 2023,
+    tags: ["ReactJS", "Responsive Web App"],
+    website: "https://zeno-app.netlify.app/",
+    previews: [
+      require("@/assets/images/works/zeno-1.jpg"),
+      require("@/assets/images/works/zeno-2.jpg"),
+      require("@/assets/images/works/zeno-3.jpg"),
+      require("@/assets/images/works/zeno-4.jpg"),
+      require("@/assets/images/works/zeno-5.jpg"),
+      require("@/assets/images/works/zeno-6.jpg"),
+    ],
+    skills: ["ReactJS", "Responsive Web App", "SCSS", "Github"],
   },
   {
     title: "Sma Mw Library Profile + Admin CMS Site",

@@ -57,6 +57,14 @@
             ) 
               | Visit Github Repository
               i.icon-earth2
+
+          template(v-if="activePortofolio.youtube")
+            a.button(
+              :href="activePortofolio.youtube" 
+              target="_blank"
+            ) 
+              | Visit Youtube
+              i.icon-earth2
 </template>
 
 <script>
