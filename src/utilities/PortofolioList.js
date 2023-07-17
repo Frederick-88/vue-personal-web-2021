@@ -268,8 +268,8 @@ module.exports = [
     tags: ["AWS", "Devops"],
     youtube: "https://www.youtube.com/@frederick88/videos",
     previews: [
-      require("@/assets/images/works/aws-1.jpg"),
-      require("@/assets/images/works/aws-2.jpg"),
+      require("@/assets/images/works/aws-1.png"),
+      require("@/assets/images/works/aws-2.png"),
     ],
     skills: ["AWS", "Devops", "AWS EC2", "AWS RDS", "AWS S3"],
   },
