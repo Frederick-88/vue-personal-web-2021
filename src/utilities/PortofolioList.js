@@ -262,7 +262,7 @@ module.exports = [
   {
     title: "AWS Tutorials",
     description:
-      "Created Youtube Videos about AWS Deployments and Uses - With Lots of Tech Stack Inside (Vue, Nuxt, React, Express, S3, RDS, MySQL, etc)",
+      "Created Youtube Videos about AWS Deployments and Uses - With Lots of Tech Stack Inside (Vue, Nuxt, React, Express, S3, RDS, Security Group, Elastic IP, MySQL, etc)",
     thumbnail: require("@/assets/images/works/aws-1.png"),
     year: 2023,
     tags: ["AWS", "Devops"],
