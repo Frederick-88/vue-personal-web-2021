@@ -18,7 +18,7 @@
               i.icon-user
               p Name
             p.divider :
-            p.section-text Chen Frederick
+            p.section-text Frederick Chen
           div.section
             div.section-title
               i.icon-phone
@@ -36,7 +36,7 @@
               i.icon-linkedin-line
               p Linkedin
             p.divider :
-            p.section-text Chen Frederick
+            p.section-text Frederick Chen
 
         h4.interest-title My Interests
         div.interest-section
