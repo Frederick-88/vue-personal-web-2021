@@ -16,7 +16,7 @@
         
         a.home-banner__button(
           :href="CvFile"
-          download="Chen Frederick - CV"
+          download="Frederick Chen - CV"
         ) Download My CV
         a.home-banner__button(
           href="#skills"
