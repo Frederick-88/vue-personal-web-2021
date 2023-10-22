@@ -1,16 +1,16 @@
 module.exports = [
   {
-    title: "Vue JS",
+    title: "Vue.js/Vue3",
     icon: "icon-vue",
     level: "Fluent",
   },
   {
-    title: "Nuxt JS",
+    title: "Nuxt.js/Nuxt3",
     icon: "icon-nuxt",
     level: "Fluent",
   },
   {
-    title: "Vuex",
+    title: "Vuex/Pinia",
     icon: "icon-vue",
     level: "Fluent",
   },
@@ -20,13 +20,38 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "React JS",
+    title: "React.js",
     icon: "icon-react",
     level: "Fluent",
   },
   {
     title: "SEO & Web Performance",
     icon: "icon-earth2",
+    level: "Fluent",
+  },
+  {
+    title: "Responsive Web Design",
+    icon: "icon-responsive",
+    level: "Fluent",
+  },
+  {
+    title: "Javascript",
+    icon: "icon-javascript",
+    level: "Fluent",
+  },
+  {
+    title: "AWS",
+    icon: "icon-amazonaws",
+    level: "Fluent",
+  },
+  {
+    title: "Wordpress",
+    icon: "icon-wordpress",
+    level: "Fluent",
+  },
+  {
+    title: "SCSS/CSS",
+    icon: "icon-css",
     level: "Fluent",
   },
   {
@@ -50,11 +75,6 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "Responsive Web Design",
-    icon: "icon-responsive",
-    level: "Fluent",
-  },
-  {
     title: "REST API",
     icon: "icon-earth",
     level: "Fluent",
@@ -70,12 +90,7 @@ module.exports = [
     level: "Familiar",
   },
   {
-    title: "SCSS",
-    icon: "icon-css",
-    level: "Fluent",
-  },
-  {
-    title: "Linux / UNIX System",
+    title: "Linux",
     icon: "icon-linux",
     level: "Fluent",
   },
@@ -85,23 +100,23 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "Firebase",
-    icon: "icon-firebase",
-    level: "Familiar",
-  },
-  {
-    title: "Mongo DB",
+    title: "MongoDB",
     icon: "icon-mongodb",
     level: "Familiar",
   },
   {
-    title: "Express JS",
+    title: "Express.js",
     icon: "icon-javascript",
     level: "Familiar",
   },
   {
-    title: "Node JS",
+    title: "Node.js",
     icon: "icon-node-js",
+    level: "Familiar",
+  },
+  {
+    title: "Firebase",
+    icon: "icon-firebase",
     level: "Familiar",
   },
   {
@@ -122,11 +137,6 @@ module.exports = [
   {
     title: "PHP",
     icon: "icon-php",
-    level: "Familiar",
-  },
-  {
-    title: "AWS",
-    icon: "icon-amazonaws",
     level: "Familiar",
   },
   {
