@@ -42,7 +42,7 @@ module.exports = [
   {
     title: "AWS",
     icon: "icon-amazonaws",
-    level: "Familiar",
+    level: "Fluent",
   },
   {
     title: "Wordpress",
