@@ -35,7 +35,7 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "Javascript",
+    title: "Javascript/Typescript",
     icon: "icon-javascript",
     level: "Fluent",
   },
