@@ -3,7 +3,7 @@ module.exports = [
     title: "OFFEO SG",
     logo: require("@/assets/images/experience/offeo.jpg"),
     description:
-      "Developing, API integrating, unit testing, optimizing performance & SEO, maintaining, reviewing PRs, and improving a reliable and scalable online video maker platform (with over 300k users & million visits of monthly traffic) with it's internal websites",
+      "Developing, API integrating, unit testing, optimizing performance & SEO, maintaining, reviewing PRs, and improving a reliable and scalable online video maker platform (with over 300k users & million visits of monthly traffic) with it's internal websites.",
     skills: [
       "Vue.js",
       "Vue3",
@@ -31,7 +31,7 @@ module.exports = [
     title: "Imaginary Ones",
     logo: require("@/assets/images/experience/imaginary-ones.png"),
     description:
-      "Developing the frontend, API integrating, unit testing, optimizing performance, maintaining, and improving one of the most well-known NFT in the world (with over 400k twitter followers)",
+      "Developing the frontend, API integrating, unit testing, optimizing performance, maintaining, and improving one of the most well-known NFT in the world (with over 400k twitter followers).",
     skills: [
       "Vue.js",
       "Vue3",
