@@ -1,7 +1,7 @@
 <template lang="pug">
   section#works.mobile-home-portofolio__content
     p.subtitle Recent Works
-    h2.title My Portofolio
+    h2.title My Portfolio
 
     div.portofolio-list-carousel__wrapper
       div.icon-wrapper
