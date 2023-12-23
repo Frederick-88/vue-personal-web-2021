@@ -1,7 +1,7 @@
 <template lang="pug">
   section#works.home-portofolio__content
     p.subtitle Recent Works
-    h2.title My Portofolio
+    h2.title My Portfolio
 
     //- section of carousel for skills keywords, when selected will show works with that skill
     div.portofolio-keyword__carousel-wrapper
