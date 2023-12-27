@@ -4,20 +4,20 @@ const portofolioKeywords = [
     value: "fullstack",
   },
   {
-    name: "NuxtJS",
-    value: "nuxtjs",
+    name: "Nuxt.js",
+    value: "nuxt.js",
   },
   {
     name: "All",
     value: "all",
   },
   {
-    name: "VueJS",
-    value: "vuejs",
+    name: "Vue.js",
+    value: "vue.js",
   },
   {
-    name: "ReactJS",
-    value: "reactjs",
+    name: "React.js",
+    value: "react.js",
   },
   {
     name: "Laravel",
@@ -36,8 +36,8 @@ const portofolioKeywords = [
     value: "mongodb",
   },
   {
-    name: "ExpressJS",
-    value: "expressjs",
+    name: "Express.js",
+    value: "express.js",
   },
   {
     name: "Firebase",
