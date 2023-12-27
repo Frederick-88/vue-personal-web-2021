@@ -329,7 +329,7 @@ module.exports = [
   {
     title: "Elite Web House - Web Agency",
     description:
-      "A modern website built on wordpress that is accessible within any device and screen from 320px to larger than 2560px.",
+      "A modern web agency website built on wordpress that is accessible within any device and screen from 320px to larger than 2560px.",
     thumbnail: require("@/assets/images/works/ewh-1.jpg"),
     thumbnailPosTop: true,
     year: 2023,
