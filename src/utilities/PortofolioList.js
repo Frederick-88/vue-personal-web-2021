@@ -6,7 +6,7 @@ module.exports = [
   {
     title: "Imaginary Ones NFT",
     description:
-      "1 of the most popular NFT with over 400K twitter followers, cooperated with HUGO BOSS brand, filled with stunning & interactive websites as part of IO ecosystem built on Web3, Nuxt3 & Vue3. Have a look on the snapshots with the URLs!",
+      "One of the most popular NFT with over 400K twitter followers, cooperated with HUGO BOSS brand, filled with stunning & interactive websites as part of IO ecosystem built on Web3, Nuxt3 & Vue3. Have a look on the snapshots with the URLs!",
     thumbnail: require("@/assets/images/works/io-1.jpg"),
     thumbnailPosTop: true,
     year: 2024,
