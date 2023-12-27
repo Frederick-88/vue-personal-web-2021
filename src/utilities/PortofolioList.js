@@ -67,7 +67,6 @@ module.exports = [
       require("@/assets/images/works/offeo-10.png"),
     ],
     skills: [
-      "Web3",
       "Nuxt3",
       "Nuxt.js",
       "Vue3",
