@@ -3,12 +3,12 @@ const path = require("path");
 module.exports = {
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
-      args[0].title = "Chen Frederick | Website";
+      args[0].title = "Frederick Chen | Website";
       args[0].meta = {
         description:
           "Professional Solution-Driven Fullstack Web Developer Specialised in Front-End Development with Years of Experience. Proficient in Vue & React. Experienced on Building Websites Along The Stages of Web Development Cycle, Meeting Best Practices.",
         keywords:
-          "Frederick, frederick, Chen Frederick, chen frederick, Frederick Website, frederick website, Frederick Batam, Frederick Indonesia, Chen Frederick Batam, React, Vue, ReactJS, VueJS, Frontend, Frontend Developer, Web Developer, Fullstack Developer",
+          "Frederick, frederick, Frederick Chen, frederick chen, Frederick Website, frederick website, Frederick Batam, Frederick Indonesia, Frederick Chen Batam, React, Vue, ReactJS, VueJS, Frontend, Frontend Developer, Web Developer, Fullstack Developer",
       };
       return args;
     });
