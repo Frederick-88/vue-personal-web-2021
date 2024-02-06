@@ -3,7 +3,7 @@
     div.left-column
       div.left-column__content
         h3.title Hello! I'm 
-        h3.title Chen Frederick
+        h3.title Frederick Chen
         
         p.subtitle 
           | Professional Solution-Driven 
@@ -15,18 +15,16 @@
           | with years of experience who focus on delivering key outcomes, collaborate together with organization team to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
         
         a.mobile-home-banner__button(
-          :href="CvFile"
-          download="Chen Frederick - CV"
-          :class="{'--light': webTheme !== 'darkMode', '--dark' : webTheme === 'darkMode'}"
-        ) Download My CV
+          :href="resumeFile"
+          download="Frederick Chen's Resume"
+        ) Download My Resume
 
     div.right-column
       GlobalAnimationLoader(:file="workingLaptopJson")
 </template>
 
 <script>
-import { mapState } from "vuex";
-import Cv from "@/assets/images/my-resume.jpeg";
+import Resume from "@/assets/images/my-resume.jpeg";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
@@ -37,12 +35,9 @@ export default {
   },
   data() {
     return {
-      CvFile: Cv,
+      resumeFile: Resume,
       workingLaptopJson: JsonFile,
     };
-  },
-  computed: {
-    ...mapState(["webTheme"]),
   },
   mounted() {
     // typing logic
@@ -148,9 +143,9 @@ export default {
   }
 
   .mobile-home-banner__button {
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    padding: 14px 25px;
+    padding: 14px 20px;
     background: transparent;
     border: 1px solid var(--button-outline-background);
     color: var(--button-outline-background);

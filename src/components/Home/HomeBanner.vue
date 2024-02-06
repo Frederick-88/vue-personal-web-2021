@@ -3,7 +3,7 @@
     div.left-column
       div.left-column__content
         h3.title Hello!
-        h3.title I'm Chen Frederick
+        h3.title I'm Frederick Chen
         
         p.subtitle 
           | Professional Solution-Driven 
@@ -15,9 +15,9 @@
           | with years of experience who focus on delivering key outcomes, collaborate together with organization team to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
         
         a.home-banner__button(
-          :href="CvFile"
-          download="Frederick Chen - CV"
-        ) Download My CV
+          :href="resumeFile"
+          download="Frederick Chen's Resume"
+        ) Download My Resume
         a.home-banner__button(
           href="#skills"
         ) My Skills
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Cv from "@/assets/images/my-resume.jpeg";
+import Resume from "@/assets/images/my-resume.jpeg";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      CvFile: Cv,
+      resumeFile: Resume,
       workingLaptopJson: JsonFile,
     };
   },
@@ -162,7 +162,7 @@ export default {
   .home-banner__button {
     font-size: 0.825rem;
     font-weight: 600;
-    padding: 14px 30px;
+    padding: 14px 25px;
     background: transparent;
     border: 1px solid var(--button-outline-background);
     color: var(--button-outline-background);
