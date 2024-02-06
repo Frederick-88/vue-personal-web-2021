@@ -2,7 +2,6 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import VueMeta from "vue-meta";
 import VueSlickCarousel from "vue-slick-carousel";
 import Toast from "vue-toastification";
 import AOS from "aos";
@@ -17,7 +16,6 @@ Vue.use(Toast, options);
 
 Vue.config.productionTip = false;
 
-Vue.use(VueMeta);
 Vue.component("VueSlickCarousel", VueSlickCarousel);
 
 new Vue({
@@ -26,7 +24,7 @@ new Vue({
   },
   router,
   store,
-  render: function(h) {
+  render: function (h) {
     return h(App);
   },
 }).$mount("#app");
