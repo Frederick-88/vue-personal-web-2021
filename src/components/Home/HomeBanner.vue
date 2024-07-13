@@ -1,29 +1,29 @@
 <template lang="pug">
-  section.home-banner__content
-    div.left-column
-      div.left-column__content
-        h3.title Hello!
-        h3.title I'm Frederick Chen
-        
-        p.subtitle 
-          | Professional Solution-Driven 
-          span.typing__word-wrapper
-            p.typing__height-secure -
-            p#typing-word.word
-            p.typing__blink |
-            p.word.typing__height-secure Developer
-          | with years of experience who focus on delivering key outcomes, collaborate together with organization team to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
-        
-        a.home-banner__button(
-          :href="resumeFile"
-          download="Frederick Chen's Resume"
-        ) Download My Resume
-        a.home-banner__button(
-          href="#skills"
-        ) My Skills
+section.home-banner__content
+  div.left-column
+    div.left-column__content
+      h3.title Hello!
+      h3.title I'm Frederick Chen
+      
+      p.subtitle 
+        | Professional Solution-Driven 
+        span.typing__word-wrapper
+          p.typing__height-secure -
+          p#typing-word.word
+          p.typing__blink |
+          p.word.typing__height-secure Developer
+        | with around 5 years of experience who focus on delivering key outcomes, collaborate together with teams to meet organization targets with more satisfied users/customers, and quickly adapt to new learnings.
+      
+      a.home-banner__button(
+        :href="resumeFile"
+        download="Frederick Chen's Resume"
+      ) Download My Resume
+      a.home-banner__button(
+        href="#skills"
+      ) My Skills
 
-    div.right-column
-      GlobalAnimationLoader(:file="workingLaptopJson")
+  div.right-column
+    GlobalAnimationLoader(:file="workingLaptopJson")
 </template>
 
 <script>
