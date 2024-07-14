@@ -1,56 +1,56 @@
 <template lang="pug">
-  section#my-intro.mobile-home-about__content(data-aos="fade-right" data-aos-duration="1000")
-    div.content-container
-      p.about-subtitle My Intro
-      h2.about-title About Me
-      div.left-column
-        img.column-image(
-          loading="lazy"
-          :src="require('@/assets/images/me.jpg')"
-        )
-      div.right-column
-        p.about-description Professional solution-driven fullstack web developer specialised in frontend development who is experienced on building websites along the stages of web development cycle, created several websites listed on personal web and still counting as a journey for constant practice over the years, developing user-focused products for desktop, tablet and mobile app meeting highest standards of best practices.
+section#my-intro.mobile-home-about__content(data-aos="fade-right" data-aos-duration="1000")
+  div.content-container
+    p.about-subtitle My Intro
+    h2.about-title About Me
+    div.left-column
+      img.column-image(
+        loading="lazy"
+        :src="require('@/assets/images/me.jpg')"
+      )
+    div.right-column
+      p.about-description Professional solution-driven fullstack web3 developer with around 5 years of experience specialize in frontend development who is experienced on building websites along the stages of web development cycle (web2 & web3), created several websites listed on personal web and still counting as a journey for continuous improvements over the years, developing user-focused products on desktop, tablet and mobile. Meeting highest standards of best practices as a developer.
 
-        div.contact-section
-          div.section
-            div.section-title
-              i.icon-user
-              p Name
-            p.divider :
-            p.section-text Frederick Chen
-          div.section
-            div.section-title
-              i.icon-phone
-              p Phone
-            p.divider :
-            p.section-text 0858-3599-8805
-          div.section
-            div.section-title
-              i.icon-email
-              p Email
-            p.divider :
-            p.section-text me@chenfrederick.com
-          div.section
-            div.section-title
-              i.icon-linkedin-line
-              p Linkedin
-            p.divider :
-            p.section-text Frederick Chen
+      div.contact-section
+        div.section
+          div.section-title
+            i.icon-user
+            p Name
+          p.divider :
+          p.section-text Frederick Chen
+        div.section
+          div.section-title
+            i.icon-phone
+            p Phone
+          p.divider :
+          p.section-text 0858-3599-8805
+        div.section
+          div.section-title
+            i.icon-email
+            p Email
+          p.divider :
+          p.section-text me@chenfrederick.com
+        div.section
+          div.section-title
+            i.icon-linkedin-line
+            p Linkedin
+          p.divider :
+          p.section-text Frederick Chen
 
-        h4.interest-title My Interests
-        div.interest-section
-          div.section-title
-            i.icon-music
-            p Music
-          div.section-title
-            i.icon-travel
-            p Travel
-          div.section-title
-            i.icon-film
-            p Movie
-          div.section-title
-            i.icon-sport
-            P Sport
+      h4.interest-title My Interests
+      div.interest-section
+        div.section-title
+          i.icon-music
+          p Music
+        div.section-title
+          i.icon-travel
+          p Travel
+        div.section-title
+          i.icon-film
+          p Movie
+        div.section-title
+          i.icon-sport
+          P Sport
 </template>
 
 <script>

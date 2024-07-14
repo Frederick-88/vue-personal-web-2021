@@ -44,6 +44,10 @@ const portofolioKeywords = [
     value: "firebase",
   },
   {
+    name: "AWS",
+    value: "aws",
+  },
+  {
     name: "Responsive Web App",
     value: "responsive web app",
   },

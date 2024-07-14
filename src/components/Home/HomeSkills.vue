@@ -114,7 +114,7 @@ export default {
 
     .card-list {
       position: relative;
-      padding: 20px;
+      padding: 16px;
       min-height: 125px;
       background: var(--dark-white);
       color: var(--white-dark);
@@ -138,6 +138,7 @@ export default {
       .card-title {
         font-size: 0.875rem;
         font-weight: 600;
+        word-break: break-word;
       }
 
       .level-text {

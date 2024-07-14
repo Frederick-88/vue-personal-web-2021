@@ -30,13 +30,18 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "Responsive Web Design",
-    icon: "icon-responsive",
+    title: "Javascript/Typescript",
+    icon: "icon-javascript",
     level: "Fluent",
   },
   {
-    title: "Javascript / Typescript",
-    icon: "icon-javascript",
+    title: "Web3",
+    icon: "icon-web3",
+    level: "Fluent",
+  },
+  {
+    title: "Viem/Ethers.js",
+    icon: "icon-web3",
     level: "Fluent",
   },
   {
@@ -50,8 +55,13 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "SCSS/CSS",
-    icon: "icon-css",
+    title: "Unit Testing",
+    icon: "icon-jest",
+    level: "Fluent",
+  },
+  {
+    title: "Vuetify/Bootstrap/TailwindCSS",
+    icon: "icon-bootstrap",
     level: "Fluent",
   },
   {
@@ -65,18 +75,33 @@ module.exports = [
     level: "Fluent",
   },
   {
+    title: "SCSS/CSS",
+    icon: "icon-css",
+    level: "Fluent",
+  },
+  {
+    title: "GSAP/Storybook",
+    icon: "icon-storybook",
+    level: "Fluent",
+  },
+  {
+    title: "Smart Contract (Solidity)",
+    icon: "icon-web3",
+    level: "Fluent",
+  },
+  {
+    title: "Hardhat/Alchemy/Ganache",
+    icon: "icon-web3",
+    level: "Fluent",
+  },
+  {
     title: "Cloudflare + Web Deployment",
     icon: "icon-cloudflare",
     level: "Fluent",
   },
   {
-    title: "Unit Testing",
-    icon: "icon-jest",
-    level: "Fluent",
-  },
-  {
-    title: "REST API",
-    icon: "icon-earth",
+    title: "Responsive Web Design",
+    icon: "icon-responsive",
     level: "Fluent",
   },
   {
@@ -85,13 +110,13 @@ module.exports = [
     level: "Familiar",
   },
   {
-    title: "MY SQL",
+    title: "MYSQL",
     icon: "icon-mysql",
     level: "Familiar",
   },
   {
-    title: "Linux",
-    icon: "icon-linux",
+    title: "Nginx/Apache",
+    icon: "icon-nginx",
     level: "Fluent",
   },
   {
@@ -120,6 +145,11 @@ module.exports = [
     level: "Familiar",
   },
   {
+    title: "Linux",
+    icon: "icon-linux",
+    level: "Fluent",
+  },
+  {
     title: "Fullstack Development",
     icon: "icon-code",
     level: "Familiar",
@@ -140,12 +170,7 @@ module.exports = [
     level: "Familiar",
   },
   {
-    title: "API Building",
-    icon: "icon-earth",
-    level: "Familiar",
-  },
-  {
-    title: "Agile Scrum",
+    title: "Scrum",
     icon: "icon-team",
     level: "Fluent",
   },
@@ -162,11 +187,6 @@ module.exports = [
   {
     title: "Teamwork",
     icon: "icon-team",
-    level: "Fluent",
-  },
-  {
-    title: "English",
-    icon: "icon-language",
     level: "Fluent",
   },
 ];
