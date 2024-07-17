@@ -24,7 +24,6 @@ section.mobile-home-banner__content
 </template>
 
 <script>
-import Resume from "@/assets/images/my-resume.jpg";
 import JsonFile from "@/assets/json/man-work-with-laptop.json";
 import GlobalAnimationLoader from "@/utilities/GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
@@ -35,7 +34,7 @@ export default {
   },
   data() {
     return {
-      resumeFile: Resume,
+      resumeFile: `${process.env.BASE_URL}my-resume.pdf`,
       workingLaptopJson: JsonFile,
     };
   },
