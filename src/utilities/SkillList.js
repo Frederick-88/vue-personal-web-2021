@@ -85,6 +85,11 @@ module.exports = [
     level: "Fluent",
   },
   {
+    title: "Blockchain",
+    icon: "icon-web3",
+    level: "Fluent",
+  },
+  {
     title: "Hardhat/Alchemy/Ganache",
     icon: "icon-web3",
     level: "Fluent",
