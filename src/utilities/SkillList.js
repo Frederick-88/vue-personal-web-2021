@@ -60,7 +60,7 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "Vuetify/Bootstrap/TailwindCSS",
+    title: "Vuetify/TailwindCSS/Bootstrap",
     icon: "icon-bootstrap",
     level: "Fluent",
   },
@@ -85,11 +85,6 @@ module.exports = [
     level: "Fluent",
   },
   {
-    title: "Smart Contract (Solidity)",
-    icon: "icon-web3",
-    level: "Fluent",
-  },
-  {
     title: "Hardhat/Alchemy/Ganache",
     icon: "icon-web3",
     level: "Fluent",
@@ -103,6 +98,11 @@ module.exports = [
     title: "Responsive Web Design",
     icon: "icon-responsive",
     level: "Fluent",
+  },
+  {
+    title: "Smart Contract (Solidity)",
+    icon: "icon-web3",
+    level: "Familiar",
   },
   {
     title: "Laravel + Laravel Blade",

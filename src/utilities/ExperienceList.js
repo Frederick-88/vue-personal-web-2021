@@ -1,9 +1,29 @@
 module.exports = [
   {
+    title: "Injective",
+    logo: require("@/assets/images/experience/injective.png"),
+    description:
+      "Injective stands as one of the top blockchain (layer1) platforms globally around the world, ranked highly on CoinMarketCap and sets the standard for innovation in decentralized finance. It offers lightning-fast, scalable infrastructure for building DeFi applications and trading solutions. With a mission to empower users and decentralize global markets, Injective is shaping the future of financial technology. (Full Contributions on LinkedIn)",
+    skills: [
+      "Vue3",
+      "Nuxt3",
+      "Typescript",
+      "Web3",
+      "Blockchain/CosmosSDK",
+      "Javascript",
+      "NuxtUI",
+      "TailwindCSS",
+      "Pinia",
+      "SCSS/SASS",
+      "Github",
+      "Jira",
+    ],
+  },
+  {
     title: "Imaginary Ones",
     logo: require("@/assets/images/experience/imaginary-ones.png"),
     description:
-      "One of the most well-known NFT Brand with over 1.1M twitter followers, backed by dozens of VC/Investors + partnered with global-brands such as HUGO BOSS, Samsung, etc. Filled with stunning & interactive websites as part of IO ecosystem built on Web3, Nuxt3 & Vue3. (Full Contributions on LinkedIn)",
+      "One of the most well-known NFT Brand with over 1.1M twitter followers, backed by dozens of VC/Investors, partnered with global brands (HUGO BOSS, Samsung, Transformer, and others), generated over 20k+ ETH opensea volume per 2024. Filled with stunning & interactive websites as part of IO ecosystem built on Web3, Nuxt3 & Vue3. (Full Contributions on LinkedIn)",
     skills: [
       "Vue3",
       "Nuxt3",
