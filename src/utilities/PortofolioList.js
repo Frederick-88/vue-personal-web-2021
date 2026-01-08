@@ -19,6 +19,9 @@ module.exports = [
       require("@/assets/images/works/injective-4.webp"),
       require("@/assets/images/works/injective-5.webp"),
       require("@/assets/images/works/injective-6.webp"),
+      require("@/assets/images/works/injective-7.webp"),
+      require("@/assets/images/works/injective-8.webp"),
+      require("@/assets/images/works/injective-9.webp"),
     ],
     skills: [
       "Vue3",
